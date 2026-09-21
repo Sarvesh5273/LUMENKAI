@@ -8,6 +8,22 @@ export const OPEN_SOURCE: Opportunity[] = [
     category: 'open_source',
     summary:
       'A global program for students and beginner open source contributors to build a project with a mentoring organization. Accepted contributors receive mentorship and a stipend.',
+    benefit: {
+      kind: 'stipend',
+      what_you_get:
+        'A stipend paid over the coding period, sized by project length and your country.',
+      amount_text: null,
+      amount_status: 'unchecked',
+      amount_source: null,
+    },
+    location: { mode: 'remote', place: 'Open worldwide' },
+    apply: {
+      what_you_need: null,
+      how_they_select: null,
+      beginner_friendly: true,
+      application_fee: null,
+      fee_status: 'unchecked',
+    },
     official_url: 'https://summerofcode.withgoogle.com/programs/2026',
     source_url: 'https://summerofcode.withgoogle.com/rules',
     last_verified: '2026-09-21',
@@ -39,6 +55,22 @@ export const OPEN_SOURCE: Opportunity[] = [
     category: 'open_source',
     summary:
       'A set of mentored open source projects offered by Linux Foundation communities. Mentees work with project mentors, and eligible projects may include a stipend.',
+    benefit: {
+      kind: 'stipend',
+      what_you_get:
+        'A mentored project; many projects pay a stipend that is set per project.',
+      amount_text: null,
+      amount_status: 'unchecked',
+      amount_source: null,
+    },
+    location: { mode: 'remote', place: 'Open worldwide' },
+    apply: {
+      what_you_need: null,
+      how_they_select: null,
+      beginner_friendly: null,
+      application_fee: null,
+      fee_status: 'unchecked',
+    },
     official_url: 'https://mentorship.lfx.linuxfoundation.org/',
     source_url:
       'https://docs.linuxfoundation.org/lfx/mentorship/mentee-guide/am-i-eligible',
@@ -72,6 +104,22 @@ export const OPEN_SOURCE: Opportunity[] = [
     category: 'open_source',
     summary:
       'A remote 12-week program where fellows build software and can contribute to open source with a cohort. Fellows receive structured experience and a stipend.',
+    benefit: {
+      kind: 'stipend',
+      what_you_get:
+        'A stipend for the 12-week remote program.',
+      amount_text: null,
+      amount_status: 'unchecked',
+      amount_source: null,
+    },
+    location: { mode: 'remote', place: 'Open worldwide' },
+    apply: {
+      what_you_need: 'Attendance at an MLH hackathon or Global Hack Week event before you apply',
+      how_they_select: null,
+      beginner_friendly: false,
+      application_fee: null,
+      fee_status: 'unchecked',
+    },
     official_url: 'https://fellowship.mlh.io/apply',
     source_url: 'https://fellowship.mlh.io/apply',
     last_verified: '2026-09-21',
@@ -103,6 +151,22 @@ export const OPEN_SOURCE: Opportunity[] = [
     category: 'open_source',
     summary:
       'A paid remote internship in open source for people who face underrepresentation, systemic bias, or discrimination in their local technology industry. Interns receive mentorship and a USD 7,000 stipend.',
+    benefit: {
+      kind: 'stipend',
+      what_you_get:
+        'A USD 7,000 stipend for a paid remote internship with a mentor.',
+      amount_text: 'USD 7,000 stipend',
+      amount_status: 'stated',
+      amount_source: 'https://www.outreachy.org/docs/applicant/',
+    },
+    location: { mode: 'remote', place: 'Open worldwide' },
+    apply: {
+      what_you_need: null,
+      how_they_select: null,
+      beginner_friendly: null,
+      application_fee: null,
+      fee_status: 'unchecked',
+    },
     official_url: 'https://www.outreachy.org/apply/',
     source_url: 'https://www.outreachy.org/apply/eligibility/',
     last_verified: '2026-09-21',
@@ -135,6 +199,22 @@ export const OPEN_SOURCE: Opportunity[] = [
     category: 'open_source',
     summary:
       'A global online summer internship for university and high school students contributing to Bitcoin open source projects. Accepted students work with mentors and earn a Bitcoin stipend.',
+    benefit: {
+      kind: 'stipend',
+      what_you_get:
+        'A stipend paid in Bitcoin for the 12-week internship.',
+      amount_text: null,
+      amount_status: 'unchecked',
+      amount_source: null,
+    },
+    location: { mode: 'remote', place: 'Open worldwide' },
+    apply: {
+      what_you_need: 'Programming or design skills and some open source experience',
+      how_they_select: null,
+      beginner_friendly: false,
+      application_fee: null,
+      fee_status: 'unchecked',
+    },
     official_url: 'https://www.summerofbitcoin.org/apply',
     source_url: 'https://guide.summerofbitcoin.org/about/am-i-eligible',
     last_verified: '2026-09-21',
@@ -166,6 +246,22 @@ export const OPEN_SOURCE: Opportunity[] = [
     category: 'open_source',
     summary:
       'A summer fellowship where students complete screening tasks and work with a FOSSEE team on free and open source software. Successful fellows receive an e-certificate and a published-work link, but the program does not provide an honorarium.',
+    benefit: {
+      kind: 'unpaid',
+      what_you_get:
+        'An e-certificate and a published-work link. The program does not pay an honorarium.',
+      amount_text: null,
+      amount_status: 'not_stated',
+      amount_source: null,
+    },
+    location: { mode: 'remote', place: 'Online, confirm on the fellowship page' },
+    apply: {
+      what_you_need: 'Completed screening tasks for the project you pick',
+      how_they_select: 'Screening tasks, then selection by the FOSSEE team',
+      beginner_friendly: null,
+      application_fee: null,
+      fee_status: 'unchecked',
+    },
     official_url: 'https://fossee.in/fellowship/2026',
     source_url: 'https://fossee.in/node/82',
     last_verified: '2026-09-21',
@@ -197,6 +293,22 @@ export const OPEN_SOURCE: Opportunity[] = [
     category: 'open_source',
     summary:
       'A worldwide October celebration with in-person and online events focused in 2026 on open source AI. Participants can learn, build projects, and may receive event prizes or swag where offered.',
+    benefit: {
+      kind: 'unpaid',
+      what_you_get:
+        'Event prizes or swag where the event you attend offers them. No stipend.',
+      amount_text: null,
+      amount_status: 'not_stated',
+      amount_source: null,
+    },
+    location: { mode: 'remote', place: 'Open worldwide, online and local events' },
+    apply: {
+      what_you_need: null,
+      how_they_select: null,
+      beginner_friendly: true,
+      application_fee: null,
+      fee_status: 'unchecked',
+    },
     official_url: 'https://hacktoberfest.com/',
     source_url: 'https://hacktoberfest.com/questions',
     last_verified: '2026-09-21',
@@ -228,6 +340,22 @@ export const OPEN_SOURCE: Opportunity[] = [
     category: 'open_source',
     summary:
       'A mentored KDE program for code and non-code projects that benefit the KDE ecosystem. Participants who complete their projects receive a certificate and merchandise.',
+    benefit: {
+      kind: 'unpaid',
+      what_you_get:
+        'A certificate and KDE merchandise on completing the project. No stipend.',
+      amount_text: null,
+      amount_status: 'not_stated',
+      amount_source: null,
+    },
+    location: { mode: 'remote', place: 'Open worldwide' },
+    apply: {
+      what_you_need: 'Contact with the KDE community and a potential mentor before applying',
+      how_they_select: null,
+      beginner_friendly: null,
+      application_fee: null,
+      fee_status: 'unchecked',
+    },
     official_url: 'https://season.kde.org/',
     source_url: 'https://season.kde.org/',
     last_verified: '2026-09-21',

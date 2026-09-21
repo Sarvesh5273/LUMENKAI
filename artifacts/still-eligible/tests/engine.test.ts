@@ -15,6 +15,9 @@ function openRecord(overrides: Partial<Opportunity['rules']> = {}): Opportunity 
     org: 'Test Org',
     category: 'open_source',
     summary: 'A program with no cutoffs, used only in tests.',
+    benefit: { kind: 'stipend', what_you_get: 'A stipend for the test.', amount_text: null, amount_status: 'unchecked', amount_source: null },
+    location: { mode: 'remote', place: 'Open worldwide' },
+    apply: { what_you_need: null, how_they_select: null, beginner_friendly: null, application_fee: null, fee_status: 'unchecked' },
     official_url: 'https://example.org/apply',
     source_url: 'https://example.org/rules',
     last_verified: '2026-09-21',
@@ -41,7 +44,7 @@ function openRecord(overrides: Partial<Opportunity['rules']> = {}): Opportunity 
   };
 }
 
-/** A mass recruiter style record with the classic five cutoffs. */
+/** A company drive style record with the classic five cutoffs. */
 function recruiterRecord(): Opportunity {
   return {
     ...openRecord({
@@ -55,7 +58,7 @@ function recruiterRecord(): Opportunity {
       requires_student: true,
     }),
     id: 'test-recruiter',
-    category: 'mass_recruiter',
+    category: 'company_drives',
   };
 }
 

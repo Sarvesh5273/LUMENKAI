@@ -12,3 +12,9 @@ description: Constraints for unit tests in this Expo artifact under pnpm, and la
 **Web deep links:** a full reload on a stacked screen has no history; back buttons must fall back to `router.replace` on the tabs route.
 
 **Design subagent output to re-check:** blank numeric inputs silently defaulting to 0, boolean selectors defaulting to "no" when the profile is undefined, and summary copy that counts `unknown` records as matches. All three contradict the "never assume" product rule and were present in the first UI pass.
+
+**Typed routes lag:** expo-router's route types live in `.expo/types/router.d.ts` and are regenerated only by the running dev server. After adding a screen file, restart the Expo workflow before `typecheck`, or the new path is rejected as not assignable.
+
+**Scripts over the data files:** Node's built-in type stripping cannot execute the data TS files (extensionless relative imports, type-only imports). Use `tsx` (artifact devDependency, `pnpm export-data`) for anything that needs to load `data/index.ts` outside jest.
+
+**Web share:** `Share.share` on web is not reliable; check `navigator.share` first and fall back to `navigator.clipboard.writeText` with a visible "Copied" note. The testing subagent confirmed the clipboard path fires in headless Chromium.

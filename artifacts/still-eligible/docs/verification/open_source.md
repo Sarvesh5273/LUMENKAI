@@ -46,6 +46,7 @@ Checked on 2026-09-21. Quotes below are from official program or organisation pa
 - Indian student timing: "Students in India are considered to be in the northern hemisphere, regardless of where their university is located." The page says Northern Hemisphere university students "will only be eligible for the May to August internship cohort."
 - Other caveats: "You must be 18 years of age or older by Dec. 7, 2026." "You must be available for a full-time internship. Outreachy interns work 30 hours per week." The displayed age date belongs to the current December cohort; the record uses the last May cohort deadline because that is the cohort Indian university students can enter. Prior Outreachy, Outreach Program for Women, and GSoC interns are excluded.
 - Doubt: none about the represented fields. Applicants should still complete Outreachy's identity and schedule eligibility questionnaire.
+- Amount (read 2026-09-22 at https://www.outreachy.org/docs/applicant/): "Interns are paid a stipend of $7,000 USD for the three month internship." The home page repeats "$7,000 USD total internship stipend".
 
 ## `summer-of-bitcoin`
 

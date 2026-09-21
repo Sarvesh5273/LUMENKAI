@@ -1,13 +1,38 @@
 import { Opportunity } from '../lib/types';
 
-export const CRITERIA_FREE_DRIVES: Opportunity[] = [
+/**
+ * Off-campus company drives: product companies that hire students directly
+ * and mass recruiters that publish their cutoffs on an official page.
+ *
+ * Most Indian mass recruiters do not publish criteria anywhere a student can
+ * read them; their cutoffs reach colleges through placement cells. Those
+ * companies were reviewed and left out on purpose. See
+ * docs/verification/recruiters.md for the list and the reasons.
+ */
+export const COMPANY_DRIVES: Opportunity[] = [
   {
     id: 'hackwithinfy',
     title: 'HackWithInfy',
     org: 'Infosys',
-    category: 'criteria_free_drives',
+    category: 'company_drives',
     summary:
       'A coding competition for engineering students that can lead to Infosys internships and employment opportunities. Participants compete in coding rounds and selected finalists attend the grand finale.',
+    benefit: {
+      kind: 'paid_role',
+      what_you_get:
+        'Finalists can get Infosys internship and job offers, decided by the coding rounds.',
+      amount_text: null,
+      amount_status: 'unchecked',
+      amount_source: null,
+    },
+    location: { mode: 'hybrid', place: 'Online rounds, grand finale in India' },
+    apply: {
+      what_you_need: 'Registration through your college placement officer',
+      how_they_select: 'Online coding rounds, then a grand finale for the shortlisted',
+      beginner_friendly: null,
+      application_fee: null,
+      fee_status: 'unchecked',
+    },
     official_url: 'https://www.infosys.com/careers/hackwithinfy.html',
     source_url:
       'https://www.infosys.com/careers/hackwithinfy/2026/hwi-terms-conditions.pdf',
@@ -37,9 +62,25 @@ export const CRITERIA_FREE_DRIVES: Opportunity[] = [
     id: 'google-swe-internship-india',
     title: 'Google Software Engineering Internship India',
     org: 'Google',
-    category: 'criteria_free_drives',
+    category: 'company_drives',
     summary:
       'Google software engineering internships place students on engineering projects with Google teams in India. Interns gain paid practical experience and work with engineering mentors.',
+    benefit: {
+      kind: 'paid_role',
+      what_you_get:
+        'A paid software engineering internship on a Google team in India.',
+      amount_text: null,
+      amount_status: 'unchecked',
+      amount_source: null,
+    },
+    location: { mode: 'on_site', place: 'India' },
+    apply: {
+      what_you_need: null,
+      how_they_select: null,
+      beginner_friendly: null,
+      application_fee: null,
+      fee_status: 'unchecked',
+    },
     official_url:
       'https://www.google.com/about/careers/applications/students/engineering-and-technical-internships',
     source_url:
@@ -70,9 +111,25 @@ export const CRITERIA_FREE_DRIVES: Opportunity[] = [
     id: 'amazon-university-hiring-india',
     title: 'Amazon University Hiring India',
     org: 'Amazon',
-    category: 'criteria_free_drives',
+    category: 'company_drives',
     summary:
       'Amazon posts software development internships and entry-level roles for university candidates in India. Successful applicants receive an internship or full-time role on an Amazon engineering team.',
+    benefit: {
+      kind: 'paid_role',
+      what_you_get:
+        'A paid internship or an entry-level engineering role at Amazon India.',
+      amount_text: null,
+      amount_status: 'unchecked',
+      amount_source: null,
+    },
+    location: { mode: 'on_site', place: 'India' },
+    apply: {
+      what_you_need: null,
+      how_they_select: null,
+      beginner_friendly: null,
+      application_fee: null,
+      fee_status: 'unchecked',
+    },
     official_url: 'https://www.amazon.jobs/en/teams/internships-for-students',
     source_url:
       'https://www.amazon.jobs/en/jobs/3046606/sde-i-intern-amazon-university-talent-acquisition',
@@ -102,9 +159,25 @@ export const CRITERIA_FREE_DRIVES: Opportunity[] = [
     id: 'microsoft-university-internship-india',
     title: 'Microsoft University Internship India',
     org: 'Microsoft',
-    category: 'criteria_free_drives',
+    category: 'company_drives',
     summary:
       'Microsoft offers university internships in India across engineering and related teams. Interns work on a team project and receive structured learning and professional experience.',
+    benefit: {
+      kind: 'paid_role',
+      what_you_get:
+        'A paid university internship on a Microsoft team in India.',
+      amount_text: null,
+      amount_status: 'unchecked',
+      amount_source: null,
+    },
+    location: { mode: 'on_site', place: 'India' },
+    apply: {
+      what_you_need: null,
+      how_they_select: null,
+      beginner_friendly: null,
+      application_fee: null,
+      fee_status: 'unchecked',
+    },
     official_url: 'https://careers.microsoft.com/v2/global/en/universityinternship',
     source_url: 'https://careers.microsoft.com/v2/global/en/internship_eligibility',
     last_verified: '2026-09-21',
@@ -133,9 +206,25 @@ export const CRITERIA_FREE_DRIVES: Opportunity[] = [
     id: 'atlassian-india-internship',
     title: 'Atlassian India Internship',
     org: 'Atlassian',
-    category: 'criteria_free_drives',
+    category: 'company_drives',
     summary:
       'Atlassian offers paid early-career internships in India for students in their penultimate year. Interns work on company projects while receiving learning and professional development support.',
+    benefit: {
+      kind: 'paid_role',
+      what_you_get:
+        'A paid early-career internship at Atlassian India for penultimate-year students.',
+      amount_text: null,
+      amount_status: 'unchecked',
+      amount_source: null,
+    },
+    location: { mode: 'on_site', place: 'India' },
+    apply: {
+      what_you_need: null,
+      how_they_select: null,
+      beginner_friendly: null,
+      application_fee: null,
+      fee_status: 'unchecked',
+    },
     official_url:
       'https://www.atlassian.com/company/careers/all-jobs?team=Interns%2CGraduates',
     source_url: 'https://www.atlassian.com/company/careers/earlycareers',
@@ -165,9 +254,25 @@ export const CRITERIA_FREE_DRIVES: Opportunity[] = [
     id: 'zoho-off-campus-hiring',
     title: 'Zoho Off-Campus Hiring',
     org: 'Zoho Corporation',
-    category: 'criteria_free_drives',
+    category: 'company_drives',
     summary:
       'Zoho accepts direct applications for software and other roles through its careers site. Applicants selected through the role-specific process can join Zoho in a full-time position.',
+    benefit: {
+      kind: 'paid_role',
+      what_you_get:
+        'A full-time software role at Zoho, applied for directly through the careers site.',
+      amount_text: null,
+      amount_status: 'unchecked',
+      amount_source: null,
+    },
+    location: { mode: 'on_site', place: 'India' },
+    apply: {
+      what_you_need: null,
+      how_they_select: null,
+      beginner_friendly: null,
+      application_fee: null,
+      fee_status: 'unchecked',
+    },
     official_url: 'https://careers.zohocorp.com/jobs/Careers',
     source_url: 'https://careers.zohocorp.com/jobs/Careers',
     last_verified: '2026-09-21',
@@ -196,9 +301,25 @@ export const CRITERIA_FREE_DRIVES: Opportunity[] = [
     id: 'juspay-developer-hiring',
     title: 'Juspay Developer Hiring',
     org: 'Juspay',
-    category: 'criteria_free_drives',
+    category: 'company_drives',
     summary:
       'Juspay accepts direct applications for backend, frontend and other engineering roles. Selected applicants join teams that build and operate payment technology.',
+    benefit: {
+      kind: 'paid_role',
+      what_you_get:
+        'A full-time engineering role at Juspay, applied for directly.',
+      amount_text: null,
+      amount_status: 'unchecked',
+      amount_source: null,
+    },
+    location: { mode: 'on_site', place: 'India' },
+    apply: {
+      what_you_need: null,
+      how_they_select: null,
+      beginner_friendly: null,
+      application_fee: null,
+      fee_status: 'unchecked',
+    },
     official_url: 'https://juspay.io/careers',
     source_url: 'https://juspay.io/careers/DEV-BE03',
     last_verified: '2026-09-21',
@@ -222,5 +343,43 @@ export const CRITERIA_FREE_DRIVES: Opportunity[] = [
     notes:
       'No current student hiring challenge with official eligibility and a deadline was found. The linked official backend role is a direct job route and may add experience requirements, so check the live role before applying. No cutoff is published, but absence could not be confirmed.',
     alternative_ids: ['zoho-off-campus-hiring', 'amazon-university-hiring-india'],
+  },
+  {
+    id: 'tcs-nqt',
+    title: 'TCS All India NQT Hiring',
+    org: 'Tata Consultancy Services',
+    category: 'company_drives',
+    summary: 'TCS uses the NQT selection process to place eligible graduates into Ninja, Digital or Prime interviews based on test performance.',
+    benefit: {
+      kind: 'paid_role',
+      what_you_get:
+        'A TCS Ninja, Digital or Prime job offer, decided by your NQT score and interviews.',
+      amount_text: null,
+      amount_status: 'unchecked',
+      amount_source: null,
+    },
+    location: { mode: 'on_site', place: 'India' },
+    apply: {
+      what_you_need: 'Registration on the TCS NextStep portal',
+      how_they_select: 'The National Qualifier Test, then interviews for the Ninja, Digital or Prime tier',
+      beginner_friendly: null,
+      application_fee: null,
+      fee_status: 'unchecked',
+    },
+    official_url: 'https://www.tcs.com/careers/india/tcs-all-india-nqt-hiring',
+    source_url: 'https://www.tcs.com/careers/india/tcs-all-india-nqt-hiring',
+    last_verified: '2026-09-21',
+    deadline: '2026-03-20',
+    typical_window: 'Registration for the 2026 drive opened in mid February and closed on 20 March. The next drive is not announced.',
+    rules: {
+      min_tenth_pct: 60, min_twelfth_pct: 60, min_cgpa: null,
+      max_active_backlogs: 0, max_gap_years: 2, grad_years: null,
+      citizenship: 'any', gender: 'any', requires_student: false, branches: 'any',
+      min_work_years: null,
+    },
+    verification_status: 'needs_check',
+    tags: ['fresher hiring', 'NQT', 'engineering'],
+    notes: 'The official page requires 60% or equivalent CGPA in class 10, class 12, diploma and graduation. It gives no 10-point CGPA cutoff, so min_cgpa is left empty; treat 60% aggregate in your degree as the bar. The 2026 drive was open to the 2024, 2025 and 2026 batches only and capped work experience at two years. The batch list for the next drive is not announced, so no graduation year rule is applied here. Re-check before relying on this.',
+    alternative_ids: ['zoho-off-campus-hiring', 'hackwithinfy', 'juspay-developer-hiring'],
   },
 ];

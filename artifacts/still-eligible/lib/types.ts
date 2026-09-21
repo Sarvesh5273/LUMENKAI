@@ -13,34 +13,155 @@
 // Categories
 // ---------------------------------------------------------------------------
 
-/** The five groups shown on the "Doors still open" home screen. */
+/**
+ * The six groups shown on the "Doors open" home screen, in display order.
+ * The order runs from the lowest barrier (a hackathon this weekend) to the
+ * highest (a company drive with published cutoffs), which is also the order
+ * the "Path from zero" screen walks through.
+ */
 export const CATEGORIES = [
-  'criteria_free_drives',
+  'hackathons_fellowships',
   'open_source',
   'funded_internships',
-  'abroad_scholarships',
-  'hackathons_fellowships',
+  'scholarships',
+  'startup_programs',
+  'company_drives',
 ] as const;
 
 export type OpportunityCategory = (typeof CATEGORIES)[number];
 
-/**
- * Mass recruiter criteria (TCS NQT, Infosys, Wipro, ...) are stored with the
- * same record shape but a separate category. They never appear on the home
- * screen. They exist so the "Closed doors" tab can tell a student exactly
- * which cutoff shut them out and by how much.
- */
-export const RECRUITER_CATEGORY = 'mass_recruiter' as const;
-
-export type RecordCategory = OpportunityCategory | typeof RECRUITER_CATEGORY;
-
-export const CATEGORY_LABELS: Record<RecordCategory, string> = {
-  criteria_free_drives: 'Criteria-free drives',
+export const CATEGORY_LABELS: Record<OpportunityCategory, string> = {
+  hackathons_fellowships: 'Hackathons and fellowships',
   open_source: 'Open source programs',
   funded_internships: 'Funded internships and research',
-  abroad_scholarships: 'Abroad scholarships',
-  hackathons_fellowships: 'Hackathons and fellowships',
-  mass_recruiter: 'Mass recruiter criteria',
+  scholarships: 'Masters and MTech scholarships',
+  startup_programs: 'Startup programs',
+  company_drives: 'Off-campus company drives',
+};
+
+/**
+ * Two plain sentences per category for a student who has never heard of it:
+ * what this kind of opportunity is and how it pays. Shown under each section
+ * header on the home screen.
+ */
+export const CATEGORY_INTROS: Record<OpportunityCategory, string> = {
+  hackathons_fellowships:
+    'Hackathons are short contests where a team builds a working demo for a problem statement, and fellowships are short paid programs for students. Winners get cash prizes, and sponsors often shortlist finalists for internships.',
+  open_source:
+    'Open source programs pay you to build and fix real software under a mentor, from home. Most pay a fixed stipend over 8 to 12 weeks and never ask for your marks.',
+  funded_internships:
+    'Research internships place you in a lab or a company team for a summer, in India or abroad. The funded ones cover travel and stay and pay a monthly stipend.',
+  scholarships:
+    'These pay for a masters or MTech degree, in India or abroad. Fully funded ones cover tuition and living costs, and most are decided on your degree marks, a test and an interview, not your 10th or 12th.',
+  startup_programs:
+    'Startup programs give student founders money, mentoring and sometimes a place to work while they build a company. Only programs that pay a grant or a fellowship are listed, not credit-only offers.',
+  company_drives:
+    'Off-campus drives are how companies hire students who did not get them through college placements. Mass recruiters publish marks cutoffs, while product companies mostly select through a coding test instead.',
+};
+
+// ---------------------------------------------------------------------------
+// What the student gets, where it happens, what applying takes
+// ---------------------------------------------------------------------------
+
+/**
+ * The kind of money on offer. Drives the chip on the card when no amount is
+ * known. `unpaid` is allowed so a stepping stone (a first pull request) can
+ * be listed without pretending it pays.
+ */
+export const BENEFIT_KINDS = [
+  'stipend',
+  'prize_money',
+  'funded_study',
+  'grant',
+  'paid_role',
+  'costs_covered',
+  'unpaid',
+] as const;
+
+export type BenefitKind = (typeof BENEFIT_KINDS)[number];
+
+export const BENEFIT_KIND_LABELS: Record<BenefitKind, string> = {
+  stipend: 'Stipend',
+  prize_money: 'Prize money',
+  funded_study: 'Tuition and living covered',
+  grant: 'Grant',
+  paid_role: 'Paid job or internship',
+  costs_covered: 'Costs covered, no pay',
+  unpaid: 'Unpaid',
+};
+
+/**
+ * - stated:     the official page prints an amount and `amount_text` quotes it
+ * - not_stated: someone read the official page and it gives no amount
+ * - unchecked:  nobody has read the page for the amount yet
+ *
+ * The app words each state differently, so a gap in our reading is never
+ * shown as a fact about the program.
+ */
+export type AmountStatus = 'stated' | 'not_stated' | 'unchecked';
+
+export type Benefit = {
+  kind: BenefitKind;
+  /** One plain sentence: what the student gets, e.g. "A stipend paid over 12 weeks, sized by project length and country." */
+  what_you_get: string;
+  /** The amount as the official page prints it, e.g. "USD 7,000 for the internship". Required when `amount_status` is `stated`, null otherwise. */
+  amount_text: string | null;
+  amount_status: AmountStatus;
+  /**
+   * Where the amount was read: the URL of the page that prints it. Required
+   * when `amount_status` is `stated`, so every figure the app shows can be
+   * traced to an official page. null otherwise.
+   */
+  amount_source: string | null;
+};
+
+export const LOCATION_MODES = ['remote', 'on_site', 'hybrid'] as const;
+export type LocationMode = (typeof LOCATION_MODES)[number];
+
+export const LOCATION_MODE_LABELS: Record<LocationMode, string> = {
+  remote: 'Remote',
+  on_site: 'On-site',
+  hybrid: 'Hybrid',
+};
+
+export type Location = {
+  mode: LocationMode;
+  /**
+   * Where, in a few words. Required for `on_site` and `hybrid` ("Bengaluru",
+   * "Germany", "Online rounds, finale in India"). Optional for `remote`, where
+   * it carries a note like "Open worldwide" or "India only".
+   */
+  place: string | null;
+};
+
+/**
+ * - free:      the official page says there is no fee, or a human read the
+ *              application flow end to end and found none
+ * - paid:      the page names a fee and `application_fee` quotes it
+ * - unchecked: nobody has looked yet
+ *
+ * Only `free` makes the app print "Free to apply". An unchecked fee is
+ * described as unchecked, never as free.
+ */
+export type FeeStatus = 'free' | 'paid' | 'unchecked';
+
+/**
+ * What applying actually takes. Every text field is nullable: null means
+ * nobody has recorded it yet, and the app says so instead of guessing.
+ */
+export type ApplyReady = {
+  /** Documents, accounts, nominations and lead time, e.g. "A project proposal and a GitHub account". */
+  what_you_need: string | null;
+  /** How they pick people, e.g. "Online coding test, then two interviews". */
+  how_they_select: string | null;
+  /** True only when the official page says beginners or people with no prior experience are welcome. null when the page does not say. */
+  beginner_friendly: boolean | null;
+  /**
+   * The application fee as the official page prints it, e.g. "INR 500
+   * registration fee". Required when `fee_status` is `paid`, null otherwise.
+   */
+  application_fee: string | null;
+  fee_status: FeeStatus;
 };
 
 // ---------------------------------------------------------------------------
@@ -182,9 +303,15 @@ export type Opportunity = {
   title: string;
   /** The organisation behind the program. */
   org: string;
-  category: RecordCategory;
+  category: OpportunityCategory;
   /** One or two plain sentences: what it is and what you get. */
   summary: string;
+  /** What the student gets: the kind of money, a plain sentence, and the amount if the page states one. */
+  benefit: Benefit;
+  /** Where it happens: remote, on-site somewhere, or hybrid. */
+  location: Location;
+  /** What applying takes. Nullable fields mean "not recorded yet". */
+  apply: ApplyReady;
   /** The page where the student actually applies. */
   official_url: string;
   /** The page where the eligibility criteria were read. Often the same URL. */

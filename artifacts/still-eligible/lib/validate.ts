@@ -10,7 +10,7 @@
  */
 
 import { z } from 'zod';
-import { BRANCHES, CATEGORIES, CITIZENSHIPS, Opportunity, RECRUITER_CATEGORY } from './types';
+import { BENEFIT_KINDS, BRANCHES, CATEGORIES, CITIZENSHIPS, LOCATION_MODES, Opportunity } from './types';
 import { isExpectedNextCycle, parseIsoDate } from './deadlines';
 
 const isoDate = z
@@ -39,14 +39,99 @@ export const rulesSchema = z.object({
   min_work_years: z.number().min(0).max(30).nullable(),
 });
 
+/** A short user-facing phrase: long enough to mean something, short enough for a card. */
+const shortText = (max: number) => z.string().trim().min(3).max(max);
+
+export const benefitSchema = z
+  .object({
+    kind: z.enum(BENEFIT_KINDS),
+    what_you_get: z.string().trim().min(10).max(240),
+    amount_text: shortText(80).nullable(),
+    amount_status: z.enum(['stated', 'not_stated', 'unchecked']),
+    amount_source: httpsUrl.nullable(),
+  })
+  .superRefine((benefit, ctx) => {
+    if (benefit.amount_status === 'stated' && benefit.amount_source === null) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ['amount_source'],
+        message: 'amount_status "stated" needs the URL of the page the amount was read on',
+      });
+    }
+    if (benefit.amount_status !== 'stated' && benefit.amount_source !== null) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ['amount_source'],
+        message: 'amount_source is only allowed when amount_status is "stated"',
+      });
+    }
+    if (benefit.amount_status === 'stated' && benefit.amount_text === null) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ['amount_text'],
+        message: 'amount_status "stated" needs the amount as the official page prints it',
+      });
+    }
+    if (benefit.amount_status !== 'stated' && benefit.amount_text !== null) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ['amount_text'],
+        message: 'amount_text is only allowed when amount_status is "stated"',
+      });
+    }
+  });
+
+export const locationSchema = z
+  .object({
+    mode: z.enum(LOCATION_MODES),
+    place: shortText(80).nullable(),
+  })
+  .superRefine((location, ctx) => {
+    if (location.mode !== 'remote' && location.place === null) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ['place'],
+        message: 'an on_site or hybrid record must say where',
+      });
+    }
+  });
+
+export const applyReadySchema = z
+  .object({
+    what_you_need: z.string().trim().min(10).max(300).nullable(),
+    how_they_select: z.string().trim().min(10).max(300).nullable(),
+    beginner_friendly: z.boolean().nullable(),
+    application_fee: shortText(80).nullable(),
+    fee_status: z.enum(['free', 'paid', 'unchecked']),
+  })
+  .superRefine((apply, ctx) => {
+    if (apply.fee_status === 'paid' && apply.application_fee === null) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ['application_fee'],
+        message: 'fee_status "paid" needs the fee as the official page prints it',
+      });
+    }
+    if (apply.fee_status !== 'paid' && apply.application_fee !== null) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ['application_fee'],
+        message: 'application_fee is only allowed when fee_status is "paid"',
+      });
+    }
+  });
+
 export function buildOpportunitySchema(now: Date) {
   return z
   .object({
     id: z.string().regex(/^[a-z0-9]+(-[a-z0-9]+)*$/, 'id must be kebab-case'),
     title: z.string().min(3).max(120),
     org: z.string().min(2).max(120),
-    category: z.enum([...CATEGORIES, RECRUITER_CATEGORY]),
+    category: z.enum(CATEGORIES),
     summary: z.string().min(20).max(400),
+    benefit: benefitSchema,
+    location: locationSchema,
+    apply: applyReadySchema,
     official_url: httpsUrl,
     source_url: httpsUrl,
     last_verified: isoDate,
@@ -76,7 +161,19 @@ export function buildOpportunitySchema(now: Date) {
           'a tbd or already-passed deadline needs a typical_window so the card can say when to expect the next cycle',
       });
     }
-    if (/\u2014/.test(record.summary + record.notes + record.title)) {
+    const userFacing = [
+      record.title,
+      record.summary,
+      record.notes,
+      record.benefit.what_you_get,
+      record.benefit.amount_text,
+      record.location.place,
+      record.apply.what_you_need,
+      record.apply.how_they_select,
+      record.apply.application_fee,
+      record.typical_window,
+    ];
+    if (userFacing.some((text) => text !== null && /\u2014/.test(text))) {
       ctx.addIssue({
         code: z.ZodIssueCode.custom,
         path: ['summary'],

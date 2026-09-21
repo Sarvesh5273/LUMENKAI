@@ -1,16 +1,17 @@
-import React, { useMemo } from 'react';
-import { StyleSheet, Text, View, ScrollView, TouchableOpacity, Linking, Share } from 'react-native';
+import React, { useMemo, useState } from 'react';
+import { StyleSheet, Text, View, ScrollView, TouchableOpacity, Share, Platform } from 'react-native';
 import { useLocalSearchParams, useRouter, Link } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useColors } from '@/hooks/useColors';
 import { typography } from '@/constants/styles';
 import { useStore } from '@/lib/store';
-import { findOpportunity } from '@/data';
 import { evaluateEligibility, summarizeStatus } from '@/lib/engine';
 import { Feather } from '@expo/vector-icons';
 import { Button } from '@/components/Button';
 import { CATEGORY_LABELS } from '@/lib/types';
-import { formatDeadlineLong, formatDate, parseIsoDate, isExpectedNextCycle } from '@/lib/deadlines';
+import { formatDeadlineLong, formatDate, parseIsoDate } from '@/lib/deadlines';
+import { formatAmountNote, formatApplicationFee, formatBenefitShort, formatLocation, NOT_RECORDED_LINE } from '@/lib/format';
+import { buildReportIssueUrl, buildShareText } from '@/lib/share';
 import * as WebBrowser from 'expo-web-browser';
 
 export default function OpportunityDetailScreen() {
@@ -18,9 +19,10 @@ export default function OpportunityDetailScreen() {
   const insets = useSafeAreaInsets();
   const colors = useColors();
   const router = useRouter();
-  const { profile, isTracked, toggleTrackOpp } = useStore();
+  const { profile, isTracked, toggleTrackOpp, findRecord } = useStore();
+  const [shareNote, setShareNote] = useState<string | null>(null);
 
-  const opp = findOpportunity(id as string);
+  const opp = findRecord(id as string);
 
   // A deep link (or a web reload on this screen) has no history to pop.
   const goBack = () => {
@@ -68,6 +70,20 @@ export default function OpportunityDetailScreen() {
     await WebBrowser.openBrowserAsync(url);
   };
 
+  const share = async () => {
+    const message = buildShareText(opp);
+    try {
+      if (Platform.OS === 'web' && typeof navigator !== 'undefined' && !navigator.share && navigator.clipboard) {
+        await navigator.clipboard.writeText(message);
+        setShareNote('Copied. Paste it into WhatsApp.');
+        return;
+      }
+      await Share.share({ message });
+    } catch {
+      setShareNote('Could not open the share sheet on this device.');
+    }
+  };
+
   const allRules = [
     ...eligibility.passed,
     ...eligibility.noRule,
@@ -81,9 +97,14 @@ export default function OpportunityDetailScreen() {
         <TouchableOpacity onPress={goBack} style={styles.backButton} accessibilityRole="button" accessibilityLabel="Go back">
           <Feather name="chevron-left" size={28} color={colors.foreground} />
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => toggleTrackOpp(opp.id)} style={styles.trackButton} accessibilityRole="button" accessibilityLabel={tracked ? 'Stop tracking this opportunity' : 'Track this opportunity'} accessibilityState={{ selected: tracked }}>
-          <Feather name="star" size={24} color={tracked ? colors.accent : colors.mutedForeground} style={tracked ? styles.iconFilled : {}} />
-        </TouchableOpacity>
+        <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+          <TouchableOpacity onPress={share} style={styles.trackButton} accessibilityRole="button" accessibilityLabel="Share this opportunity">
+            <Feather name="share-2" size={22} color={colors.mutedForeground} />
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => toggleTrackOpp(opp.id)} style={styles.trackButton} accessibilityRole="button" accessibilityLabel={tracked ? 'Stop tracking this opportunity' : 'Track this opportunity'} accessibilityState={{ selected: tracked }}>
+            <Feather name="star" size={24} color={tracked ? colors.accent : colors.mutedForeground} style={tracked ? styles.iconFilled : {}} />
+          </TouchableOpacity>
+        </View>
       </View>
 
       <ScrollView contentContainerStyle={{ paddingHorizontal: 20, paddingBottom: insets.bottom + 40 }}>
@@ -101,6 +122,25 @@ export default function OpportunityDetailScreen() {
                 <Text style={[typography.caption, { color: colors.mutedForeground }]}>{tag}</Text>
               </View>
             ))}
+          </View>
+        </View>
+
+        <View style={[styles.benefitBox, { backgroundColor: colors.card, borderColor: colors.border, borderRadius: colors.radius }]} testID="benefit-box">
+          <View style={styles.benefitRow}>
+            <Feather name="award" size={20} color={colors.foreground} />
+            <View style={{ marginLeft: 12, flex: 1 }}>
+              <Text style={[typography.caption, { color: colors.mutedForeground }]}>What you get</Text>
+              <Text style={[typography.h3, { color: colors.cardForeground, marginTop: 2 }]}>{formatBenefitShort(opp.benefit)}</Text>
+              <Text style={[typography.body, { color: colors.cardForeground, marginTop: 6 }]}>{opp.benefit.what_you_get}</Text>
+              <Text style={[typography.bodySmall, { color: colors.mutedForeground, marginTop: 6 }]}>{formatAmountNote(opp.benefit)}</Text>
+            </View>
+          </View>
+          <View style={[styles.benefitRow, { borderTopWidth: 1, borderTopColor: colors.border, marginTop: 14, paddingTop: 14 }]}>
+            <Feather name="map-pin" size={20} color={colors.foreground} />
+            <View style={{ marginLeft: 12, flex: 1 }}>
+              <Text style={[typography.caption, { color: colors.mutedForeground }]}>Where</Text>
+              <Text style={[typography.body, { color: colors.cardForeground, marginTop: 2 }]}>{formatLocation(opp.location)}</Text>
+            </View>
           </View>
         </View>
 
@@ -163,6 +203,48 @@ export default function OpportunityDetailScreen() {
           })}
         </View>
 
+        <TouchableOpacity
+          onPress={() => openUrlBrowser(buildReportIssueUrl(opp))}
+          style={styles.reportLink}
+          accessibilityRole="link"
+          accessibilityLabel="Report a wrong rule on the public repo"
+          testID="report-wrong-rule"
+        >
+          <Feather name="flag" size={14} color={colors.mutedForeground} />
+          <Text style={[typography.bodySmall, { color: colors.mutedForeground, marginLeft: 6, textDecorationLine: 'underline' }]}>
+            Report a wrong rule
+          </Text>
+        </TouchableOpacity>
+
+        <View style={{ marginTop: 32 }} testID="apply-ready">
+          <Text style={[typography.h3, { color: colors.foreground, marginBottom: 12 }]}>Apply-ready</Text>
+          <View style={[styles.rulesContainer, { borderColor: colors.border, backgroundColor: colors.card, borderRadius: colors.radius }]}>
+            <View style={[styles.applyRow, { borderBottomWidth: 1, borderBottomColor: colors.border }]}>
+              <Text style={[typography.bodySmall, { color: colors.mutedForeground, marginBottom: 2 }]}>What you need</Text>
+              <Text style={[typography.body, { color: colors.cardForeground }]}>{opp.apply.what_you_need ?? NOT_RECORDED_LINE}</Text>
+            </View>
+            <View style={[styles.applyRow, { borderBottomWidth: 1, borderBottomColor: colors.border }]}>
+              <Text style={[typography.bodySmall, { color: colors.mutedForeground, marginBottom: 2 }]}>How they select</Text>
+              <Text style={[typography.body, { color: colors.cardForeground }]}>{opp.apply.how_they_select ?? NOT_RECORDED_LINE}</Text>
+            </View>
+            {opp.apply.beginner_friendly === true && (
+              <View style={[styles.applyRow, { borderBottomWidth: 1, borderBottomColor: colors.border, flexDirection: 'row', alignItems: 'center' }]}>
+                <View style={[styles.tag, { backgroundColor: colors.success + '20' }]}>
+                  <Text style={[typography.caption, { color: colors.success }]}>No experience needed</Text>
+                </View>
+                <Text style={[typography.bodySmall, { color: colors.mutedForeground, marginLeft: 10, flex: 1 }]}>The official page says beginners are welcome.</Text>
+              </View>
+            )}
+            <View style={[styles.applyRow, { flexDirection: 'row', alignItems: 'flex-start' }]}>
+              <Feather name="shield" size={16} color={opp.apply.fee_status === 'free' ? colors.success : colors.mutedForeground} style={{ marginTop: 3 }} />
+              <View style={{ flex: 1, marginLeft: 10 }}>
+                <Text style={[typography.bodySmall, { color: colors.mutedForeground, marginBottom: 2 }]}>Application fee</Text>
+                <Text style={[typography.body, { color: colors.cardForeground }]}>{formatApplicationFee(opp.apply)}</Text>
+              </View>
+            </View>
+          </View>
+        </View>
+
         {opp.notes ? (
           <View style={{ marginTop: 32 }}>
             <Text style={[typography.h3, { color: colors.foreground, marginBottom: 8 }]}>Notes</Text>
@@ -174,7 +256,7 @@ export default function OpportunityDetailScreen() {
           <View style={{ marginTop: 32 }}>
             <Text style={[typography.h3, { color: colors.foreground, marginBottom: 12 }]}>Alternatives</Text>
             {opp.alternative_ids.map(altId => {
-              const altOpp = findOpportunity(altId);
+              const altOpp = findRecord(altId);
               if (!altOpp) return null;
               return (
                 <Link key={altId} href={`/opportunity/${altId}`} style={{ marginBottom: 12 }}>
@@ -206,8 +288,19 @@ export default function OpportunityDetailScreen() {
             variant="outline"
             onPress={() => toggleTrackOpp(opp.id)} 
             size="lg" 
-            style={{ width: '100%' }} 
+            style={{ width: '100%', marginBottom: 12 }} 
           />
+          <Button
+            label="Share on WhatsApp"
+            variant="outline"
+            onPress={share}
+            size="lg"
+            style={{ width: '100%' }}
+            testID="share-button"
+          />
+          {shareNote && (
+            <Text style={[typography.bodySmall, { color: colors.mutedForeground, textAlign: 'center', marginTop: 8 }]}>{shareNote}</Text>
+          )}
         </View>
 
         <Text style={[typography.caption, { color: colors.mutedForeground, textAlign: 'center', marginTop: 32 }]}>
@@ -271,6 +364,25 @@ const styles = StyleSheet.create({
   rulesContainer: {
     borderWidth: 1,
     overflow: 'hidden',
+  },
+  benefitBox: {
+    borderWidth: 1,
+    padding: 16,
+    marginBottom: 16,
+  },
+  benefitRow: {
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+  },
+  reportLink: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    alignSelf: 'flex-start',
+    marginTop: 12,
+    paddingVertical: 4,
+  },
+  applyRow: {
+    padding: 16,
   },
   ruleRow: {
     flexDirection: 'row',

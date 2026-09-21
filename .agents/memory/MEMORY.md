@@ -1,2 +1,3 @@
-- [Opportunity data sourcing lessons](data-sourcing-lessons.md) — all-null rules only mean "no cutoff" when verified; mass recruiters publish no cutoffs, so Closed doors stays thin.
-- [Expo testing setup and UI quirks](expo-testing-and-ui-quirks.md) — jest+babel-preset-expo (not jest-expo) under pnpm, tsconfig types for jest globals, pin `now` in tests, classic Tabs header duplication.
+- [Opportunity data sourcing lessons](data-sourcing-lessons.md) — all-null rules only mean "no cutoff" when verified; mass recruiters publish no cutoffs, so company drives stay thin.
+- [Expo testing setup and UI quirks](expo-testing-and-ui-quirks.md) — jest+babel-preset-expo (not jest-expo) under pnpm, pin `now` in tests, typed routes need a dev-server restart.
+- [Remote dataset design](remote-dataset-design.md) — no-backend updates via repo JSON, newest validated copy wins, three-valued amount and fee status must stay.

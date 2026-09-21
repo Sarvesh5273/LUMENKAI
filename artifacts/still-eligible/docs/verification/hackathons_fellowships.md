@@ -66,6 +66,7 @@ Checked on 2026-09-21. Organisation-linked Unstop and Devpost registration pages
 - Class 12 cutoff: “Have passed Class 12 with a minimum of 60% marks.”
 - Student and cohort rule: “Be enrolled in the first year (academic year 2026–27) of a regular, full-time undergraduate” degree. First-year BTech in 2026-27 is translated to graduation year 2030.
 - Income rule retained in notes: “Have a household income of ₹15 lakh or less (preference will be given to applicants with a household income below ₹2.5 lakh).”
+- Amount (read 2026-09-22 at https://scholarships.reliancefoundation.org/UG_Scholarship.aspx): “Selected scholars will receive a scholarship of up to 2 lakhs over the duration of their degree programme.”
 - Stream: the program page says first-year students may be “pursuing any subject stream,” so branches are `any`.
 - Gender: the page says it aims to encourage applications by girls, not that it is women-only, so gender is `any`.
 - No Class 10, CGPA, backlog, gap-year or work-experience threshold appears in the official eligibility list.

@@ -8,6 +8,22 @@ export const HACKATHONS_FELLOWSHIPS: Opportunity[] = [
     category: 'hackathons_fellowships',
     summary:
       'A national team hackathon where college students solve problem statements from government and industry. Selected teams build their solution for the grand finale and compete for awards.',
+    benefit: {
+      kind: 'prize_money',
+      what_you_get:
+        'Cash awards for winning teams at the grand finale.',
+      amount_text: null,
+      amount_status: 'unchecked',
+      amount_source: null,
+    },
+    location: { mode: 'hybrid', place: 'Online rounds, in-person grand finale in India' },
+    apply: {
+      what_you_need: 'Nomination by your college SPOC after an internal hackathon, in a team of six with at least one woman',
+      how_they_select: 'Internal college hackathon first, then nomination by the college SPOC',
+      beginner_friendly: null,
+      application_fee: null,
+      fee_status: 'unchecked',
+    },
     official_url: 'https://www.sih.gov.in/',
     source_url: 'https://www.sih.gov.in/letters/2026/SIH%202026%20Guidelines.pdf',
     last_verified: '2026-09-21',
@@ -39,6 +55,22 @@ export const HACKATHONS_FELLOWSHIPS: Opportunity[] = [
     category: 'hackathons_fellowships',
     summary:
       'A global mobile app hackathon where entrants build and ship a new app using RevenueCat. Eligible projects compete for cash prizes across product and themed categories.',
+    benefit: {
+      kind: 'prize_money',
+      what_you_get:
+        'Cash prizes across product and themed categories for shipped apps.',
+      amount_text: null,
+      amount_status: 'unchecked',
+      amount_source: null,
+    },
+    location: { mode: 'remote', place: 'Open worldwide, some territories excluded' },
+    apply: {
+      what_you_need: 'A new app shipped to an app store using RevenueCat during the contest',
+      how_they_select: null,
+      beginner_friendly: null,
+      application_fee: null,
+      fee_status: 'unchecked',
+    },
     official_url: 'https://revenuecat-shipaton-2026.devpost.com/',
     source_url: 'https://revenuecat-shipaton-2026.devpost.com/rules',
     last_verified: '2026-09-21',
@@ -70,6 +102,22 @@ export const HACKATHONS_FELLOWSHIPS: Opportunity[] = [
     category: 'hackathons_fellowships',
     summary:
       'A global startup competition for student founders building with Microsoft technology. Teams receive competition exposure, coaching opportunities and a chance to compete for prizes.',
+    benefit: {
+      kind: 'prize_money',
+      what_you_get:
+        'Cash prizes, coaching and exposure for student startup teams.',
+      amount_text: null,
+      amount_status: 'unchecked',
+      amount_source: null,
+    },
+    location: { mode: 'remote', place: 'Online rounds, finals in person' },
+    apply: {
+      what_you_need: 'A team where every member is an enrolled student',
+      how_they_select: null,
+      beginner_friendly: null,
+      application_fee: null,
+      fee_status: 'unchecked',
+    },
     official_url: 'https://imaginecup.microsoft.com/',
     source_url: 'https://aka.ms/icrulesregs',
     last_verified: '2026-09-21',
@@ -101,6 +149,22 @@ export const HACKATHONS_FELLOWSHIPS: Opportunity[] = [
     category: 'hackathons_fellowships',
     summary:
       'A women-only fashion technology hackathon for undergraduate engineering students. Teams receive mentoring, compete for prizes and may earn pre-placement interview opportunities.',
+    benefit: {
+      kind: 'prize_money',
+      what_you_get:
+        'Prizes, mentoring and possible pre-placement interviews for women engineering students.',
+      amount_text: null,
+      amount_status: 'unchecked',
+      amount_source: null,
+    },
+    location: { mode: 'remote', place: 'Online rounds' },
+    apply: {
+      what_you_need: 'A team of two or three women undergraduate engineering students',
+      how_they_select: null,
+      beginner_friendly: null,
+      application_fee: null,
+      fee_status: 'unchecked',
+    },
     official_url:
       'https://unstop.com/hackathons/crp-myntra-hackerramp-weforshe-2025-myntra-1513857',
     source_url:
@@ -134,6 +198,22 @@ export const HACKATHONS_FELLOWSHIPS: Opportunity[] = [
     category: 'hackathons_fellowships',
     summary:
       'An individual coding challenge used to select students for summer internships at Walmart Global Tech India. Top performers can receive paid internship opportunities with development teams.',
+    benefit: {
+      kind: 'paid_role',
+      what_you_get:
+        'Top 100 performers are selected for paid summer internships at Walmart Global Tech India.',
+      amount_text: 'Internship stipend of INR 1 to 1.1 lakh per month',
+      amount_status: 'stated',
+      amount_source: 'https://unstop.com/hackathons/crp-sparkplug-summer-internship-2026-walmart-global-tech-in-india-1575885',
+    },
+    location: { mode: 'on_site', place: 'India, Walmart Global Tech offices' },
+    apply: {
+      what_you_need: null,
+      how_they_select: 'An individual online coding challenge',
+      beginner_friendly: null,
+      application_fee: null,
+      fee_status: 'unchecked',
+    },
     official_url:
       'https://unstop.com/hackathons/crp-sparkplug-summer-internship-2026-walmart-global-tech-in-india-1575885',
     source_url:
@@ -167,6 +247,22 @@ export const HACKATHONS_FELLOWSHIPS: Opportunity[] = [
     category: 'hackathons_fellowships',
     summary:
       'An individual idea competition for full-time undergraduate and postgraduate students in India. Participants develop and pitch an idea for prizes and opportunities to interact with Tata leaders.',
+    benefit: {
+      kind: 'prize_money',
+      what_you_get:
+        'Prizes for the best ideas and chances to meet Tata leaders.',
+      amount_text: null,
+      amount_status: 'unchecked',
+      amount_source: null,
+    },
+    location: { mode: 'remote', place: 'Online rounds' },
+    apply: {
+      what_you_need: null,
+      how_they_select: 'Idea submission, then pitching rounds',
+      beginner_friendly: null,
+      application_fee: null,
+      fee_status: 'unchecked',
+    },
     official_url:
       'https://unstop.com/competitions/crp-tata-imagination-challenge-2026-tata-group-1740413',
     source_url: 'https://www.tata.com/careers/programs/tata-imagination-challenge',
@@ -199,6 +295,22 @@ export const HACKATHONS_FELLOWSHIPS: Opportunity[] = [
     category: 'hackathons_fellowships',
     summary:
       'A merit-cum-means scholarship for first-year undergraduate students in India. Selected scholars receive up to INR 2 lakh over their degree and access to networking and support.',
+    benefit: {
+      kind: 'grant',
+      what_you_get:
+        'Up to INR 2 lakh over your degree, plus networking and support.',
+      amount_text: 'Up to INR 2 lakh over the degree',
+      amount_status: 'stated',
+      amount_source: 'https://scholarships.reliancefoundation.org/UG_Scholarship.aspx',
+    },
+    location: { mode: 'on_site', place: 'India, at your own college' },
+    apply: {
+      what_you_need: 'Household income of INR 15 lakh or less and first-year enrolment in a full-time degree',
+      how_they_select: 'Mandatory aptitude test, then selection on merit and means',
+      beginner_friendly: null,
+      application_fee: null,
+      fee_status: 'unchecked',
+    },
     official_url: 'https://scholarshipportal.reliancefoundation.org/',
     source_url: 'https://scholarships.reliancefoundation.org/assets/pdf/UG_FAQ.pdf',
     last_verified: '2026-09-21',

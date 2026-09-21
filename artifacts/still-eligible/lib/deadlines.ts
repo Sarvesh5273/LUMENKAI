@@ -120,8 +120,23 @@ export function formatDeadlineLong(opportunity: Opportunity, now: Date = new Dat
 }
 
 /**
+ * Days until the next anniversary of a passed deadline, counted from `now`.
+ * A cycle that closed 11 months ago is probably about to reopen; one that
+ * closed last week will not be back for almost a year.
+ */
+export function daysUntilAnniversary(date: Date, now: Date): number {
+  const today = startOfLocalDay(now);
+  let next = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+  while (next.getTime() <= today) {
+    next = new Date(next.getFullYear() + 1, next.getMonth(), next.getDate());
+  }
+  return Math.round((next.getTime() - today) / DAY_MS);
+}
+
+/**
  * Sort key for lists: soonest real deadline first, then rolling, then
- * expected-next-cycle and tbd at the end.
+ * expected-next-cycle records ordered by how soon their usual window comes
+ * round again, and tbd at the end.
  */
 export function deadlineSortValue(deadline: Opportunity['deadline'], now: Date = new Date()): number {
   const info = getDeadlineInfo(deadline, now);
@@ -131,7 +146,7 @@ export function deadlineSortValue(deadline: Opportunity['deadline'], now: Date =
     case 'rolling':
       return 100_000;
     case 'passed':
-      return 200_000 + info.daysAgo;
+      return 200_000 + daysUntilAnniversary(info.date, now);
     case 'tbd':
       return 300_000;
   }

@@ -1,5 +1,7 @@
 # Recruiter verification log
 
+Note: there is no longer a separate recruiter list in the app. The TCS NQT record now lives in `data/company_drives.ts` under the `company_drives` category with its real cutoffs, so the app shows which rule failed. This file keeps the reading notes and the list of recruiters reviewed and left out.
+
 Checked on 2026-09-21. Only official company pages were used. Only TCS NQT publishes its cutoffs on a public official page, so it is the only record kept. It stays `needs_check` because the next drive and its batch list are not announced. The graduation year rule was left empty on purpose: the 2026 drive named the 2024, 2025 and 2026 batches, and the next drive has not named its batches yet.
 
 ## tcs-nqt

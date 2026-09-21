@@ -1,4 +1,5 @@
 import {
+  daysUntilAnniversary,
   deadlineSortValue,
   formatDate,
   formatDeadlineLong,
@@ -92,9 +93,18 @@ describe('predicates and sorting', () => {
     expect(isUpcoming('rolling', NOW)).toBe(false);
   });
 
-  test('sort order: soonest first, then rolling, then passed, then tbd', () => {
-    const deadlines: Opportunity['deadline'][] = ['tbd', '2026-02-15', 'rolling', '2026-10-05', '2026-09-25'];
+  test('sort order: soonest first, then rolling, then passed by next expected window, then tbd', () => {
+    // NOW is 21 Sep 2026. 2026-02-15 comes round again in about 5 months;
+    // 2026-08-30 closed three weeks ago and is almost a year away.
+    const deadlines: Opportunity['deadline'][] = ['tbd', '2026-08-30', '2026-02-15', 'rolling', '2026-10-05', '2026-09-25'];
     const sorted = [...deadlines].sort((a, b) => deadlineSortValue(a, NOW) - deadlineSortValue(b, NOW));
-    expect(sorted).toEqual(['2026-09-25', '2026-10-05', 'rolling', '2026-02-15', 'tbd']);
+    expect(sorted).toEqual(['2026-09-25', '2026-10-05', 'rolling', '2026-02-15', '2026-08-30', 'tbd']);
+  });
+
+  test('daysUntilAnniversary counts to the next occurrence of the calendar date', () => {
+    expect(daysUntilAnniversary(new Date(2026, 8, 20), NOW)).toBe(364);
+    expect(daysUntilAnniversary(new Date(2025, 8, 22), NOW)).toBe(1);
+    // The anniversary that falls today is treated as passed; the next one is a year out.
+    expect(daysUntilAnniversary(new Date(2024, 8, 21), NOW)).toBe(365);
   });
 });

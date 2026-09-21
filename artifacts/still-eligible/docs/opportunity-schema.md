@@ -11,6 +11,21 @@ Every opportunity in StillEligible is one object in a TypeScript file under `dat
   org: 'Google Open Source',
   category: 'open_source',
   summary: 'A paid 12 week (or longer) open source contribution program with a mentor. Stipend depends on project size and your country.',
+  benefit: {
+    kind: 'stipend',
+    what_you_get: 'A stipend paid over the coding period, sized by project length and your country.',
+    amount_text: null,
+    amount_status: 'unchecked',
+    amount_source: null,
+  },
+  location: { mode: 'remote', place: 'Open worldwide' },
+  apply: {
+    what_you_need: 'A proposal written with a mentoring organisation, and ideally a small merged contribution to it.',
+    how_they_select: 'Mentoring organisations rank proposals; Google confirms the slots.',
+    beginner_friendly: true,
+    application_fee: null,
+    fee_status: 'unchecked',
+  },
   official_url: 'https://summerofcode.withgoogle.com/',
   source_url: 'https://summerofcode.withgoogle.com/rules',
   last_verified: '2026-09-21',
@@ -45,6 +60,9 @@ Every opportunity in StillEligible is one object in a TypeScript file under `dat
 | `org` | string | Who runs it. |
 | `category` | one of the six codes below | Which home screen section it belongs in. |
 | `summary` | string | One or two plain sentences: what it is and what you get. No marketing language. |
+| `benefit` | object | The money. See [Benefit](#benefit). |
+| `location` | object | Where you would be. See [Location](#location). |
+| `apply` | object | What it takes to apply. See [Apply-ready](#apply-ready). |
 | `official_url` | https URL | Where the student applies. |
 | `source_url` | https URL | The exact page where you read the eligibility criteria. Often the same as `official_url`. Prefer a rules or FAQ page over a landing page. |
 | `last_verified` | `YYYY-MM-DD` | The date a human last read `source_url`. Update it every time you re-check. |
@@ -58,23 +76,45 @@ Every opportunity in StillEligible is one object in a TypeScript file under `dat
 
 ## Categories
 
-The five categories shown on the home screen:
+The six categories, in the order the home screen shows them:
 
-| Code | Label |
-| --- | --- |
-| `criteria_free_drives` | Criteria-free drives |
-| `open_source` | Open source programs |
-| `funded_internships` | Funded internships and research |
-| `abroad_scholarships` | Abroad scholarships |
-| `hackathons_fellowships` | Hackathons and fellowships |
+| Code | Label | What belongs here |
+| --- | --- | --- |
+| `hackathons_fellowships` | Hackathons and fellowships | Prize money or a fellowship stipend; no marks needed to enter. |
+| `open_source` | Open source programs | Paid contribution programs and the unpaid stepping stones that lead to them. |
+| `funded_internships` | Funded internships and research | Stipend or costs covered; India and abroad. |
+| `scholarships` | Scholarships | Merit or need based, student-facing, from a foundation, university or company. No government portals. |
+| `startup_programs` | Startup programs | Grants, fellowships and incubators that put money behind a student founder. Credit-only offers are out. |
+| `company_drives` | Company drives | Off-campus hiring where the company publishes its criteria on an official page. |
 
-One extra category that never appears on the home screen:
+There is no separate recruiter list. A mass recruiter that publishes its cutoffs (today, TCS NQT) is a `company_drives` record with real rules; the app shows the student which rule failed. Recruiters whose cutoffs only reach colleges through placement cells are left out on purpose; see `docs/verification/recruiters.md`.
 
-| Code | Label |
-| --- | --- |
-| `mass_recruiter` | Mass recruiter criteria |
+## Benefit
 
-Recruiter records exist only so the "Closed doors" tab can tell a student exactly which cutoff shut them out and by how much. They live in `data/recruiters.ts`.
+| Field | Type | What it means |
+| --- | --- | --- |
+| `kind` | `stipend`, `prize_money`, `funded_study`, `grant`, `paid_role`, `costs_covered`, `unpaid` | The shape of the money. `unpaid` is allowed only for stepping stones that lead somewhere paid, and the app labels them Unpaid. |
+| `what_you_get` | string, 10 to 240 chars | One plain sentence in the student's terms: "A stipend paid over 12 weeks", "Tuition, a monthly allowance and one flight". |
+| `amount_text` | string or null | The amount exactly as the official page states it, with the currency: `'USD 7,000'`, `'INR 1 to 1.1 lakh per month'`, `'Up to EUR 700 per month'`. Required when `amount_status` is `stated`, must be null otherwise. |
+| `amount_status` | `stated`, `not_stated`, `unchecked` | `stated`: the page names a figure and it is in `amount_text`. `not_stated`: a human read the page and it gives no figure. `unchecked`: nobody has looked for a figure yet. Never write `not_stated` without reading the page; the app words the two differently. |
+| `amount_source` | https URL or null | The page the amount was read on. Required when `amount_status` is `stated`, null otherwise. Copy the sentence into `docs/verification/<category>.md` as well. |
+
+## Location
+
+| Field | Type | What it means |
+| --- | --- | --- |
+| `mode` | `remote`, `on_site`, `hybrid` | `remote` powers the "Remote only" filter, so use it only when the whole program can be done from home. |
+| `place` | string or null | Where, in a few words: `'Open worldwide'`, `'Bengaluru'`, `'Online rounds, finals in person'`. Required for `on_site` and `hybrid`. |
+
+## Apply-ready
+
+| Field | Type | What it means |
+| --- | --- | --- |
+| `what_you_need` | string or null | What to have ready before starting: a proposal, a resume, a team, a GitHub profile. Null means not recorded yet; the app says so and sends the student to the official page. |
+| `how_they_select` | string or null | The selection route in one sentence: coding test then interviews, proposal review, jury. Null means not recorded yet. |
+| `beginner_friendly` | boolean or null | `true` only when the official page says beginners or first-time contributors are welcome. `false` when it asks for prior experience. Null when the page does not say. The app shows a tag only for `true`. |
+| `application_fee` | string or null | The fee as the page states it, e.g. `'INR 500 registration fee'`. Required when `fee_status` is `paid`, null otherwise. |
+| `fee_status` | `free`, `paid`, `unchecked` | `free` only when the page says there is no fee or you went through the application flow and found none; the app then prints "Free to apply. Never pay anyone to get you in." `paid` quotes `application_fee`. `unchecked` means nobody has looked, and the app says the fee is not recorded. Never write `free` without checking. |
 
 ## Rules
 

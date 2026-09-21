@@ -26,6 +26,7 @@ function RootLayoutNav() {
       <Stack.Screen name="(tabs)" />
       <Stack.Screen name="onboarding" options={{ presentation: 'modal' }} />
       <Stack.Screen name="opportunity/[id]" options={{ presentation: 'card' }} />
+      <Stack.Screen name="path-from-zero" options={{ presentation: 'card' }} />
     </Stack>
   );
 }

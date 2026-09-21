@@ -1,13 +1,29 @@
 import { Opportunity } from '../lib/types';
 
-export const ABROAD_SCHOLARSHIPS: Opportunity[] = [
+export const SCHOLARSHIPS: Opportunity[] = [
   {
     id: 'mext-undergraduate',
     title: 'MEXT Undergraduate Scholarship',
     org: 'Ministry of Education, Culture, Sports, Science and Technology, Japan',
-    category: 'abroad_scholarships',
+    category: 'scholarships',
     summary:
       'A Japanese Government scholarship for an undergraduate degree in Japan. It covers tuition, provides a monthly allowance and includes travel support under the scholarship guidelines.',
+    benefit: {
+      kind: 'funded_study',
+      what_you_get:
+        'Tuition covered, a monthly allowance and travel support for an undergraduate degree in Japan.',
+      amount_text: null,
+      amount_status: 'unchecked',
+      amount_source: null,
+    },
+    location: { mode: 'on_site', place: 'Japan' },
+    apply: {
+      what_you_need: null,
+      how_they_select: null,
+      beginner_friendly: null,
+      application_fee: null,
+      fee_status: 'unchecked',
+    },
     official_url: 'https://www.in.emb-japan.go.jp/education/Undergraduate_Student.html',
     source_url: 'https://www.in.emb-japan.go.jp/education/Undergraduate_Student.html',
     last_verified: '2026-09-21',
@@ -36,9 +52,25 @@ export const ABROAD_SCHOLARSHIPS: Opportunity[] = [
     id: 'chevening',
     title: 'Chevening Scholarship',
     org: 'UK Government',
-    category: 'abroad_scholarships',
+    category: 'scholarships',
     summary:
       'A scholarship for a one-year taught master’s degree at a UK university. It funds study and connects scholars with the Chevening network.',
+    benefit: {
+      kind: 'funded_study',
+      what_you_get:
+        'A funded one-year taught masters at a UK university.',
+      amount_text: null,
+      amount_status: 'unchecked',
+      amount_source: null,
+    },
+    location: { mode: 'on_site', place: 'United Kingdom' },
+    apply: {
+      what_you_need: 'At least 2,800 hours of work experience after your degree, over two years or more',
+      how_they_select: null,
+      beginner_friendly: null,
+      application_fee: null,
+      fee_status: 'unchecked',
+    },
     official_url: 'https://www.chevening.org/scholarship/india/',
     source_url: 'https://www.chevening.org/resource-hub/guidance/eligibility/',
     last_verified: '2026-09-21',
@@ -67,9 +99,25 @@ export const ABROAD_SCHOLARSHIPS: Opportunity[] = [
     id: 'fulbright-nehru-masters',
     title: 'Fulbright-Nehru Master’s Fellowships',
     org: 'United States-India Educational Foundation',
-    category: 'abroad_scholarships',
+    category: 'scholarships',
     summary:
       'A fellowship for selected master’s programmes in the United States for Indian professionals. It provides tuition and fee funding, living support, travel, visa support and health coverage for up to two years.',
+    benefit: {
+      kind: 'funded_study',
+      what_you_get:
+        'Tuition and fees, living support, travel, visa support and health coverage for up to two years.',
+      amount_text: null,
+      amount_status: 'unchecked',
+      amount_source: null,
+    },
+    location: { mode: 'on_site', place: 'United States' },
+    apply: {
+      what_you_need: 'Three years of relevant full-time paid work experience by the deadline',
+      how_they_select: null,
+      beginner_friendly: null,
+      application_fee: null,
+      fee_status: 'unchecked',
+    },
     official_url: 'https://www.usief.org.in/fulbright-fellowships/fellowships-for-indian-citizen/fulbright-nehru-masters-fellowships',
     source_url: 'https://www.usief.org.in/fulbright-fellowships/fellowships-for-indian-citizen/fulbright-nehru-masters-fellowships',
     last_verified: '2026-09-21',
@@ -98,9 +146,25 @@ export const ABROAD_SCHOLARSHIPS: Opportunity[] = [
     id: 'rhodes-scholarship-india',
     title: 'Rhodes Scholarship for India',
     org: 'Rhodes Trust',
-    category: 'abroad_scholarships',
+    category: 'scholarships',
     summary:
       'A scholarship for full-time postgraduate study at the University of Oxford. Five scholarships are available for the India constituency.',
+    benefit: {
+      kind: 'funded_study',
+      what_you_get:
+        'Full funding for postgraduate study at the University of Oxford.',
+      amount_text: null,
+      amount_status: 'unchecked',
+      amount_source: null,
+    },
+    location: { mode: 'on_site', place: 'Oxford, United Kingdom' },
+    apply: {
+      what_you_need: null,
+      how_they_select: null,
+      beginner_friendly: null,
+      application_fee: null,
+      fee_status: 'unchecked',
+    },
     official_url: 'https://www.rhodeshouse.ox.ac.uk/scholarships/applications/india',
     source_url: 'https://www.rhodeshouse.ox.ac.uk/scholarships/applications/india/eligibilitycriteria',
     last_verified: '2026-09-21',
@@ -129,9 +193,25 @@ export const ABROAD_SCHOLARSHIPS: Opportunity[] = [
     id: 'inlaks-scholarship',
     title: 'Inlaks Scholarship',
     org: 'Inlaks Shivdasani Foundation',
-    category: 'abroad_scholarships',
+    category: 'scholarships',
     summary:
       'A scholarship for Indian graduates pursuing selected programmes abroad. It contributes up to USD 120,000 toward programme expenses.',
+    benefit: {
+      kind: 'funded_study',
+      what_you_get:
+        'A contribution of up to USD 120,000 toward programme expenses abroad.',
+      amount_text: 'Up to USD 120,000',
+      amount_status: 'stated',
+      amount_source: 'https://inlaksfoundation.org/opportunities/scholarship/',
+    },
+    location: { mode: 'on_site', place: 'Selected universities abroad' },
+    apply: {
+      what_you_need: 'An admission offer from the chosen programme, an Indian passport and residence in India',
+      how_they_select: null,
+      beginner_friendly: null,
+      application_fee: null,
+      fee_status: 'unchecked',
+    },
     official_url: 'https://onlineapplication.inlaksfoundation.org/',
     source_url: 'https://inlaksfoundation.org/opportunities/scholarship/',
     last_verified: '2026-09-21',
@@ -160,9 +240,25 @@ export const ABROAD_SCHOLARSHIPS: Opportunity[] = [
     id: 'erasmus-mundus-joint-masters',
     title: 'Erasmus Mundus Joint Masters',
     org: 'European Union',
-    category: 'abroad_scholarships',
+    category: 'scholarships',
     summary:
       'Joint master’s programmes delivered by groups of universities in Europe and beyond. The best-ranked applicants may receive scholarships covering participation costs with contributions toward travel, visa and living costs.',
+    benefit: {
+      kind: 'funded_study',
+      what_you_get:
+        'Scholarships covering participation costs with contributions toward travel, visa and living costs, for the best-ranked applicants.',
+      amount_text: null,
+      amount_status: 'unchecked',
+      amount_source: null,
+    },
+    location: { mode: 'on_site', place: 'Europe, two or more countries' },
+    apply: {
+      what_you_need: null,
+      how_they_select: null,
+      beginner_friendly: null,
+      application_fee: null,
+      fee_status: 'unchecked',
+    },
     official_url: 'https://erasmus-plus.ec.europa.eu/opportunities/individuals/students/erasmus-mundus-joint-masters',
     source_url: 'https://erasmus-plus.ec.europa.eu/opportunities/individuals/students/erasmus-mundus-joint-masters',
     last_verified: '2026-09-21',
@@ -191,14 +287,31 @@ export const ABROAD_SCHOLARSHIPS: Opportunity[] = [
     id: 'kaust-fellowship',
     title: 'KAUST Fellowship',
     org: 'King Abdullah University of Science and Technology',
-    category: 'abroad_scholarships',
+    category: 'scholarships',
     summary:
       'Funding provided to admitted graduate students at KAUST in Saudi Arabia. It supports students for the duration of their graduate study and includes tuition, living and medical benefits.',
+    benefit: {
+      kind: 'funded_study',
+      what_you_get:
+        'Tuition, living and medical benefits for the whole graduate programme at KAUST.',
+      amount_text: null,
+      amount_status: 'unchecked',
+      amount_source: null,
+    },
+    location: { mode: 'on_site', place: 'Thuwal, Saudi Arabia' },
+    apply: {
+      what_you_need: 'Admission to a KAUST graduate programme',
+      how_they_select: null,
+      beginner_friendly: null,
+      application_fee: null,
+      fee_status: 'unchecked',
+    },
     official_url: 'https://admissions.kaust.edu.sa/how-to-apply',
     source_url: 'https://admissions.kaust.edu.sa/how-to-apply/entry-requirements',
-    last_verified: '2026-09-21',
-    deadline: '2026-09-27',
-    typical_window: null,
+    last_verified: '2026-09-22',
+    deadline: '2027-01-03',
+    typical_window:
+      'Two rounds a year. A round closing in late September is for spring entry and PhD applicants only; the round for fall entry (MS and PhD) opens in late September and closes in early January.',
     rules: {
       min_tenth_pct: null,
       min_twelfth_pct: null,
@@ -215,16 +328,32 @@ export const ABROAD_SCHOLARSHIPS: Opportunity[] = [
     verification_status: 'needs_check',
     tags: ['graduate study', 'Saudi Arabia', 'STEM'],
     notes:
-      'Master’s applicants need a bachelor’s degree in a subject relevant to the programme. The minimum GPA is stated as 3.0 on a 4-point scale or equivalent, so it is not converted to min_cgpa. The stored deadline is Spring 2027 Round 1; Round 2 closes 3 January 2027. Confirm the appropriate intake and programme before applying.',
+      'Master’s applicants need a bachelor’s degree in a subject relevant to the programme. The minimum GPA is stated as 3.0 on a 4-point scale or equivalent, so it is not converted to min_cgpa. The stored deadline is Fall 2027 Round 2 (MS, MS/PhD and PhD), which the timeline page calls tentative. The 27 September 2026 round is Spring 2027 entry for PhD applicants only. Confirm the intake and programme before applying.',
     alternative_ids: ['erasmus-mundus-joint-masters', 'stipendium-hungaricum'],
   },
   {
     id: 'stipendium-hungaricum',
     title: 'Stipendium Hungaricum',
     org: 'Tempus Public Foundation',
-    category: 'abroad_scholarships',
+    category: 'scholarships',
     summary:
       'A Hungarian Government scholarship for eligible bachelor’s, master’s and other study programmes in Hungary. It provides tuition-free study, a stipend, accommodation support and medical insurance under the call.',
+    benefit: {
+      kind: 'funded_study',
+      what_you_get:
+        'Tuition-free study, a stipend, accommodation support and medical insurance under the call.',
+      amount_text: null,
+      amount_status: 'unchecked',
+      amount_source: null,
+    },
+    location: { mode: 'on_site', place: 'Hungary' },
+    apply: {
+      what_you_need: null,
+      how_they_select: null,
+      beginner_friendly: null,
+      application_fee: null,
+      fee_status: 'unchecked',
+    },
     official_url: 'https://apply.stipendiumhungaricum.hu/',
     source_url: 'https://stipendiumhungaricum.hu/apply/',
     last_verified: '2026-09-21',

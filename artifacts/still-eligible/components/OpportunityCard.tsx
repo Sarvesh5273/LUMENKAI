@@ -8,16 +8,20 @@ import { useRouter } from "expo-router";
 import * as Haptics from "expo-haptics";
 import { formatDeadlineShort } from "@/lib/deadlines";
 import { hasNoMarksCutoff, summarizeStatus } from "@/lib/engine";
+import { formatBenefitShort, formatLocation } from "@/lib/format";
 
 interface OpportunityCardProps {
   opportunity: Opportunity;
   eligibility: EligibilityResult;
+  /** Added to the dataset since the student's last visit. */
+  isNew?: boolean;
   onPress?: () => void;
 }
 
 export function OpportunityCard({
   opportunity,
   eligibility,
+  isNew = false,
   onPress,
 }: OpportunityCardProps) {
   const colors = useColors();
@@ -60,6 +64,8 @@ export function OpportunityCard({
   // Only a verified record may wear the badge; an unconfirmed record with
   // empty rules is a gap in our data, not a promise from the program.
   const noCutoffs = opportunity.verification_status === 'verified' && hasNoMarksCutoff(opportunity.rules);
+  const moneyText = formatBenefitShort(opportunity.benefit);
+  const locationText = formatLocation(opportunity.location);
 
   return (
     <TouchableOpacity
@@ -74,7 +80,7 @@ export function OpportunityCard({
         },
       ]}
       accessibilityRole="button"
-      accessibilityLabel={`Opportunity: ${opportunity.title} at ${opportunity.org}. Status: ${summary.headline}`}
+      accessibilityLabel={`Opportunity: ${opportunity.title} at ${opportunity.org}. ${moneyText}. ${locationText}. Status: ${summary.headline}`}
       testID={`opp-card-${opportunity.id}`}
     >
       <View style={styles.header}>
@@ -85,6 +91,11 @@ export function OpportunityCard({
           >
             {opportunity.org}
           </Text>
+          {isNew && (
+            <View style={[styles.badge, { backgroundColor: colors.accent, marginRight: 6 }]} testID={`opp-new-${opportunity.id}`}>
+              <Text style={[typography.caption, { color: colors.accentForeground, fontSize: 10 }]}>New</Text>
+            </View>
+          )}
           {noCutoffs && (
             <View style={[styles.badge, { backgroundColor: colors.secondary }]}>
               <Text
@@ -107,6 +118,21 @@ export function OpportunityCard({
         >
           {opportunity.title}
         </Text>
+
+        <View style={styles.metaRow}>
+          <View style={styles.metaItem}>
+            <Feather name="award" size={14} color={colors.foreground} />
+            <Text style={[typography.label, { color: colors.cardForeground, marginLeft: 6, flexShrink: 1 }]} numberOfLines={1}>
+              {moneyText}
+            </Text>
+          </View>
+          <View style={styles.metaItem}>
+            <Feather name="map-pin" size={14} color={colors.mutedForeground} />
+            <Text style={[typography.bodySmall, { color: colors.mutedForeground, marginLeft: 6, flexShrink: 1 }]} numberOfLines={1}>
+              {locationText}
+            </Text>
+          </View>
+        </View>
 
         <View style={styles.tagsRow}>
           {opportunity.tags.slice(0, 3).map((tag) => (
@@ -170,6 +196,14 @@ const styles = StyleSheet.create({
     paddingHorizontal: 6,
     paddingVertical: 2,
     borderRadius: 4,
+  },
+  metaRow: {
+    marginBottom: 10,
+    gap: 4,
+  },
+  metaItem: {
+    flexDirection: "row",
+    alignItems: "center",
   },
   tagsRow: {
     flexDirection: "row",

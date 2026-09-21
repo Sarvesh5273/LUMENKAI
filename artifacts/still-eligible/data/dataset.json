@@ -1,0 +1,2106 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-21T21:01:54.302Z",
+  "records": [
+    {
+      "id": "smart-india-hackathon",
+      "title": "Smart India Hackathon",
+      "org": "Ministry of Education Innovation Cell and AICTE",
+      "category": "hackathons_fellowships",
+      "summary": "A national team hackathon where college students solve problem statements from government and industry. Selected teams build their solution for the grand finale and compete for awards.",
+      "benefit": {
+        "kind": "prize_money",
+        "what_you_get": "Cash awards for winning teams at the grand finale.",
+        "amount_text": null,
+        "amount_status": "unchecked",
+        "amount_source": null
+      },
+      "location": {
+        "mode": "hybrid",
+        "place": "Online rounds, in-person grand finale in India"
+      },
+      "apply": {
+        "what_you_need": "Nomination by your college SPOC after an internal hackathon, in a team of six with at least one woman",
+        "how_they_select": "Internal college hackathon first, then nomination by the college SPOC",
+        "beginner_friendly": null,
+        "application_fee": null,
+        "fee_status": "unchecked"
+      },
+      "official_url": "https://www.sih.gov.in/",
+      "source_url": "https://www.sih.gov.in/letters/2026/SIH%202026%20Guidelines.pdf",
+      "last_verified": "2026-09-21",
+      "deadline": "2026-09-30",
+      "typical_window": null,
+      "rules": {
+        "min_tenth_pct": null,
+        "min_twelfth_pct": null,
+        "min_cgpa": null,
+        "max_active_backlogs": null,
+        "max_gap_years": null,
+        "grad_years": null,
+        "citizenship": "any",
+        "gender": "any",
+        "requires_student": true,
+        "branches": "any",
+        "min_work_years": null
+      },
+      "verification_status": "verified",
+      "tags": [
+        "hackathon",
+        "team",
+        "innovation"
+      ],
+      "notes": "Students cannot register directly. A college SPOC nominates teams selected through the internal hackathon. Teams have six members from the same college and must include at least one female member.",
+      "alternative_ids": [
+        "tata-imagination-challenge",
+        "myntra-hackerramp-weforshe"
+      ]
+    },
+    {
+      "id": "revenuecat-shipaton",
+      "title": "RevenueCat Shipaton",
+      "org": "RevenueCat",
+      "category": "hackathons_fellowships",
+      "summary": "A global mobile app hackathon where entrants build and ship a new app using RevenueCat. Eligible projects compete for cash prizes across product and themed categories.",
+      "benefit": {
+        "kind": "prize_money",
+        "what_you_get": "Cash prizes across product and themed categories for shipped apps.",
+        "amount_text": null,
+        "amount_status": "unchecked",
+        "amount_source": null
+      },
+      "location": {
+        "mode": "remote",
+        "place": "Open worldwide, some territories excluded"
+      },
+      "apply": {
+        "what_you_need": "A new app shipped to an app store using RevenueCat during the contest",
+        "how_they_select": null,
+        "beginner_friendly": null,
+        "application_fee": null,
+        "fee_status": "unchecked"
+      },
+      "official_url": "https://revenuecat-shipaton-2026.devpost.com/",
+      "source_url": "https://revenuecat-shipaton-2026.devpost.com/rules",
+      "last_verified": "2026-09-21",
+      "deadline": "2026-09-30",
+      "typical_window": null,
+      "rules": {
+        "min_tenth_pct": null,
+        "min_twelfth_pct": null,
+        "min_cgpa": null,
+        "max_active_backlogs": null,
+        "max_gap_years": null,
+        "grad_years": null,
+        "citizenship": "any",
+        "gender": "any",
+        "requires_student": false,
+        "branches": "any",
+        "min_work_years": null
+      },
+      "verification_status": "verified",
+      "tags": [
+        "mobile apps",
+        "global",
+        "prizes"
+      ],
+      "notes": "The main competition is for people who have reached the age of majority where they live. Entrants aged 13 or older may enter only the Next Gen Award with parental or guardian consent. Residents of sanctioned or locally prohibited territories are excluded.",
+      "alternative_ids": [
+        "smart-india-hackathon",
+        "tata-imagination-challenge"
+      ]
+    },
+    {
+      "id": "microsoft-imagine-cup",
+      "title": "Microsoft Imagine Cup",
+      "org": "Microsoft",
+      "category": "hackathons_fellowships",
+      "summary": "A global startup competition for student founders building with Microsoft technology. Teams receive competition exposure, coaching opportunities and a chance to compete for prizes.",
+      "benefit": {
+        "kind": "prize_money",
+        "what_you_get": "Cash prizes, coaching and exposure for student startup teams.",
+        "amount_text": null,
+        "amount_status": "unchecked",
+        "amount_source": null
+      },
+      "location": {
+        "mode": "remote",
+        "place": "Online rounds, finals in person"
+      },
+      "apply": {
+        "what_you_need": "A team where every member is an enrolled student",
+        "how_they_select": null,
+        "beginner_friendly": null,
+        "application_fee": null,
+        "fee_status": "unchecked"
+      },
+      "official_url": "https://imaginecup.microsoft.com/",
+      "source_url": "https://aka.ms/icrulesregs",
+      "last_verified": "2026-09-21",
+      "deadline": "2026-01-09",
+      "typical_window": "The season usually opens around September and MVP submissions close in early January",
+      "rules": {
+        "min_tenth_pct": null,
+        "min_twelfth_pct": null,
+        "min_cgpa": null,
+        "max_active_backlogs": null,
+        "max_gap_years": null,
+        "grad_years": null,
+        "citizenship": "any",
+        "gender": "any",
+        "requires_student": true,
+        "branches": "any",
+        "min_work_years": null
+      },
+      "verification_status": "verified",
+      "tags": [
+        "startup",
+        "students",
+        "global"
+      ],
+      "notes": "Entrants must be at least 18 as of 30 September 2025. Every team member must have been enrolled at an accredited degree-granting institution during the stated competition period. Sanctioned countries and regions listed in the rules are excluded.",
+      "alternative_ids": [
+        "tata-imagination-challenge",
+        "revenuecat-shipaton"
+      ]
+    },
+    {
+      "id": "myntra-hackerramp-weforshe",
+      "title": "Myntra HackerRamp WeForShe",
+      "org": "Myntra",
+      "category": "hackathons_fellowships",
+      "summary": "A women-only fashion technology hackathon for undergraduate engineering students. Teams receive mentoring, compete for prizes and may earn pre-placement interview opportunities.",
+      "benefit": {
+        "kind": "prize_money",
+        "what_you_get": "Prizes, mentoring and possible pre-placement interviews for women engineering students.",
+        "amount_text": null,
+        "amount_status": "unchecked",
+        "amount_source": null
+      },
+      "location": {
+        "mode": "remote",
+        "place": "Online rounds"
+      },
+      "apply": {
+        "what_you_need": "A team of two or three women undergraduate engineering students",
+        "how_they_select": null,
+        "beginner_friendly": null,
+        "application_fee": null,
+        "fee_status": "unchecked"
+      },
+      "official_url": "https://unstop.com/hackathons/crp-myntra-hackerramp-weforshe-2025-myntra-1513857",
+      "source_url": "https://unstop.com/hackathons/crp-myntra-hackerramp-weforshe-2025-myntra-1513857",
+      "last_verified": "2026-09-21",
+      "deadline": "2025-09-03",
+      "typical_window": "Registration has recently closed in late August or early September",
+      "rules": {
+        "min_tenth_pct": null,
+        "min_twelfth_pct": null,
+        "min_cgpa": null,
+        "max_active_backlogs": null,
+        "max_gap_years": null,
+        "grad_years": null,
+        "citizenship": "any",
+        "gender": "women",
+        "requires_student": true,
+        "branches": "any",
+        "min_work_years": null
+      },
+      "verification_status": "verified",
+      "tags": [
+        "women",
+        "hackathon",
+        "fashion tech"
+      ],
+      "notes": "The latest official registration page found is the 2025 cycle. It lists undergraduate engineering students, female gender and teams of two to three, but does not name graduation years.",
+      "alternative_ids": [
+        "smart-india-hackathon",
+        "walmart-sparkplug"
+      ]
+    },
+    {
+      "id": "walmart-sparkplug",
+      "title": "Walmart Sparkplug",
+      "org": "Walmart Global Tech India",
+      "category": "hackathons_fellowships",
+      "summary": "An individual coding challenge used to select students for summer internships at Walmart Global Tech India. Top performers can receive paid internship opportunities with development teams.",
+      "benefit": {
+        "kind": "paid_role",
+        "what_you_get": "Top 100 performers are selected for paid summer internships at Walmart Global Tech India.",
+        "amount_text": "Internship stipend of INR 1 to 1.1 lakh per month",
+        "amount_status": "stated",
+        "amount_source": "https://unstop.com/hackathons/crp-sparkplug-summer-internship-2026-walmart-global-tech-in-india-1575885"
+      },
+      "location": {
+        "mode": "on_site",
+        "place": "India, Walmart Global Tech offices"
+      },
+      "apply": {
+        "what_you_need": null,
+        "how_they_select": "An individual online coding challenge",
+        "beginner_friendly": null,
+        "application_fee": null,
+        "fee_status": "unchecked"
+      },
+      "official_url": "https://unstop.com/hackathons/crp-sparkplug-summer-internship-2026-walmart-global-tech-in-india-1575885",
+      "source_url": "https://unstop.com/hackathons/crp-sparkplug-summer-internship-2026-walmart-global-tech-in-india-1575885",
+      "last_verified": "2026-09-21",
+      "deadline": "2025-11-16",
+      "typical_window": "Registration for the summer internship challenge usually closes in October or November",
+      "rules": {
+        "min_tenth_pct": null,
+        "min_twelfth_pct": null,
+        "min_cgpa": null,
+        "max_active_backlogs": null,
+        "max_gap_years": null,
+        "grad_years": null,
+        "citizenship": "any",
+        "gender": "any",
+        "requires_student": true,
+        "branches": "any",
+        "min_work_years": null
+      },
+      "verification_status": "needs_check",
+      "tags": [
+        "coding",
+        "internship",
+        "students"
+      ],
+      "notes": "The official registration page labels eligibility as engineering students from eligible institutes but does not expose the institute list or detailed cohort rules in the fetched text. Check the next cycle for institute, degree, graduation-year and any academic-cutoff requirements.",
+      "alternative_ids": [
+        "myntra-hackerramp-weforshe",
+        "smart-india-hackathon"
+      ]
+    },
+    {
+      "id": "tata-imagination-challenge",
+      "title": "Tata Imagination Challenge",
+      "org": "Tata Group",
+      "category": "hackathons_fellowships",
+      "summary": "An individual idea competition for full-time undergraduate and postgraduate students in India. Participants develop and pitch an idea for prizes and opportunities to interact with Tata leaders.",
+      "benefit": {
+        "kind": "prize_money",
+        "what_you_get": "Prizes for the best ideas and chances to meet Tata leaders.",
+        "amount_text": null,
+        "amount_status": "unchecked",
+        "amount_source": null
+      },
+      "location": {
+        "mode": "remote",
+        "place": "Online rounds"
+      },
+      "apply": {
+        "what_you_need": null,
+        "how_they_select": "Idea submission, then pitching rounds",
+        "beginner_friendly": null,
+        "application_fee": null,
+        "fee_status": "unchecked"
+      },
+      "official_url": "https://unstop.com/competitions/crp-tata-imagination-challenge-2026-tata-group-1740413",
+      "source_url": "https://www.tata.com/careers/programs/tata-imagination-challenge",
+      "last_verified": "2026-09-21",
+      "deadline": "2026-09-17",
+      "typical_window": "Registration usually opens in August and closes in September",
+      "rules": {
+        "min_tenth_pct": null,
+        "min_twelfth_pct": null,
+        "min_cgpa": null,
+        "max_active_backlogs": null,
+        "max_gap_years": null,
+        "grad_years": null,
+        "citizenship": "any",
+        "gender": "any",
+        "requires_student": true,
+        "branches": "any",
+        "min_work_years": null
+      },
+      "verification_status": "verified",
+      "tags": [
+        "ideas",
+        "students",
+        "prizes"
+      ],
+      "notes": "Applicants must be full-time college students in a regular undergraduate or postgraduate course in India. The official page does not restrict the academic stream.",
+      "alternative_ids": [
+        "microsoft-imagine-cup",
+        "smart-india-hackathon"
+      ]
+    },
+    {
+      "id": "reliance-foundation-undergraduate-scholarship",
+      "title": "Reliance Foundation Undergraduate Scholarship",
+      "org": "Reliance Foundation",
+      "category": "hackathons_fellowships",
+      "summary": "A merit-cum-means scholarship for first-year undergraduate students in India. Selected scholars receive up to INR 2 lakh over their degree and access to networking and support.",
+      "benefit": {
+        "kind": "grant",
+        "what_you_get": "Up to INR 2 lakh over your degree, plus networking and support.",
+        "amount_text": "Up to INR 2 lakh over the degree",
+        "amount_status": "stated",
+        "amount_source": "https://scholarships.reliancefoundation.org/UG_Scholarship.aspx"
+      },
+      "location": {
+        "mode": "on_site",
+        "place": "India, at your own college"
+      },
+      "apply": {
+        "what_you_need": "Household income of INR 15 lakh or less and first-year enrolment in a full-time degree",
+        "how_they_select": "Mandatory aptitude test, then selection on merit and means",
+        "beginner_friendly": null,
+        "application_fee": null,
+        "fee_status": "unchecked"
+      },
+      "official_url": "https://scholarshipportal.reliancefoundation.org/",
+      "source_url": "https://scholarships.reliancefoundation.org/assets/pdf/UG_FAQ.pdf",
+      "last_verified": "2026-09-21",
+      "deadline": "2026-10-05",
+      "typical_window": null,
+      "rules": {
+        "min_tenth_pct": null,
+        "min_twelfth_pct": 60,
+        "min_cgpa": null,
+        "max_active_backlogs": null,
+        "max_gap_years": null,
+        "grad_years": [
+          2030
+        ],
+        "citizenship": [
+          "IN"
+        ],
+        "gender": "any",
+        "requires_student": true,
+        "branches": "any",
+        "min_work_years": null
+      },
+      "verification_status": "verified",
+      "tags": [
+        "scholarship",
+        "first year",
+        "financial aid"
+      ],
+      "notes": "Household income must be INR 15 lakh or less, with preference for applicants below INR 2.5 lakh. Applicants must be in the first year of a regular full-time undergraduate degree in academic year 2026-27, and an aptitude test is mandatory.",
+      "alternative_ids": [
+        "tata-imagination-challenge",
+        "microsoft-imagine-cup"
+      ]
+    },
+    {
+      "id": "gsoc",
+      "title": "Google Summer of Code",
+      "org": "Google",
+      "category": "open_source",
+      "summary": "A global program for students and beginner open source contributors to build a project with a mentoring organization. Accepted contributors receive mentorship and a stipend.",
+      "benefit": {
+        "kind": "stipend",
+        "what_you_get": "A stipend paid over the coding period, sized by project length and your country.",
+        "amount_text": null,
+        "amount_status": "unchecked",
+        "amount_source": null
+      },
+      "location": {
+        "mode": "remote",
+        "place": "Open worldwide"
+      },
+      "apply": {
+        "what_you_need": null,
+        "how_they_select": null,
+        "beginner_friendly": true,
+        "application_fee": null,
+        "fee_status": "unchecked"
+      },
+      "official_url": "https://summerofcode.withgoogle.com/programs/2026",
+      "source_url": "https://summerofcode.withgoogle.com/rules",
+      "last_verified": "2026-09-21",
+      "deadline": "2026-03-31",
+      "typical_window": "Contributor proposals usually open in March and close near the end of March",
+      "rules": {
+        "min_tenth_pct": null,
+        "min_twelfth_pct": null,
+        "min_cgpa": null,
+        "max_active_backlogs": null,
+        "max_gap_years": null,
+        "grad_years": null,
+        "citizenship": "any",
+        "gender": "any",
+        "requires_student": false,
+        "branches": "any",
+        "min_work_years": null
+      },
+      "verification_status": "verified",
+      "tags": [
+        "mentorship",
+        "stipend",
+        "coding"
+      ],
+      "notes": "Applicants must be at least 18, be eligible to work in their country of residence, and be a student or a beginner to open source. Residents of embargoed countries and some prior participants are excluded.",
+      "alternative_ids": [
+        "lfx-mentorship",
+        "season-of-kde",
+        "summer-of-bitcoin"
+      ]
+    },
+    {
+      "id": "lfx-mentorship",
+      "title": "LFX Mentorship",
+      "org": "Linux Foundation",
+      "category": "open_source",
+      "summary": "A set of mentored open source projects offered by Linux Foundation communities. Mentees work with project mentors, and eligible projects may include a stipend.",
+      "benefit": {
+        "kind": "stipend",
+        "what_you_get": "A mentored project; many projects pay a stipend that is set per project.",
+        "amount_text": null,
+        "amount_status": "unchecked",
+        "amount_source": null
+      },
+      "location": {
+        "mode": "remote",
+        "place": "Open worldwide"
+      },
+      "apply": {
+        "what_you_need": null,
+        "how_they_select": null,
+        "beginner_friendly": null,
+        "application_fee": null,
+        "fee_status": "unchecked"
+      },
+      "official_url": "https://mentorship.lfx.linuxfoundation.org/",
+      "source_url": "https://docs.linuxfoundation.org/lfx/mentorship/mentee-guide/am-i-eligible",
+      "last_verified": "2026-09-21",
+      "deadline": "tbd",
+      "typical_window": "Project applications are commonly open for about four weeks before spring, summer, and fall terms",
+      "rules": {
+        "min_tenth_pct": null,
+        "min_twelfth_pct": null,
+        "min_cgpa": null,
+        "max_active_backlogs": null,
+        "max_gap_years": null,
+        "grad_years": null,
+        "citizenship": "any",
+        "gender": "any",
+        "requires_student": false,
+        "branches": "any",
+        "min_work_years": null
+      },
+      "verification_status": "needs_check",
+      "tags": [
+        "mentorship",
+        "linux",
+        "stipend"
+      ],
+      "notes": "Applicants must be at least 18 and legally able to participate where they live. Each project can add prerequisites and its own exact deadline, so check the selected project before applying.",
+      "alternative_ids": [
+        "gsoc",
+        "season-of-kde",
+        "outreachy"
+      ]
+    },
+    {
+      "id": "mlh-fellowship",
+      "title": "MLH Fellowship",
+      "org": "Major League Hacking",
+      "category": "open_source",
+      "summary": "A remote 12-week program where fellows build software and can contribute to open source with a cohort. Fellows receive structured experience and a stipend.",
+      "benefit": {
+        "kind": "stipend",
+        "what_you_get": "A stipend for the 12-week remote program.",
+        "amount_text": null,
+        "amount_status": "unchecked",
+        "amount_source": null
+      },
+      "location": {
+        "mode": "remote",
+        "place": "Open worldwide"
+      },
+      "apply": {
+        "what_you_need": "Attendance at an MLH hackathon or Global Hack Week event before you apply",
+        "how_they_select": null,
+        "beginner_friendly": false,
+        "application_fee": null,
+        "fee_status": "unchecked"
+      },
+      "official_url": "https://fellowship.mlh.io/apply",
+      "source_url": "https://fellowship.mlh.io/apply",
+      "last_verified": "2026-09-21",
+      "deadline": "2026-08-31",
+      "typical_window": "Batches run during the year, with deadlines announced for each term",
+      "rules": {
+        "min_tenth_pct": null,
+        "min_twelfth_pct": null,
+        "min_cgpa": null,
+        "max_active_backlogs": null,
+        "max_gap_years": null,
+        "grad_years": null,
+        "citizenship": "any",
+        "gender": "any",
+        "requires_student": false,
+        "branches": "any",
+        "min_work_years": null
+      },
+      "verification_status": "verified",
+      "tags": [
+        "fellowship",
+        "remote",
+        "stipend"
+      ],
+      "notes": "The Fall 2026 application requires applicants to be over 18, commit at least 20 hours per week, code proficiently in at least one language, communicate in English, and have attended an MLH Hackathon or Global Hack Week event. Residents of US-embargoed countries are excluded.",
+      "alternative_ids": [
+        "outreachy",
+        "gsoc",
+        "lfx-mentorship"
+      ]
+    },
+    {
+      "id": "outreachy",
+      "title": "Outreachy",
+      "org": "Software Freedom Conservancy",
+      "category": "open_source",
+      "summary": "A paid remote internship in open source for people who face underrepresentation, systemic bias, or discrimination in their local technology industry. Interns receive mentorship and a USD 7,000 stipend.",
+      "benefit": {
+        "kind": "stipend",
+        "what_you_get": "A USD 7,000 stipend for a paid remote internship with a mentor.",
+        "amount_text": "USD 7,000 stipend",
+        "amount_status": "stated",
+        "amount_source": "https://www.outreachy.org/docs/applicant/"
+      },
+      "location": {
+        "mode": "remote",
+        "place": "Open worldwide"
+      },
+      "apply": {
+        "what_you_need": null,
+        "how_they_select": null,
+        "beginner_friendly": null,
+        "application_fee": null,
+        "fee_status": "unchecked"
+      },
+      "official_url": "https://www.outreachy.org/apply/",
+      "source_url": "https://www.outreachy.org/apply/eligibility/",
+      "last_verified": "2026-09-21",
+      "deadline": "2026-02-13",
+      "typical_window": "For Indian university students, initial applications usually open in early February for the May to August cohort",
+      "rules": {
+        "min_tenth_pct": null,
+        "min_twelfth_pct": null,
+        "min_cgpa": null,
+        "max_active_backlogs": null,
+        "max_gap_years": null,
+        "grad_years": null,
+        "citizenship": "any",
+        "gender": "any",
+        "requires_student": false,
+        "branches": "any",
+        "min_work_years": null
+      },
+      "verification_status": "verified",
+      "tags": [
+        "internship",
+        "diversity",
+        "stipend"
+      ],
+      "notes": "This is not women-only. Applicants from any underrepresented background may apply. Applicants must be at least 18 and available for 30 hours per week. Indian university students are treated as Northern Hemisphere students and may apply only to the May to August cohort; non-students may apply to either cohort. Prior Outreachy, Outreach Program for Women, and Google Summer of Code interns are ineligible.",
+      "alternative_ids": [
+        "mlh-fellowship",
+        "gsoc",
+        "lfx-mentorship"
+      ]
+    },
+    {
+      "id": "summer-of-bitcoin",
+      "title": "Summer of Bitcoin",
+      "org": "Summer of Bitcoin",
+      "category": "open_source",
+      "summary": "A global online summer internship for university and high school students contributing to Bitcoin open source projects. Accepted students work with mentors and earn a Bitcoin stipend.",
+      "benefit": {
+        "kind": "stipend",
+        "what_you_get": "A stipend paid in Bitcoin for the 12-week internship.",
+        "amount_text": null,
+        "amount_status": "unchecked",
+        "amount_source": null
+      },
+      "location": {
+        "mode": "remote",
+        "place": "Open worldwide"
+      },
+      "apply": {
+        "what_you_need": "Programming or design skills and some open source experience",
+        "how_they_select": null,
+        "beginner_friendly": false,
+        "application_fee": null,
+        "fee_status": "unchecked"
+      },
+      "official_url": "https://www.summerofbitcoin.org/apply",
+      "source_url": "https://guide.summerofbitcoin.org/about/am-i-eligible",
+      "last_verified": "2026-09-21",
+      "deadline": "2026-02-15",
+      "typical_window": "Applications usually run during the first half of February",
+      "rules": {
+        "min_tenth_pct": null,
+        "min_twelfth_pct": null,
+        "min_cgpa": null,
+        "max_active_backlogs": null,
+        "max_gap_years": null,
+        "grad_years": null,
+        "citizenship": "any",
+        "gender": "any",
+        "requires_student": true,
+        "branches": "any",
+        "min_work_years": null
+      },
+      "verification_status": "verified",
+      "tags": [
+        "bitcoin",
+        "internship",
+        "stipend"
+      ],
+      "notes": "Applicants need programming or design skills and open source experience. The program expects full-time availability for the 12-week summer internship and regular contact with mentors.",
+      "alternative_ids": [
+        "gsoc",
+        "lfx-mentorship",
+        "season-of-kde"
+      ]
+    },
+    {
+      "id": "fossee-summer-fellowship",
+      "title": "FOSSEE Summer Fellowship",
+      "org": "FOSSEE, IIT Bombay",
+      "category": "open_source",
+      "summary": "A summer fellowship where students complete screening tasks and work with a FOSSEE team on free and open source software. Successful fellows receive an e-certificate and a published-work link, but the program does not provide an honorarium.",
+      "benefit": {
+        "kind": "unpaid",
+        "what_you_get": "An e-certificate and a published-work link. The program does not pay an honorarium.",
+        "amount_text": null,
+        "amount_status": "not_stated",
+        "amount_source": null
+      },
+      "location": {
+        "mode": "remote",
+        "place": "Online, confirm on the fellowship page"
+      },
+      "apply": {
+        "what_you_need": "Completed screening tasks for the project you pick",
+        "how_they_select": "Screening tasks, then selection by the FOSSEE team",
+        "beginner_friendly": null,
+        "application_fee": null,
+        "fee_status": "unchecked"
+      },
+      "official_url": "https://fossee.in/fellowship/2026",
+      "source_url": "https://fossee.in/node/82",
+      "last_verified": "2026-09-21",
+      "deadline": "tbd",
+      "typical_window": "Registrations usually open in March and the fellowship starts in May",
+      "rules": {
+        "min_tenth_pct": null,
+        "min_twelfth_pct": null,
+        "min_cgpa": null,
+        "max_active_backlogs": null,
+        "max_gap_years": null,
+        "grad_years": null,
+        "citizenship": "any",
+        "gender": "any",
+        "requires_student": true,
+        "branches": "any",
+        "min_work_years": null
+      },
+      "verification_status": "needs_check",
+      "tags": [
+        "fellowship",
+        "IIT Bombay",
+        "FOSS"
+      ],
+      "notes": "The official page says students from any college, degree, and stage may apply. The next cycle and its exact deadline are not announced, so check the fellowship page when March registration opens.",
+      "alternative_ids": [
+        "summer-of-bitcoin",
+        "gsoc",
+        "season-of-kde"
+      ]
+    },
+    {
+      "id": "hacktoberfest",
+      "title": "Hacktoberfest",
+      "org": "Major League Hacking and DEV",
+      "category": "open_source",
+      "summary": "A worldwide October celebration with in-person and online events focused in 2026 on open source AI. Participants can learn, build projects, and may receive event prizes or swag where offered.",
+      "benefit": {
+        "kind": "unpaid",
+        "what_you_get": "Event prizes or swag where the event you attend offers them. No stipend.",
+        "amount_text": null,
+        "amount_status": "not_stated",
+        "amount_source": null
+      },
+      "location": {
+        "mode": "remote",
+        "place": "Open worldwide, online and local events"
+      },
+      "apply": {
+        "what_you_need": null,
+        "how_they_select": null,
+        "beginner_friendly": true,
+        "application_fee": null,
+        "fee_status": "unchecked"
+      },
+      "official_url": "https://hacktoberfest.com/",
+      "source_url": "https://hacktoberfest.com/questions",
+      "last_verified": "2026-09-21",
+      "deadline": "tbd",
+      "typical_window": "Events take place throughout October, with individual event registration dates",
+      "rules": {
+        "min_tenth_pct": null,
+        "min_twelfth_pct": null,
+        "min_cgpa": null,
+        "max_active_backlogs": null,
+        "max_gap_years": null,
+        "grad_years": null,
+        "citizenship": "any",
+        "gender": "any",
+        "requires_student": false,
+        "branches": "any",
+        "min_work_years": null
+      },
+      "verification_status": "needs_check",
+      "tags": [
+        "open source",
+        "events",
+        "AI"
+      ],
+      "notes": "Anyone aged 13 or older may participate, subject to US export controls and embargo restrictions. The official FAQ gives no single participant registration deadline because attendance is through individual events; check the selected event for its date.",
+      "alternative_ids": [
+        "season-of-kde",
+        "gsoc",
+        "lfx-mentorship"
+      ]
+    },
+    {
+      "id": "season-of-kde",
+      "title": "Season of KDE",
+      "org": "KDE",
+      "category": "open_source",
+      "summary": "A mentored KDE program for code and non-code projects that benefit the KDE ecosystem. Participants who complete their projects receive a certificate and merchandise.",
+      "benefit": {
+        "kind": "unpaid",
+        "what_you_get": "A certificate and KDE merchandise on completing the project. No stipend.",
+        "amount_text": null,
+        "amount_status": "not_stated",
+        "amount_source": null
+      },
+      "location": {
+        "mode": "remote",
+        "place": "Open worldwide"
+      },
+      "apply": {
+        "what_you_need": "Contact with the KDE community and a potential mentor before applying",
+        "how_they_select": null,
+        "beginner_friendly": null,
+        "application_fee": null,
+        "fee_status": "unchecked"
+      },
+      "official_url": "https://season.kde.org/",
+      "source_url": "https://season.kde.org/",
+      "last_verified": "2026-09-21",
+      "deadline": "2026-01-14",
+      "typical_window": "Applications generally run from December to mid January",
+      "rules": {
+        "min_tenth_pct": null,
+        "min_twelfth_pct": null,
+        "min_cgpa": null,
+        "max_active_backlogs": null,
+        "max_gap_years": null,
+        "grad_years": null,
+        "citizenship": "any",
+        "gender": "any",
+        "requires_student": false,
+        "branches": "any",
+        "min_work_years": null
+      },
+      "verification_status": "verified",
+      "tags": [
+        "KDE",
+        "mentorship",
+        "non-code"
+      ],
+      "notes": "The program is open to everyone, not only enrolled students. KDE says rules can vary by season and recommends contacting the community and a potential mentor before applying.",
+      "alternative_ids": [
+        "gsoc",
+        "lfx-mentorship",
+        "summer-of-bitcoin"
+      ]
+    },
+    {
+      "id": "science-academies-srfp",
+      "title": "Science Academies Summer Research Fellowship Programme",
+      "org": "Indian Academy of Sciences, INSA and NASI",
+      "category": "funded_internships",
+      "summary": "A two-month research placement with a scientist associated with one of India’s three national science academies. Selected fellows receive round-trip train fare and a monthly fellowship for living expenses.",
+      "benefit": {
+        "kind": "stipend",
+        "what_you_get": "Round-trip train fare and a monthly fellowship for two months at the host institute.",
+        "amount_text": null,
+        "amount_status": "unchecked",
+        "amount_source": null
+      },
+      "location": {
+        "mode": "on_site",
+        "place": "India, at the host scientist’s institute"
+      },
+      "apply": {
+        "what_you_need": null,
+        "how_they_select": null,
+        "beginner_friendly": null,
+        "application_fee": null,
+        "fee_status": "unchecked"
+      },
+      "official_url": "https://webjapps.ias.ac.in/fellowship2026/index.html",
+      "source_url": "https://webjapps.ias.ac.in/fellowship2026/index.html",
+      "last_verified": "2026-09-21",
+      "deadline": "2026-01-31",
+      "typical_window": "Applications are usually invited around October and close in January.",
+      "rules": {
+        "min_tenth_pct": null,
+        "min_twelfth_pct": null,
+        "min_cgpa": null,
+        "max_active_backlogs": null,
+        "max_gap_years": null,
+        "grad_years": null,
+        "citizenship": "any",
+        "gender": "any",
+        "requires_student": true,
+        "branches": "any",
+        "min_work_years": null
+      },
+      "verification_status": "needs_check",
+      "tags": [
+        "research",
+        "India",
+        "fellowship"
+      ],
+      "notes": "The public announcement says applicants must study in India. The detailed eligibility instructions in the closed application could not be read, so any academic percentage or CGPA requirement must be checked when the next form opens.",
+      "alternative_ids": [
+        "iit-madras-summer-fellowship",
+        "sn-bose-scholars"
+      ]
+    },
+    {
+      "id": "charpak-summer-training",
+      "title": "France Excellence Charpak Summer Training Scholarship",
+      "org": "French Institute in India",
+      "category": "funded_internships",
+      "summary": "A scholarship for an Indian student doing a one or two-month internship or research project at a French laboratory. It provides a monthly stipend, a student visa fee waiver and a Campus France procedure fee waiver.",
+      "benefit": {
+        "kind": "stipend",
+        "what_you_get": "A monthly stipend for one or two months in a French lab, plus a visa fee waiver and a Campus France fee waiver.",
+        "amount_text": "EUR 700 per month for up to 2 months",
+        "amount_status": "stated",
+        "amount_source": "https://www.inde.campusfrance.org/france-excellence-charpak-summer-training-scholarship"
+      },
+      "location": {
+        "mode": "on_site",
+        "place": "France"
+      },
+      "apply": {
+        "what_you_need": "An invitation from a French laboratory or institution",
+        "how_they_select": null,
+        "beginner_friendly": null,
+        "application_fee": null,
+        "fee_status": "unchecked"
+      },
+      "official_url": "https://scholarship.institutfrancaisindia.in/",
+      "source_url": "https://www.inde.campusfrance.org/france-excellence-charpak-summer-training-scholarship",
+      "last_verified": "2026-09-21",
+      "deadline": "tbd",
+      "typical_window": "The call is announced before internships held between May and August.",
+      "rules": {
+        "min_tenth_pct": null,
+        "min_twelfth_pct": null,
+        "min_cgpa": null,
+        "max_active_backlogs": null,
+        "max_gap_years": null,
+        "grad_years": null,
+        "citizenship": [
+          "IN"
+        ],
+        "gender": "any",
+        "requires_student": true,
+        "branches": "any",
+        "min_work_years": null
+      },
+      "verification_status": "needs_check",
+      "tags": [
+        "France",
+        "research",
+        "stipend"
+      ],
+      "notes": "The official page says the 2026 call is closed but does not display its exact deadline or the next deadline. It explicitly says there is no CGPA or percentage cutoff. Applicants also need an invitation from a French laboratory or institution.",
+      "alternative_ids": [
+        "technion-summer-research",
+        "sn-bose-scholars"
+      ]
+    },
+    {
+      "id": "sn-bose-scholars",
+      "title": "S.N. Bose Scholars Program",
+      "org": "Indo-U.S. Science and Technology Forum",
+      "category": "funded_internships",
+      "summary": "A research exchange that places Indian bachelor’s and master’s students at leading institutions in the United States. The award includes a stipend, health insurance and airfare.",
+      "benefit": {
+        "kind": "stipend",
+        "what_you_get": "A stipend, health insurance and airfare for a research stay in the United States.",
+        "amount_text": null,
+        "amount_status": "unchecked",
+        "amount_source": null
+      },
+      "location": {
+        "mode": "on_site",
+        "place": "United States"
+      },
+      "apply": {
+        "what_you_need": null,
+        "how_they_select": null,
+        "beginner_friendly": null,
+        "application_fee": null,
+        "fee_status": "unchecked"
+      },
+      "official_url": "https://iusstf.org/s-n-bose-scholars-program",
+      "source_url": "https://iusstf.org/s-n-bose-scholars-program",
+      "last_verified": "2026-09-21",
+      "deadline": "tbd",
+      "typical_window": "IUSSTF publishes a separate call for each summer cohort.",
+      "rules": {
+        "min_tenth_pct": null,
+        "min_twelfth_pct": null,
+        "min_cgpa": null,
+        "max_active_backlogs": null,
+        "max_gap_years": null,
+        "grad_years": null,
+        "citizenship": [
+          "IN"
+        ],
+        "gender": "any",
+        "requires_student": true,
+        "branches": "any",
+        "min_work_years": null
+      },
+      "verification_status": "needs_check",
+      "tags": [
+        "USA",
+        "research",
+        "exchange"
+      ],
+      "notes": "The official program page has no current application deadline and does not state a numeric academic cutoff. Its eligible fields are Atmospheric and Earth Sciences, Chemical Sciences, Engineering Sciences, Mathematical and Computational Sciences, and Physical Sciences. Check the next call for a deadline and any cohort-specific academic criteria.",
+      "alternative_ids": [
+        "iusstf-viterbi",
+        "science-academies-srfp"
+      ]
+    },
+    {
+      "id": "iit-madras-summer-fellowship",
+      "title": "IIT Madras Summer Fellowship Programme",
+      "org": "Indian Institute of Technology Madras",
+      "category": "funded_internships",
+      "summary": "A guided summer research internship with IIT Madras faculty. The Engineering Design department describes it for BTech students who have completed six semesters.",
+      "benefit": {
+        "kind": "stipend",
+        "what_you_get": "A guided research internship at IIT Madras. The stipend for the next cycle is not stated on the pages read.",
+        "amount_text": null,
+        "amount_status": "unchecked",
+        "amount_source": null
+      },
+      "location": {
+        "mode": "on_site",
+        "place": "Chennai"
+      },
+      "apply": {
+        "what_you_need": null,
+        "how_they_select": null,
+        "beginner_friendly": null,
+        "application_fee": null,
+        "fee_status": "unchecked"
+      },
+      "official_url": "https://ssp.iitm.ac.in/summer-fellowship-registration",
+      "source_url": "https://ed.iitm.ac.in/summerfellowship.html",
+      "last_verified": "2026-09-21",
+      "deadline": "tbd",
+      "typical_window": "The portal normally opens in February for the summer fellowship.",
+      "rules": {
+        "min_tenth_pct": null,
+        "min_twelfth_pct": null,
+        "min_cgpa": null,
+        "max_active_backlogs": null,
+        "max_gap_years": null,
+        "grad_years": [
+          2027
+        ],
+        "citizenship": "any",
+        "gender": "any",
+        "requires_student": true,
+        "branches": "any",
+        "min_work_years": null
+      },
+      "verification_status": "needs_check",
+      "tags": [
+        "IIT Madras",
+        "research",
+        "summer"
+      ],
+      "notes": "The 2026 registration portal is closed and does not show the exact deadline. The Engineering Design page says applications are accepted on a rolling basis, while the central portal is cycle-based. Confirm the next central deadline and whether the completed-sixth-semester rule applies across all departments.",
+      "alternative_ids": [
+        "science-academies-srfp",
+        "sn-bose-scholars"
+      ]
+    },
+    {
+      "id": "iusstf-viterbi",
+      "title": "IUSSTF-Viterbi Program",
+      "org": "Indo-U.S. Science and Technology Forum and USC Viterbi School of Engineering",
+      "category": "funded_internships",
+      "summary": "An eight-week full-time summer research placement for Indian engineering students at the USC Viterbi School of Engineering. It provides a stipend, airfare and accommodation.",
+      "benefit": {
+        "kind": "stipend",
+        "what_you_get": "A stipend, airfare and accommodation for eight weeks at USC Viterbi.",
+        "amount_text": null,
+        "amount_status": "unchecked",
+        "amount_source": null
+      },
+      "location": {
+        "mode": "on_site",
+        "place": "Los Angeles, United States"
+      },
+      "apply": {
+        "what_you_need": null,
+        "how_they_select": null,
+        "beginner_friendly": null,
+        "application_fee": null,
+        "fee_status": "unchecked"
+      },
+      "official_url": "https://iusstf.org/iusstf-viterbi-program",
+      "source_url": "https://iusstf.org/iusstf-viterbi-program",
+      "last_verified": "2026-09-21",
+      "deadline": "2025-12-31",
+      "typical_window": "Applications for the 2026 summer cohort closed at the end of December 2025.",
+      "rules": {
+        "min_tenth_pct": null,
+        "min_twelfth_pct": null,
+        "min_cgpa": 8.5,
+        "max_active_backlogs": null,
+        "max_gap_years": null,
+        "grad_years": [
+          2027,
+          2028
+        ],
+        "citizenship": [
+          "IN"
+        ],
+        "gender": "any",
+        "requires_student": true,
+        "branches": [
+          "CSE",
+          "AI_DS",
+          "ECE",
+          "EE"
+        ],
+        "min_work_years": null
+      },
+      "verification_status": "verified",
+      "tags": [
+        "USA",
+        "engineering",
+        "research"
+      ],
+      "notes": "The official page also gives equivalents of 3.5 on a 4.0 scale or 80 percent. The structured cutoff uses only the explicitly stated 8.5 GPA value. Eligible students are in the third year of a four-year bachelor’s, the third or fourth year of a five-year bachelor’s, or the first year of a master’s, with degree completion on or after May 2027.",
+      "alternative_ids": [
+        "sn-bose-scholars",
+        "technion-summer-research"
+      ]
+    },
+    {
+      "id": "technion-summer-research",
+      "title": "Technion Summer Research Program in Science and Engineering",
+      "org": "Technion International",
+      "category": "funded_internships",
+      "summary": "A one-month laboratory research program in Israel for international undergraduate students. Technion covers research costs, health insurance, accommodation, mentorship and social activities, while students pay airfare, most meals and local transport.",
+      "benefit": {
+        "kind": "costs_covered",
+        "what_you_get": "Research costs, health insurance, accommodation and mentoring are covered. You pay airfare, most meals and local transport.",
+        "amount_text": null,
+        "amount_status": "not_stated",
+        "amount_source": null
+      },
+      "location": {
+        "mode": "on_site",
+        "place": "Haifa, Israel"
+      },
+      "apply": {
+        "what_you_need": null,
+        "how_they_select": null,
+        "beginner_friendly": null,
+        "application_fee": null,
+        "fee_status": "unchecked"
+      },
+      "official_url": "https://int.technion.ac.il/programs/summer-research-program-in-science-and-engineering/",
+      "source_url": "https://int.technion.ac.il/programs/summer-research-program-in-science-and-engineering/application-requirements-and-deadlines/",
+      "last_verified": "2026-09-21",
+      "deadline": "tbd",
+      "typical_window": "Applications usually close in February for the July program.",
+      "rules": {
+        "min_tenth_pct": null,
+        "min_twelfth_pct": null,
+        "min_cgpa": null,
+        "max_active_backlogs": null,
+        "max_gap_years": null,
+        "grad_years": null,
+        "citizenship": "any",
+        "gender": "any",
+        "requires_student": true,
+        "branches": "any",
+        "min_work_years": null
+      },
+      "verification_status": "needs_check",
+      "tags": [
+        "Israel",
+        "research",
+        "scholarship"
+      ],
+      "notes": "The program page announces dates for July 2027 and says registration will open soon, but the requirements page still shows the old February 21, 2026 deadline. It requires an 80 percent GPA, stated as 3.0 on a 4.0 scale, so no min_cgpa was entered. Confirm the 2027 deadline when registration opens.",
+      "alternative_ids": [
+        "charpak-summer-training",
+        "iusstf-viterbi"
+      ]
+    },
+    {
+      "id": "flipkart-grid",
+      "title": "Flipkart GRiD",
+      "org": "Flipkart",
+      "category": "funded_internships",
+      "summary": "An online engineering challenge with software development, AI engineering and data science tracks. Strong performers can be interviewed for summer or winter internships and full-time roles, and Flipkart covers travel and stay for national finalists.",
+      "benefit": {
+        "kind": "paid_role",
+        "what_you_get": "Interviews for internships and full-time roles for strong performers, with travel and stay covered for national finalists.",
+        "amount_text": null,
+        "amount_status": "unchecked",
+        "amount_source": null
+      },
+      "location": {
+        "mode": "hybrid",
+        "place": "Online rounds, in-person finale in India"
+      },
+      "apply": {
+        "what_you_need": null,
+        "how_they_select": "Online challenge rounds, then interviews for strong performers",
+        "beginner_friendly": null,
+        "application_fee": null,
+        "fee_status": "unchecked"
+      },
+      "official_url": "https://flipkartearlycareers.hirepro.in/grid8.0.html",
+      "source_url": "https://flipkartearlycareers.hirepro.in/grid8.0.html",
+      "last_verified": "2026-09-21",
+      "deadline": "2026-07-12",
+      "typical_window": "Registration opened in mid-June and closed in mid-July for the 2026 edition.",
+      "rules": {
+        "min_tenth_pct": null,
+        "min_twelfth_pct": null,
+        "min_cgpa": null,
+        "max_active_backlogs": null,
+        "max_gap_years": null,
+        "grad_years": [
+          2027,
+          2028,
+          2029,
+          2030
+        ],
+        "citizenship": "any",
+        "gender": "any",
+        "requires_student": true,
+        "branches": "any",
+        "min_work_years": null
+      },
+      "verification_status": "verified",
+      "tags": [
+        "challenge",
+        "internship",
+        "technology"
+      ],
+      "notes": "The official registration page permits bachelor’s and master’s graduation years 2027 to 2030. It also permits PhD and dual or integrated degree graduation years through 2031, which this BTech-focused record does not model.",
+      "alternative_ids": [
+        "iit-madras-summer-fellowship",
+        "iusstf-viterbi"
+      ]
+    },
+    {
+      "id": "mext-undergraduate",
+      "title": "MEXT Undergraduate Scholarship",
+      "org": "Ministry of Education, Culture, Sports, Science and Technology, Japan",
+      "category": "scholarships",
+      "summary": "A Japanese Government scholarship for an undergraduate degree in Japan. It covers tuition, provides a monthly allowance and includes travel support under the scholarship guidelines.",
+      "benefit": {
+        "kind": "funded_study",
+        "what_you_get": "Tuition covered, a monthly allowance and travel support for an undergraduate degree in Japan.",
+        "amount_text": null,
+        "amount_status": "unchecked",
+        "amount_source": null
+      },
+      "location": {
+        "mode": "on_site",
+        "place": "Japan"
+      },
+      "apply": {
+        "what_you_need": null,
+        "how_they_select": null,
+        "beginner_friendly": null,
+        "application_fee": null,
+        "fee_status": "unchecked"
+      },
+      "official_url": "https://www.in.emb-japan.go.jp/education/Undergraduate_Student.html",
+      "source_url": "https://www.in.emb-japan.go.jp/education/Undergraduate_Student.html",
+      "last_verified": "2026-09-21",
+      "deadline": "2026-05-25",
+      "typical_window": "Applications usually close in May for study beginning the following April",
+      "rules": {
+        "min_tenth_pct": null,
+        "min_twelfth_pct": 80,
+        "min_cgpa": null,
+        "max_active_backlogs": null,
+        "max_gap_years": null,
+        "grad_years": null,
+        "citizenship": "any",
+        "gender": "any",
+        "requires_student": false,
+        "branches": "any",
+        "min_work_years": null
+      },
+      "verification_status": "verified",
+      "tags": [
+        "undergraduate",
+        "Japan",
+        "government"
+      ],
+      "notes": "This is a new undergraduate degree, not postgraduate study for a BTech student. Applicants must generally have been born on or after 2 April 2002 and must meet the schooling conditions in the guidelines. Applicants awaiting their 2027 Grade 12 result need 80% in Grade 10 plus a school prediction above 80%; this conditional rule is not stored as a Grade 10 cutoff.",
+      "alternative_ids": [
+        "stipendium-hungaricum",
+        "erasmus-mundus-joint-masters"
+      ]
+    },
+    {
+      "id": "chevening",
+      "title": "Chevening Scholarship",
+      "org": "UK Government",
+      "category": "scholarships",
+      "summary": "A scholarship for a one-year taught master’s degree at a UK university. It funds study and connects scholars with the Chevening network.",
+      "benefit": {
+        "kind": "funded_study",
+        "what_you_get": "A funded one-year taught masters at a UK university.",
+        "amount_text": null,
+        "amount_status": "unchecked",
+        "amount_source": null
+      },
+      "location": {
+        "mode": "on_site",
+        "place": "United Kingdom"
+      },
+      "apply": {
+        "what_you_need": "At least 2,800 hours of work experience after your degree, over two years or more",
+        "how_they_select": null,
+        "beginner_friendly": null,
+        "application_fee": null,
+        "fee_status": "unchecked"
+      },
+      "official_url": "https://www.chevening.org/scholarship/india/",
+      "source_url": "https://www.chevening.org/resource-hub/guidance/eligibility/",
+      "last_verified": "2026-09-21",
+      "deadline": "2026-10-06",
+      "typical_window": null,
+      "rules": {
+        "min_tenth_pct": null,
+        "min_twelfth_pct": null,
+        "min_cgpa": null,
+        "max_active_backlogs": null,
+        "max_gap_years": null,
+        "grad_years": null,
+        "citizenship": [
+          "IN"
+        ],
+        "gender": "any",
+        "requires_student": false,
+        "branches": "any",
+        "min_work_years": 2
+      },
+      "verification_status": "verified",
+      "tags": [
+        "master’s",
+        "UK",
+        "work experience"
+      ],
+      "notes": "A current undergraduate cannot apply. You must have finished your undergraduate degree at least two years before the deadline and have at least 2,800 hours of work experience gained after it, over a minimum of two years. The two year figure is the official minimum; the hours are checked by Chevening, not by this app.",
+      "alternative_ids": [
+        "fulbright-nehru-masters",
+        "inlaks-scholarship"
+      ]
+    },
+    {
+      "id": "fulbright-nehru-masters",
+      "title": "Fulbright-Nehru Master’s Fellowships",
+      "org": "United States-India Educational Foundation",
+      "category": "scholarships",
+      "summary": "A fellowship for selected master’s programmes in the United States for Indian professionals. It provides tuition and fee funding, living support, travel, visa support and health coverage for up to two years.",
+      "benefit": {
+        "kind": "funded_study",
+        "what_you_get": "Tuition and fees, living support, travel, visa support and health coverage for up to two years.",
+        "amount_text": null,
+        "amount_status": "unchecked",
+        "amount_source": null
+      },
+      "location": {
+        "mode": "on_site",
+        "place": "United States"
+      },
+      "apply": {
+        "what_you_need": "Three years of relevant full-time paid work experience by the deadline",
+        "how_they_select": null,
+        "beginner_friendly": null,
+        "application_fee": null,
+        "fee_status": "unchecked"
+      },
+      "official_url": "https://www.usief.org.in/fulbright-fellowships/fellowships-for-indian-citizen/fulbright-nehru-masters-fellowships",
+      "source_url": "https://www.usief.org.in/fulbright-fellowships/fellowships-for-indian-citizen/fulbright-nehru-masters-fellowships",
+      "last_verified": "2026-09-21",
+      "deadline": "2025-05-14",
+      "typical_window": "Applications usually close in May for programmes beginning the following year",
+      "rules": {
+        "min_tenth_pct": null,
+        "min_twelfth_pct": null,
+        "min_cgpa": null,
+        "max_active_backlogs": null,
+        "max_gap_years": null,
+        "grad_years": null,
+        "citizenship": [
+          "IN"
+        ],
+        "gender": "any",
+        "requires_student": false,
+        "branches": "any",
+        "min_work_years": 3
+      },
+      "verification_status": "needs_check",
+      "tags": [
+        "master’s",
+        "United States",
+        "work experience"
+      ],
+      "notes": "A current undergraduate cannot apply because three years of relevant full-time paid professional experience are required by the deadline. The official page still shows the 2026-27 cycle and a 14 May 2025 deadline, so check for a newer call. The degree requirement is at least 55% in a qualifying degree and is not stored as min_cgpa.",
+      "alternative_ids": [
+        "chevening",
+        "inlaks-scholarship"
+      ]
+    },
+    {
+      "id": "rhodes-scholarship-india",
+      "title": "Rhodes Scholarship for India",
+      "org": "Rhodes Trust",
+      "category": "scholarships",
+      "summary": "A scholarship for full-time postgraduate study at the University of Oxford. Five scholarships are available for the India constituency.",
+      "benefit": {
+        "kind": "funded_study",
+        "what_you_get": "Full funding for postgraduate study at the University of Oxford.",
+        "amount_text": null,
+        "amount_status": "unchecked",
+        "amount_source": null
+      },
+      "location": {
+        "mode": "on_site",
+        "place": "Oxford, United Kingdom"
+      },
+      "apply": {
+        "what_you_need": null,
+        "how_they_select": null,
+        "beginner_friendly": null,
+        "application_fee": null,
+        "fee_status": "unchecked"
+      },
+      "official_url": "https://www.rhodeshouse.ox.ac.uk/scholarships/applications/india",
+      "source_url": "https://www.rhodeshouse.ox.ac.uk/scholarships/applications/india/eligibilitycriteria",
+      "last_verified": "2026-09-21",
+      "deadline": "2026-07-23",
+      "typical_window": "Applications usually close in July for study beginning the following year",
+      "rules": {
+        "min_tenth_pct": null,
+        "min_twelfth_pct": null,
+        "min_cgpa": null,
+        "max_active_backlogs": null,
+        "max_gap_years": null,
+        "grad_years": null,
+        "citizenship": [
+          "IN"
+        ],
+        "gender": "any",
+        "requires_student": false,
+        "branches": "any",
+        "min_work_years": null
+      },
+      "verification_status": "verified",
+      "tags": [
+        "postgraduate",
+        "Oxford",
+        "India"
+      ],
+      "notes": "Final-year students may apply, but the undergraduate degree must be complete by July 2027. The India constituency also applies education and residency tests. Applicants normally must be aged 18 to 23 on 1 October 2026, with a separate route for applicants under 27 who completed their first degree on or after 1 October 2025. The chosen Oxford course must accept the applicant’s academic background and grade.",
+      "alternative_ids": [
+        "chevening",
+        "inlaks-scholarship"
+      ]
+    },
+    {
+      "id": "inlaks-scholarship",
+      "title": "Inlaks Scholarship",
+      "org": "Inlaks Shivdasani Foundation",
+      "category": "scholarships",
+      "summary": "A scholarship for Indian graduates pursuing selected programmes abroad. It contributes up to USD 120,000 toward programme expenses.",
+      "benefit": {
+        "kind": "funded_study",
+        "what_you_get": "A contribution of up to USD 120,000 toward programme expenses abroad.",
+        "amount_text": "Up to USD 120,000",
+        "amount_status": "stated",
+        "amount_source": "https://inlaksfoundation.org/opportunities/scholarship/"
+      },
+      "location": {
+        "mode": "on_site",
+        "place": "Selected universities abroad"
+      },
+      "apply": {
+        "what_you_need": "An admission offer from the chosen programme, an Indian passport and residence in India",
+        "how_they_select": null,
+        "beginner_friendly": null,
+        "application_fee": null,
+        "fee_status": "unchecked"
+      },
+      "official_url": "https://onlineapplication.inlaksfoundation.org/",
+      "source_url": "https://inlaksfoundation.org/opportunities/scholarship/",
+      "last_verified": "2026-09-21",
+      "deadline": "2026-03-31",
+      "typical_window": "Applications usually close at the end of March",
+      "rules": {
+        "min_tenth_pct": null,
+        "min_twelfth_pct": null,
+        "min_cgpa": null,
+        "max_active_backlogs": null,
+        "max_gap_years": null,
+        "grad_years": null,
+        "citizenship": [
+          "IN"
+        ],
+        "gender": "any",
+        "requires_student": false,
+        "branches": "any",
+        "min_work_years": null
+      },
+      "verification_status": "needs_check",
+      "tags": [
+        "postgraduate",
+        "India",
+        "overseas study"
+      ],
+      "notes": "Final-year undergraduates awaiting results may apply. Applicants must hold an Indian passport, reside in India at application, be born on or after 1 January 1996 for the 2026 call, and already hold an admission offer. Degree cutoffs vary by subject: 65% or 6.8/10 for listed humanities-related fields, and 70% or 7.2/10 for listed science-related fields. These degree cutoffs are not stored as current min_cgpa. Engineering and natural sciences are considered only at Imperial College London, so check course eligibility before applying.",
+      "alternative_ids": [
+        "rhodes-scholarship-india",
+        "erasmus-mundus-joint-masters"
+      ]
+    },
+    {
+      "id": "erasmus-mundus-joint-masters",
+      "title": "Erasmus Mundus Joint Masters",
+      "org": "European Union",
+      "category": "scholarships",
+      "summary": "Joint master’s programmes delivered by groups of universities in Europe and beyond. The best-ranked applicants may receive scholarships covering participation costs with contributions toward travel, visa and living costs.",
+      "benefit": {
+        "kind": "funded_study",
+        "what_you_get": "Scholarships covering participation costs with contributions toward travel, visa and living costs, for the best-ranked applicants.",
+        "amount_text": null,
+        "amount_status": "unchecked",
+        "amount_source": null
+      },
+      "location": {
+        "mode": "on_site",
+        "place": "Europe, two or more countries"
+      },
+      "apply": {
+        "what_you_need": null,
+        "how_they_select": null,
+        "beginner_friendly": null,
+        "application_fee": null,
+        "fee_status": "unchecked"
+      },
+      "official_url": "https://erasmus-plus.ec.europa.eu/opportunities/individuals/students/erasmus-mundus-joint-masters",
+      "source_url": "https://erasmus-plus.ec.europa.eu/opportunities/individuals/students/erasmus-mundus-joint-masters",
+      "last_verified": "2026-09-21",
+      "deadline": "tbd",
+      "typical_window": "Most programmes accept applications between October and January",
+      "rules": {
+        "min_tenth_pct": null,
+        "min_twelfth_pct": null,
+        "min_cgpa": null,
+        "max_active_backlogs": null,
+        "max_gap_years": null,
+        "grad_years": null,
+        "citizenship": "any",
+        "gender": "any",
+        "requires_student": false,
+        "branches": "any",
+        "min_work_years": null
+      },
+      "verification_status": "needs_check",
+      "tags": [
+        "master’s",
+        "Europe",
+        "joint degree"
+      ],
+      "notes": "Final-year bachelor’s students may apply but must graduate before the master’s programme begins. Each consortium sets its own exact deadline, entry requirements and available subjects, so check the chosen programme’s official website.",
+      "alternative_ids": [
+        "stipendium-hungaricum",
+        "inlaks-scholarship"
+      ]
+    },
+    {
+      "id": "kaust-fellowship",
+      "title": "KAUST Fellowship",
+      "org": "King Abdullah University of Science and Technology",
+      "category": "scholarships",
+      "summary": "Funding provided to admitted graduate students at KAUST in Saudi Arabia. It supports students for the duration of their graduate study and includes tuition, living and medical benefits.",
+      "benefit": {
+        "kind": "funded_study",
+        "what_you_get": "Tuition, living and medical benefits for the whole graduate programme at KAUST.",
+        "amount_text": null,
+        "amount_status": "unchecked",
+        "amount_source": null
+      },
+      "location": {
+        "mode": "on_site",
+        "place": "Thuwal, Saudi Arabia"
+      },
+      "apply": {
+        "what_you_need": "Admission to a KAUST graduate programme",
+        "how_they_select": null,
+        "beginner_friendly": null,
+        "application_fee": null,
+        "fee_status": "unchecked"
+      },
+      "official_url": "https://admissions.kaust.edu.sa/how-to-apply",
+      "source_url": "https://admissions.kaust.edu.sa/how-to-apply/entry-requirements",
+      "last_verified": "2026-09-22",
+      "deadline": "2027-01-03",
+      "typical_window": "Two rounds a year. A round closing in late September is for spring entry and PhD applicants only; the round for fall entry (MS and PhD) opens in late September and closes in early January.",
+      "rules": {
+        "min_tenth_pct": null,
+        "min_twelfth_pct": null,
+        "min_cgpa": null,
+        "max_active_backlogs": null,
+        "max_gap_years": null,
+        "grad_years": null,
+        "citizenship": "any",
+        "gender": "any",
+        "requires_student": false,
+        "branches": "any",
+        "min_work_years": null
+      },
+      "verification_status": "needs_check",
+      "tags": [
+        "graduate study",
+        "Saudi Arabia",
+        "STEM"
+      ],
+      "notes": "Master’s applicants need a bachelor’s degree in a subject relevant to the programme. The minimum GPA is stated as 3.0 on a 4-point scale or equivalent, so it is not converted to min_cgpa. The stored deadline is Fall 2027 Round 2 (MS, MS/PhD and PhD), which the timeline page calls tentative. The 27 September 2026 round is Spring 2027 entry for PhD applicants only. Confirm the intake and programme before applying.",
+      "alternative_ids": [
+        "erasmus-mundus-joint-masters",
+        "stipendium-hungaricum"
+      ]
+    },
+    {
+      "id": "stipendium-hungaricum",
+      "title": "Stipendium Hungaricum",
+      "org": "Tempus Public Foundation",
+      "category": "scholarships",
+      "summary": "A Hungarian Government scholarship for eligible bachelor’s, master’s and other study programmes in Hungary. It provides tuition-free study, a stipend, accommodation support and medical insurance under the call.",
+      "benefit": {
+        "kind": "funded_study",
+        "what_you_get": "Tuition-free study, a stipend, accommodation support and medical insurance under the call.",
+        "amount_text": null,
+        "amount_status": "unchecked",
+        "amount_source": null
+      },
+      "location": {
+        "mode": "on_site",
+        "place": "Hungary"
+      },
+      "apply": {
+        "what_you_need": null,
+        "how_they_select": null,
+        "beginner_friendly": null,
+        "application_fee": null,
+        "fee_status": "unchecked"
+      },
+      "official_url": "https://apply.stipendiumhungaricum.hu/",
+      "source_url": "https://stipendiumhungaricum.hu/apply/",
+      "last_verified": "2026-09-21",
+      "deadline": "2026-01-15",
+      "typical_window": "Applications usually close in mid January",
+      "rules": {
+        "min_tenth_pct": null,
+        "min_twelfth_pct": null,
+        "min_cgpa": null,
+        "max_active_backlogs": null,
+        "max_gap_years": null,
+        "grad_years": null,
+        "citizenship": "any",
+        "gender": "any",
+        "requires_student": false,
+        "branches": "any",
+        "min_work_years": null
+      },
+      "verification_status": "needs_check",
+      "tags": [
+        "Hungary",
+        "government",
+        "degree study"
+      ],
+      "notes": "India appears in the official list of eligible sending partners. Available study levels and fields depend on the sending partner, and applications may also need submission to the responsible Indian authority under its own requirements and deadline. Check the India partner page and the next call before applying.",
+      "alternative_ids": [
+        "erasmus-mundus-joint-masters",
+        "mext-undergraduate"
+      ]
+    },
+    {
+      "id": "hackwithinfy",
+      "title": "HackWithInfy",
+      "org": "Infosys",
+      "category": "company_drives",
+      "summary": "A coding competition for engineering students that can lead to Infosys internships and employment opportunities. Participants compete in coding rounds and selected finalists attend the grand finale.",
+      "benefit": {
+        "kind": "paid_role",
+        "what_you_get": "Finalists can get Infosys internship and job offers, decided by the coding rounds.",
+        "amount_text": null,
+        "amount_status": "unchecked",
+        "amount_source": null
+      },
+      "location": {
+        "mode": "hybrid",
+        "place": "Online rounds, grand finale in India"
+      },
+      "apply": {
+        "what_you_need": "Registration through your college placement officer",
+        "how_they_select": "Online coding rounds, then a grand finale for the shortlisted",
+        "beginner_friendly": null,
+        "application_fee": null,
+        "fee_status": "unchecked"
+      },
+      "official_url": "https://www.infosys.com/careers/hackwithinfy.html",
+      "source_url": "https://www.infosys.com/careers/hackwithinfy/2026/hwi-terms-conditions.pdf",
+      "last_verified": "2026-09-21",
+      "deadline": "tbd",
+      "typical_window": "College-led registration usually runs from February into March",
+      "rules": {
+        "min_tenth_pct": null,
+        "min_twelfth_pct": null,
+        "min_cgpa": null,
+        "max_active_backlogs": null,
+        "max_gap_years": null,
+        "grad_years": [
+          2027
+        ],
+        "citizenship": "any",
+        "gender": "any",
+        "requires_student": true,
+        "branches": "any",
+        "min_work_years": null
+      },
+      "verification_status": "needs_check",
+      "tags": [
+        "coding",
+        "hiring",
+        "internship"
+      ],
+      "notes": "The 2026 terms list the degree, graduation year, age and Indian residency requirements without a marks or backlog rule. No registration closing date is published, so the deadline and the absence of any college-level screening need confirmation. Registration happens through the college placement officer.",
+      "alternative_ids": [
+        "microsoft-university-internship-india",
+        "atlassian-india-internship"
+      ]
+    },
+    {
+      "id": "google-swe-internship-india",
+      "title": "Google Software Engineering Internship India",
+      "org": "Google",
+      "category": "company_drives",
+      "summary": "Google software engineering internships place students on engineering projects with Google teams in India. Interns gain paid practical experience and work with engineering mentors.",
+      "benefit": {
+        "kind": "paid_role",
+        "what_you_get": "A paid software engineering internship on a Google team in India.",
+        "amount_text": null,
+        "amount_status": "unchecked",
+        "amount_source": null
+      },
+      "location": {
+        "mode": "on_site",
+        "place": "India"
+      },
+      "apply": {
+        "what_you_need": null,
+        "how_they_select": null,
+        "beginner_friendly": null,
+        "application_fee": null,
+        "fee_status": "unchecked"
+      },
+      "official_url": "https://www.google.com/about/careers/applications/students/engineering-and-technical-internships",
+      "source_url": "https://www.google.com/about/careers/applications/students/engineering-and-technical-internships",
+      "last_verified": "2026-09-21",
+      "deadline": "tbd",
+      "typical_window": "India summer internship roles are posted separately when teams begin hiring",
+      "rules": {
+        "min_tenth_pct": null,
+        "min_twelfth_pct": null,
+        "min_cgpa": null,
+        "max_active_backlogs": null,
+        "max_gap_years": null,
+        "grad_years": null,
+        "citizenship": "any",
+        "gender": "any",
+        "requires_student": false,
+        "branches": "any",
+        "min_work_years": null
+      },
+      "verification_status": "needs_check",
+      "tags": [
+        "internship",
+        "software",
+        "engineering"
+      ],
+      "notes": "No live India BTech internship listing with a current deadline could be read on the official site. Role-specific enrollment, degree and graduation-year requirements must be checked when a listing opens. No cutoff is published, but absence could not be confirmed.",
+      "alternative_ids": [
+        "microsoft-university-internship-india",
+        "atlassian-india-internship"
+      ]
+    },
+    {
+      "id": "amazon-university-hiring-india",
+      "title": "Amazon University Hiring India",
+      "org": "Amazon",
+      "category": "company_drives",
+      "summary": "Amazon posts software development internships and entry-level roles for university candidates in India. Successful applicants receive an internship or full-time role on an Amazon engineering team.",
+      "benefit": {
+        "kind": "paid_role",
+        "what_you_get": "A paid internship or an entry-level engineering role at Amazon India.",
+        "amount_text": null,
+        "amount_status": "unchecked",
+        "amount_source": null
+      },
+      "location": {
+        "mode": "on_site",
+        "place": "India"
+      },
+      "apply": {
+        "what_you_need": null,
+        "how_they_select": null,
+        "beginner_friendly": null,
+        "application_fee": null,
+        "fee_status": "unchecked"
+      },
+      "official_url": "https://www.amazon.jobs/en/teams/internships-for-students",
+      "source_url": "https://www.amazon.jobs/en/jobs/3046606/sde-i-intern-amazon-university-talent-acquisition",
+      "last_verified": "2026-09-21",
+      "deadline": "tbd",
+      "typical_window": "University roles are posted throughout the year and close by individual job",
+      "rules": {
+        "min_tenth_pct": null,
+        "min_twelfth_pct": null,
+        "min_cgpa": null,
+        "max_active_backlogs": null,
+        "max_gap_years": null,
+        "grad_years": null,
+        "citizenship": "any",
+        "gender": "any",
+        "requires_student": false,
+        "branches": "any",
+        "min_work_years": null
+      },
+      "verification_status": "needs_check",
+      "tags": [
+        "university",
+        "software",
+        "hiring"
+      ],
+      "notes": "The India university role found in official search was no longer readable as a live job page, so its qualifications and closing date could not be verified. Check the current job listing for degree, graduation year and work authorization. No cutoff is published, but absence could not be confirmed.",
+      "alternative_ids": [
+        "google-swe-internship-india",
+        "microsoft-university-internship-india"
+      ]
+    },
+    {
+      "id": "microsoft-university-internship-india",
+      "title": "Microsoft University Internship India",
+      "org": "Microsoft",
+      "category": "company_drives",
+      "summary": "Microsoft offers university internships in India across engineering and related teams. Interns work on a team project and receive structured learning and professional experience.",
+      "benefit": {
+        "kind": "paid_role",
+        "what_you_get": "A paid university internship on a Microsoft team in India.",
+        "amount_text": null,
+        "amount_status": "unchecked",
+        "amount_source": null
+      },
+      "location": {
+        "mode": "on_site",
+        "place": "India"
+      },
+      "apply": {
+        "what_you_need": null,
+        "how_they_select": null,
+        "beginner_friendly": null,
+        "application_fee": null,
+        "fee_status": "unchecked"
+      },
+      "official_url": "https://careers.microsoft.com/v2/global/en/universityinternship",
+      "source_url": "https://careers.microsoft.com/v2/global/en/internship_eligibility",
+      "last_verified": "2026-09-21",
+      "deadline": "tbd",
+      "typical_window": "Openings and deadlines are published on individual internship job listings",
+      "rules": {
+        "min_tenth_pct": null,
+        "min_twelfth_pct": null,
+        "min_cgpa": null,
+        "max_active_backlogs": null,
+        "max_gap_years": null,
+        "grad_years": [
+          2028
+        ],
+        "citizenship": "any",
+        "gender": "any",
+        "requires_student": true,
+        "branches": "any",
+        "min_work_years": null
+      },
+      "verification_status": "needs_check",
+      "tags": [
+        "internship",
+        "university",
+        "technology"
+      ],
+      "notes": "The India eligibility section requires enrollment in a relevant course and pre-final-year status, but each role has its own closing date and qualifications. No cutoff is published, but absence could not be confirmed on a current India job listing.",
+      "alternative_ids": [
+        "google-swe-internship-india",
+        "atlassian-india-internship"
+      ]
+    },
+    {
+      "id": "atlassian-india-internship",
+      "title": "Atlassian India Internship",
+      "org": "Atlassian",
+      "category": "company_drives",
+      "summary": "Atlassian offers paid early-career internships in India for students in their penultimate year. Interns work on company projects while receiving learning and professional development support.",
+      "benefit": {
+        "kind": "paid_role",
+        "what_you_get": "A paid early-career internship at Atlassian India for penultimate-year students.",
+        "amount_text": null,
+        "amount_status": "unchecked",
+        "amount_source": null
+      },
+      "location": {
+        "mode": "on_site",
+        "place": "India"
+      },
+      "apply": {
+        "what_you_need": null,
+        "how_they_select": null,
+        "beginner_friendly": null,
+        "application_fee": null,
+        "fee_status": "unchecked"
+      },
+      "official_url": "https://www.atlassian.com/company/careers/all-jobs?team=Interns%2CGraduates",
+      "source_url": "https://www.atlassian.com/company/careers/earlycareers",
+      "last_verified": "2026-09-21",
+      "deadline": "tbd",
+      "typical_window": "India internship applications usually open around July for an April to June start",
+      "rules": {
+        "min_tenth_pct": null,
+        "min_twelfth_pct": null,
+        "min_cgpa": null,
+        "max_active_backlogs": null,
+        "max_gap_years": null,
+        "grad_years": [
+          2028
+        ],
+        "citizenship": "any",
+        "gender": "any",
+        "requires_student": true,
+        "branches": "any",
+        "min_work_years": null
+      },
+      "verification_status": "needs_check",
+      "tags": [
+        "internship",
+        "early career",
+        "software"
+      ],
+      "notes": "The early-careers page states the cohort and usual India opening window, but not an exact current deadline or a complete role-specific eligibility list. No cutoff is published, but absence could not be confirmed.",
+      "alternative_ids": [
+        "microsoft-university-internship-india",
+        "google-swe-internship-india"
+      ]
+    },
+    {
+      "id": "zoho-off-campus-hiring",
+      "title": "Zoho Off-Campus Hiring",
+      "org": "Zoho Corporation",
+      "category": "company_drives",
+      "summary": "Zoho accepts direct applications for software and other roles through its careers site. Applicants selected through the role-specific process can join Zoho in a full-time position.",
+      "benefit": {
+        "kind": "paid_role",
+        "what_you_get": "A full-time software role at Zoho, applied for directly through the careers site.",
+        "amount_text": null,
+        "amount_status": "unchecked",
+        "amount_source": null
+      },
+      "location": {
+        "mode": "on_site",
+        "place": "India"
+      },
+      "apply": {
+        "what_you_need": null,
+        "how_they_select": null,
+        "beginner_friendly": null,
+        "application_fee": null,
+        "fee_status": "unchecked"
+      },
+      "official_url": "https://careers.zohocorp.com/jobs/Careers",
+      "source_url": "https://careers.zohocorp.com/jobs/Careers",
+      "last_verified": "2026-09-21",
+      "deadline": "tbd",
+      "typical_window": "Openings appear throughout the year and close by individual role",
+      "rules": {
+        "min_tenth_pct": null,
+        "min_twelfth_pct": null,
+        "min_cgpa": null,
+        "max_active_backlogs": null,
+        "max_gap_years": null,
+        "grad_years": null,
+        "citizenship": "any",
+        "gender": "any",
+        "requires_student": false,
+        "branches": "any",
+        "min_work_years": null
+      },
+      "verification_status": "needs_check",
+      "tags": [
+        "off campus",
+        "software",
+        "jobs"
+      ],
+      "notes": "The official careers page lists current openings, but criteria and closing dates vary by role. The software-developer form found during research was unavailable when opened. No cutoff is published, but absence could not be confirmed.",
+      "alternative_ids": [
+        "juspay-developer-hiring",
+        "amazon-university-hiring-india"
+      ]
+    },
+    {
+      "id": "juspay-developer-hiring",
+      "title": "Juspay Developer Hiring",
+      "org": "Juspay",
+      "category": "company_drives",
+      "summary": "Juspay accepts direct applications for backend, frontend and other engineering roles. Selected applicants join teams that build and operate payment technology.",
+      "benefit": {
+        "kind": "paid_role",
+        "what_you_get": "A full-time engineering role at Juspay, applied for directly.",
+        "amount_text": null,
+        "amount_status": "unchecked",
+        "amount_source": null
+      },
+      "location": {
+        "mode": "on_site",
+        "place": "India"
+      },
+      "apply": {
+        "what_you_need": null,
+        "how_they_select": null,
+        "beginner_friendly": null,
+        "application_fee": null,
+        "fee_status": "unchecked"
+      },
+      "official_url": "https://juspay.io/careers",
+      "source_url": "https://juspay.io/careers/DEV-BE03",
+      "last_verified": "2026-09-21",
+      "deadline": "tbd",
+      "typical_window": "Roles are posted as hiring needs arise and close individually",
+      "rules": {
+        "min_tenth_pct": null,
+        "min_twelfth_pct": null,
+        "min_cgpa": null,
+        "max_active_backlogs": null,
+        "max_gap_years": null,
+        "grad_years": null,
+        "citizenship": "any",
+        "gender": "any",
+        "requires_student": false,
+        "branches": "any",
+        "min_work_years": null
+      },
+      "verification_status": "needs_check",
+      "tags": [
+        "developer",
+        "fintech",
+        "jobs"
+      ],
+      "notes": "No current student hiring challenge with official eligibility and a deadline was found. The linked official backend role is a direct job route and may add experience requirements, so check the live role before applying. No cutoff is published, but absence could not be confirmed.",
+      "alternative_ids": [
+        "zoho-off-campus-hiring",
+        "amazon-university-hiring-india"
+      ]
+    },
+    {
+      "id": "tcs-nqt",
+      "title": "TCS All India NQT Hiring",
+      "org": "Tata Consultancy Services",
+      "category": "company_drives",
+      "summary": "TCS uses the NQT selection process to place eligible graduates into Ninja, Digital or Prime interviews based on test performance.",
+      "benefit": {
+        "kind": "paid_role",
+        "what_you_get": "A TCS Ninja, Digital or Prime job offer, decided by your NQT score and interviews.",
+        "amount_text": null,
+        "amount_status": "unchecked",
+        "amount_source": null
+      },
+      "location": {
+        "mode": "on_site",
+        "place": "India"
+      },
+      "apply": {
+        "what_you_need": "Registration on the TCS NextStep portal",
+        "how_they_select": "The National Qualifier Test, then interviews for the Ninja, Digital or Prime tier",
+        "beginner_friendly": null,
+        "application_fee": null,
+        "fee_status": "unchecked"
+      },
+      "official_url": "https://www.tcs.com/careers/india/tcs-all-india-nqt-hiring",
+      "source_url": "https://www.tcs.com/careers/india/tcs-all-india-nqt-hiring",
+      "last_verified": "2026-09-21",
+      "deadline": "2026-03-20",
+      "typical_window": "Registration for the 2026 drive opened in mid February and closed on 20 March. The next drive is not announced.",
+      "rules": {
+        "min_tenth_pct": 60,
+        "min_twelfth_pct": 60,
+        "min_cgpa": null,
+        "max_active_backlogs": 0,
+        "max_gap_years": 2,
+        "grad_years": null,
+        "citizenship": "any",
+        "gender": "any",
+        "requires_student": false,
+        "branches": "any",
+        "min_work_years": null
+      },
+      "verification_status": "needs_check",
+      "tags": [
+        "fresher hiring",
+        "NQT",
+        "engineering"
+      ],
+      "notes": "The official page requires 60% or equivalent CGPA in class 10, class 12, diploma and graduation. It gives no 10-point CGPA cutoff, so min_cgpa is left empty; treat 60% aggregate in your degree as the bar. The 2026 drive was open to the 2024, 2025 and 2026 batches only and capped work experience at two years. The batch list for the next drive is not announced, so no graduation year rule is applied here. Re-check before relying on this.",
+      "alternative_ids": [
+        "zoho-off-campus-hiring",
+        "hackwithinfy",
+        "juspay-developer-hiring"
+      ]
+    }
+  ]
+}

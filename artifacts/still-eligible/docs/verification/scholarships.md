@@ -53,6 +53,7 @@ Checked on 2026-09-21. Quotes below are from official programme or organisation 
 - `requires_student: false`: “The applicant must hold a degree from a recognised university in India. If you are in the final year of graduation and awaiting results, you are eligible to apply.”
 - `gender: any`: no gender restriction is stated.
 - Deadline: “The last day to submit your application is till 12:00pm (afternoon) on 31st March 2026.”
+- Amount (read 2026-09-22 on the same page): “The value depends on the course and covers tuition fees, living expenses, one-way travel, visa costs and health allowance, up to USD 120,000.”
 - Doubt: the official degree thresholds differ by subject. The page gives “65%, CGPA 6.8/10, or GPA 2.6/4” for listed humanities-related fields and “70%, CGPA 7.2/10, or GPA 3/4” for listed science-related fields. A single cutoff would misrepresent these alternatives, so `min_cgpa` is null. The official page also limits Engineering and Natural Sciences study to Imperial College London.
 
 ## `erasmus-mundus-joint-masters`
@@ -72,7 +73,7 @@ Checked on 2026-09-21. Quotes below are from official programme or organisation 
 - Citizenship `any`, `gender: any`: the official entry requirements state no nationality or gender restriction.
 - `requires_student: false`: the master’s minimum is a “Bachelors degree in a subject relevant the program being applied to, from a recognized higher education institution”. The page separately permits an applicant who has not yet completed the current degree to submit a recent academic record.
 - `branches: any`: relevance is programme-specific and cannot be mapped to one stored BTech branch list.
-- Deadline: “Round 1 application deadline | 27 September 2026”. The page says Spring 2027 applications are open and also lists “Round 2 application deadline | 3 January 2027”.
+- Deadline (re-read 2026-09-22 at https://admissions.kaust.edu.sa/how-to-apply/admission-timelines): under “Fall 2027 Admission”, “Fall 2027 admission is open to MS, MS/PhD, and PhD applicants.” with “Round 2 application open | 28 September 2026” and “Round 2 application deadline | 3 January 2027”. Under “Spring 2027 Admission”, “Spring 2027 admission is only open to PhD applicants.” with “Round 1 application deadline | 27 September 2026”. The page notes “These dates are tentative and may change based on application volume.” The record stores the fall round because a BTech student applies for the MS intake, and `typical_window` describes both rounds.
 - Doubt: “The minimum permitted GPA is 3.0 on a 4-point scale (or equivalent).” This is not converted to a 10-point `min_cgpa`. The applicant must also confirm the appropriate intake and programme.
 
 ## `stipendium-hungaricum`

@@ -4,7 +4,6 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useColors } from '@/hooks/useColors';
 import { typography } from '@/constants/styles';
 import { useStore } from '@/lib/store';
-import { findOpportunity } from '@/data';
 import { evaluateEligibility } from '@/lib/engine';
 import { deadlineSortValue } from '@/lib/deadlines';
 import { OpportunityCard } from '@/components/OpportunityCard';
@@ -13,13 +12,13 @@ import Animated, { FadeInUp } from 'react-native-reanimated';
 export default function TrackedScreen() {
   const insets = useSafeAreaInsets();
   const colors = useColors();
-  const { profile, trackedOppIds } = useStore();
+  const { profile, trackedOppIds, findRecord } = useStore();
 
   const trackedItems = useMemo(() => {
     if (!profile) return [];
     const items = [];
     for (const id of trackedOppIds) {
-      const opp = findOpportunity(id);
+      const opp = findRecord(id);
       if (opp) {
         items.push({
           opportunity: opp,
@@ -28,7 +27,7 @@ export default function TrackedScreen() {
       }
     }
     return items.sort((a, b) => deadlineSortValue(a.opportunity.deadline) - deadlineSortValue(b.opportunity.deadline));
-  }, [profile, trackedOppIds]);
+  }, [profile, trackedOppIds, findRecord]);
 
   return (
     <View style={[styles.container, { backgroundColor: colors.background }]}>
