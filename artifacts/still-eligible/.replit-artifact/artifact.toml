@@ -1,0 +1,24 @@
+kind = "mobile"
+previewPath = "/"
+title = "StillEligible"
+description = "An offline-first mobile app for Indian BTech students that evaluates eligibility locally, shows opportunities they still qualify for, explains closed doors clearly, and helps track application deadlines."
+version = "1.0.0"
+id = "artifacts/still-eligible"
+router = "expo-domain"
+
+[[services]]
+name = "expo"
+ensurePreviewReachable = "/status"
+paths = [ "/" ]
+localPort = 21663
+
+[services.development]
+run = "pnpm --filter @workspace/still-eligible run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/still-eligible", "run", "build" ]
+run = [ "pnpm", "--filter", "@workspace/still-eligible", "run", "serve" ]
+
+[services.env]
+PORT = "21663"
+BASE_PATH = "/"

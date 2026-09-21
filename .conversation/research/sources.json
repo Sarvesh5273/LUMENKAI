@@ -1,0 +1,79 @@
+{
+  "official-rules": {
+    "title": "RevenueCat Shipaton 2026 Official Rules",
+    "url": "https://revenuecat-shipaton-2026.devpost.com/rules",
+    "authority": "Controlling official event rules",
+    "accessed": "2026-09-21",
+    "evidence": "research/sources/official-rules.md"
+  },
+  "event-home": {
+    "title": "RevenueCat Shipaton 2026",
+    "url": "https://revenuecat-shipaton-2026.devpost.com/",
+    "authority": "Official event summary, subordinate to rules",
+    "accessed": "2026-09-21",
+    "evidence": "research/sources/shipaton-home.md"
+  },
+  "official-faq": {
+    "title": "Shipaton FAQ",
+    "url": "https://www.shipaton.com/faq",
+    "authority": "Official organizer FAQ",
+    "accessed": "2026-09-21",
+    "evidence": "research/sources/official-faq.md"
+  },
+  "next-gen": {
+    "title": "Shipaton Next Gen Award",
+    "url": "https://www.shipaton.com/next-gen",
+    "authority": "Official category overview",
+    "accessed": "2026-09-21",
+    "evidence": "research/sources/next-gen-guide.md"
+  },
+  "current-gallery": {
+    "title": "Shipaton 2026 Project Gallery",
+    "url": "https://revenuecat-shipaton-2026.devpost.com/project-gallery",
+    "authority": "Official gallery availability",
+    "accessed": "2026-09-21",
+    "evidence": "research/sources/current-gallery.md"
+  },
+  "winners-2025": {
+    "title": "Shipaton 2025 Winners",
+    "url": "https://www.revenuecat.com/blog/company/shipaton-2025-winners",
+    "authority": "Organizer retrospective; outcomes authoritative, development durations organizer-reported",
+    "accessed": "2026-09-21",
+    "evidence": "research/sources/verified-2025-winners.md"
+  },
+  "google-testing": {
+    "title": "App testing requirements for new personal developer accounts",
+    "url": "https://support.google.com/googleplay/android-developer/answer/14151465?hl=en-IN",
+    "authority": "Official platform documentation",
+    "accessed": "2026-09-21",
+    "evidence": "research/sources/publishing-google-personal-testing.md"
+  },
+  "apple-enrollment": {
+    "title": "Enrolling, verifying, and renewing with the Apple Developer app",
+    "url": "https://developer.apple.com/help/account/membership/enrolling-in-the-app",
+    "authority": "Official platform documentation",
+    "accessed": "2026-09-21",
+    "evidence": "research/sources/publishing-apple-enrollment.md"
+  },
+  "samsung-onboarding": {
+    "title": "Get Started in Galaxy Store",
+    "url": "https://developer.samsung.com/galaxy-store/prepare.html",
+    "authority": "Official platform documentation",
+    "accessed": "2026-09-21",
+    "evidence": "research/sources/publishing-samsung-get-started.md"
+  },
+  "revenuecat-test-store": {
+    "title": "RevenueCat Test Store",
+    "url": "https://www.revenuecat.com/docs/test-and-launch/sandbox/test-store",
+    "authority": "Official product documentation, not an event eligibility ruling",
+    "accessed": "2026-09-21",
+    "evidence": "research/sources/build-revenuecat-test-store.md"
+  },
+  "revenuecat-expo": {
+    "title": "RevenueCat with Expo",
+    "url": "https://www.revenuecat.com/docs/getting-started/installation/expo",
+    "authority": "Official product documentation",
+    "accessed": "2026-09-21",
+    "evidence": "research/sources/build-expo-revenuecat.md"
+  }
+}
