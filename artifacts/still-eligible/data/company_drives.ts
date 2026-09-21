@@ -22,7 +22,7 @@ export const COMPANY_DRIVES: Opportunity[] = [
       what_you_get:
         'Finalists can get Infosys internship and job offers, decided by the coding rounds.',
       amount_text: null,
-      amount_status: 'unchecked',
+      amount_status: 'not_stated',
       amount_source: null,
     },
     location: { mode: 'hybrid', place: 'Online rounds, grand finale in India' },
@@ -36,7 +36,7 @@ export const COMPANY_DRIVES: Opportunity[] = [
     official_url: 'https://www.infosys.com/careers/hackwithinfy.html',
     source_url:
       'https://www.infosys.com/careers/hackwithinfy/2026/hwi-terms-conditions.pdf',
-    last_verified: '2026-09-21',
+    last_verified: '2026-09-22',
     deadline: 'tbd',
     typical_window: 'College-led registration usually runs from February into March',
     rules: {
@@ -70,7 +70,7 @@ export const COMPANY_DRIVES: Opportunity[] = [
       what_you_get:
         'A paid software engineering internship on a Google team in India.',
       amount_text: null,
-      amount_status: 'unchecked',
+      amount_status: 'not_stated',
       amount_source: null,
     },
     location: { mode: 'on_site', place: 'India' },
@@ -85,7 +85,7 @@ export const COMPANY_DRIVES: Opportunity[] = [
       'https://www.google.com/about/careers/applications/students/engineering-and-technical-internships',
     source_url:
       'https://www.google.com/about/careers/applications/students/engineering-and-technical-internships',
-    last_verified: '2026-09-21',
+    last_verified: '2026-09-22',
     deadline: 'tbd',
     typical_window: 'India summer internship roles are posted separately when teams begin hiring',
     rules: {
@@ -119,7 +119,7 @@ export const COMPANY_DRIVES: Opportunity[] = [
       what_you_get:
         'A paid internship or an entry-level engineering role at Amazon India.',
       amount_text: null,
-      amount_status: 'unchecked',
+      amount_status: 'not_stated',
       amount_source: null,
     },
     location: { mode: 'on_site', place: 'India' },
@@ -133,7 +133,7 @@ export const COMPANY_DRIVES: Opportunity[] = [
     official_url: 'https://www.amazon.jobs/en/teams/internships-for-students',
     source_url:
       'https://www.amazon.jobs/en/jobs/3046606/sde-i-intern-amazon-university-talent-acquisition',
-    last_verified: '2026-09-21',
+    last_verified: '2026-09-22',
     deadline: 'tbd',
     typical_window: 'University roles are posted throughout the year and close by individual job',
     rules: {
@@ -167,7 +167,7 @@ export const COMPANY_DRIVES: Opportunity[] = [
       what_you_get:
         'A paid university internship on a Microsoft team in India.',
       amount_text: null,
-      amount_status: 'unchecked',
+      amount_status: 'not_stated',
       amount_source: null,
     },
     location: { mode: 'on_site', place: 'India' },
@@ -180,7 +180,7 @@ export const COMPANY_DRIVES: Opportunity[] = [
     },
     official_url: 'https://careers.microsoft.com/v2/global/en/universityinternship',
     source_url: 'https://careers.microsoft.com/v2/global/en/internship_eligibility',
-    last_verified: '2026-09-21',
+    last_verified: '2026-09-22',
     deadline: 'tbd',
     typical_window: 'Openings and deadlines are published on individual internship job listings',
     rules: {
@@ -214,7 +214,7 @@ export const COMPANY_DRIVES: Opportunity[] = [
       what_you_get:
         'A paid early-career internship at Atlassian India for penultimate-year students.',
       amount_text: null,
-      amount_status: 'unchecked',
+      amount_status: 'not_stated',
       amount_source: null,
     },
     location: { mode: 'on_site', place: 'India' },
@@ -228,7 +228,7 @@ export const COMPANY_DRIVES: Opportunity[] = [
     official_url:
       'https://www.atlassian.com/company/careers/all-jobs?team=Interns%2CGraduates',
     source_url: 'https://www.atlassian.com/company/careers/earlycareers',
-    last_verified: '2026-09-21',
+    last_verified: '2026-09-22',
     deadline: 'tbd',
     typical_window: 'India internship applications usually open around July for an April to June start',
     rules: {
@@ -262,7 +262,7 @@ export const COMPANY_DRIVES: Opportunity[] = [
       what_you_get:
         'A full-time software role at Zoho, applied for directly through the careers site.',
       amount_text: null,
-      amount_status: 'unchecked',
+      amount_status: 'not_stated',
       amount_source: null,
     },
     location: { mode: 'on_site', place: 'India' },
@@ -275,7 +275,7 @@ export const COMPANY_DRIVES: Opportunity[] = [
     },
     official_url: 'https://careers.zohocorp.com/jobs/Careers',
     source_url: 'https://careers.zohocorp.com/jobs/Careers',
-    last_verified: '2026-09-21',
+    last_verified: '2026-09-22',
     deadline: 'tbd',
     typical_window: 'Openings appear throughout the year and close by individual role',
     rules: {
@@ -309,7 +309,7 @@ export const COMPANY_DRIVES: Opportunity[] = [
       what_you_get:
         'A full-time engineering role at Juspay, applied for directly.',
       amount_text: null,
-      amount_status: 'unchecked',
+      amount_status: 'not_stated',
       amount_source: null,
     },
     location: { mode: 'on_site', place: 'India' },
@@ -322,7 +322,7 @@ export const COMPANY_DRIVES: Opportunity[] = [
     },
     official_url: 'https://juspay.io/careers',
     source_url: 'https://juspay.io/careers/DEV-BE03',
-    last_verified: '2026-09-21',
+    last_verified: '2026-09-22',
     deadline: 'tbd',
     typical_window: 'Roles are posted as hiring needs arise and close individually',
     rules: {
@@ -354,9 +354,9 @@ export const COMPANY_DRIVES: Opportunity[] = [
       kind: 'paid_role',
       what_you_get:
         'A TCS Ninja, Digital or Prime job offer, decided by your NQT score and interviews.',
-      amount_text: null,
-      amount_status: 'unchecked',
-      amount_source: null,
+      amount_text: 'Prime tier: 9.09 LPA - 9.30 LPA (the page prints no Ninja or Digital figure)',
+      amount_status: 'stated',
+      amount_source: 'https://www.tcs.com/careers/india/tcs-all-india-nqt-hiring',
     },
     location: { mode: 'on_site', place: 'India' },
     apply: {
@@ -364,22 +364,120 @@ export const COMPANY_DRIVES: Opportunity[] = [
       how_they_select: 'The National Qualifier Test, then interviews for the Ninja, Digital or Prime tier',
       beginner_friendly: null,
       application_fee: null,
-      fee_status: 'unchecked',
+      fee_status: 'free',
     },
     official_url: 'https://www.tcs.com/careers/india/tcs-all-india-nqt-hiring',
     source_url: 'https://www.tcs.com/careers/india/tcs-all-india-nqt-hiring',
-    last_verified: '2026-09-21',
+    last_verified: '2026-09-22',
     deadline: '2026-03-20',
     typical_window: 'Registration for the 2026 drive opened in mid February and closed on 20 March. The next drive is not announced.',
     rules: {
       min_tenth_pct: 60, min_twelfth_pct: 60, min_cgpa: null,
-      max_active_backlogs: 0, max_gap_years: 2, grad_years: null,
+      max_active_backlogs: 0, max_gap_years: 2, grad_years: [2024, 2025, 2026],
       citizenship: 'any', gender: 'any', requires_student: false, branches: 'any',
       min_work_years: null,
     },
-    verification_status: 'needs_check',
+    verification_status: 'verified',
     tags: ['fresher hiring', 'NQT', 'engineering'],
-    notes: 'The official page requires 60% or equivalent CGPA in class 10, class 12, diploma and graduation. It gives no 10-point CGPA cutoff, so min_cgpa is left empty; treat 60% aggregate in your degree as the bar. The 2026 drive was open to the 2024, 2025 and 2026 batches only and capped work experience at two years. The batch list for the next drive is not announced, so no graduation year rule is applied here. Re-check before relying on this.',
+    notes: 'The official page requires 60% or equivalent CGPA in class 10, class 12, diploma and graduation. It gives no 10-point CGPA cutoff, so min_cgpa is left empty; treat 60% aggregate in your degree as the bar. The closed 2026 drive was open to the 2024, 2025 and 2026 batches only and capped work experience at two years. The salary figure shown is the Prime offer range for a UG candidate with zero to one year of experience.',
     alternative_ids: ['zoho-off-campus-hiring', 'hackwithinfy', 'juspay-developer-hiring'],
+  },
+  {
+    id: 'qualcomm-campus-hiring-india',
+    title: 'Qualcomm Campus Hiring India',
+    org: 'Qualcomm India',
+    category: 'company_drives',
+    summary:
+      'Qualcomm hires campus graduates for software engineering roles in India. The role covers embedded software, platforms, connectivity and application development.',
+    benefit: {
+      kind: 'paid_role',
+      what_you_get: 'A full-time associate software engineering role at Qualcomm India.',
+      amount_text: null,
+      amount_status: 'not_stated',
+      amount_source: null,
+    },
+    location: { mode: 'on_site', place: 'Hyderabad, Bengaluru, Chennai or Noida' },
+    apply: {
+      what_you_need: 'A resume showing your engineering degree and relevant software skills.',
+      how_they_select: null,
+      beginner_friendly: null,
+      application_fee: null,
+      fee_status: 'unchecked',
+    },
+    official_url:
+      'https://careers.qualcomm.com/careers/apply?pid=446719784235&domain=qualcomm.com',
+    source_url:
+      'https://careers.qualcomm.com/careers/job/446719784235?domain=qualcomm.com',
+    last_verified: '2026-09-22',
+    deadline: 'tbd',
+    typical_window:
+      'The 2027 campus listing was open in September 2026 and gave no closing date.',
+    rules: {
+      min_tenth_pct: null,
+      min_twelfth_pct: null,
+      min_cgpa: null,
+      max_active_backlogs: null,
+      max_gap_years: null,
+      grad_years: null,
+      citizenship: 'any',
+      gender: 'any',
+      requires_student: false,
+      branches: ['CSE', 'ECE'],
+      min_work_years: null,
+    },
+    verification_status: 'verified',
+    tags: ['campus hiring', 'software', 'engineering'],
+    notes:
+      'The official page lists no marks, backlog or gap cutoff. Its education line names Computer Science Engineering, Communication Engineering and ECE, and the minimum qualification also allows a related engineering, information systems or computer science field.',
+    alternative_ids: ['tcs-nqt', 'zoho-off-campus-hiring', 'amazon-university-hiring-india'],
+  },
+  {
+    id: 'qualcomm-hardware-internship-india',
+    title: 'Qualcomm Hardware Engineering Internship India',
+    org: 'Qualcomm India',
+    category: 'company_drives',
+    summary:
+      'A Qualcomm hardware engineering internship in India covering chip design, verification, validation and related engineering work.',
+    benefit: {
+      kind: 'paid_role',
+      what_you_get: 'A hardware engineering internship with Qualcomm India.',
+      amount_text: null,
+      amount_status: 'not_stated',
+      amount_source: null,
+    },
+    location: { mode: 'on_site', place: 'Bengaluru and one other India location' },
+    apply: {
+      what_you_need: 'A resume showing an electrical, VLSI, embedded systems or ECE background.',
+      how_they_select: null,
+      beginner_friendly: false,
+      application_fee: null,
+      fee_status: 'unchecked',
+    },
+    official_url:
+      'https://careers.qualcomm.com/careers/apply?pid=446719784824&domain=qualcomm.com',
+    source_url:
+      'https://careers.qualcomm.com/careers/job/446719784824?domain=qualcomm.com',
+    last_verified: '2026-09-22',
+    deadline: 'tbd',
+    typical_window:
+      'The 2027 internship listing was open in September 2026 and gave no closing date.',
+    rules: {
+      min_tenth_pct: null,
+      min_twelfth_pct: null,
+      min_cgpa: null,
+      max_active_backlogs: null,
+      max_gap_years: null,
+      grad_years: null,
+      citizenship: 'any',
+      gender: 'any',
+      requires_student: false,
+      branches: ['ECE', 'EE'],
+      min_work_years: null,
+    },
+    verification_status: 'verified',
+    tags: ['internship', 'hardware', 'VLSI'],
+    notes:
+      'The official page lists no marks, backlog or gap cutoff and does not state that current enrolment is required. It names bachelor or master backgrounds in Electrical Engineering, VLSI, Embedded and VLSI, or ECE.',
+    alternative_ids: ['qualcomm-campus-hiring-india', 'microsoft-university-internship-india'],
   },
 ];

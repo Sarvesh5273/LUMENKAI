@@ -9,6 +9,7 @@
     "serve": "node server/serve.js",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "export-data": "tsx scripts/export-dataset.ts",
+    "check-data": "tsx scripts/check-data.ts",
     "test": "jest",
     "test:watch": "jest --watch"
   },

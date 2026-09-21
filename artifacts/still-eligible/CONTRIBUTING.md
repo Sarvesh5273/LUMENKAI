@@ -22,23 +22,24 @@ The field-by-field reference is in [`docs/opportunity-schema.md`](docs/opportuni
 ## The four rules
 
 1. **Official sources only.** The program's own site, the company's own careers page, or a government notification. Not a coaching site, not a Telegram forward, not a blog, not a screenshot from a placement group. Put the exact page you read in `source_url`.
-2. **Never invent a number.** If the official page does not state a cutoff, the rule is `null`. If you are not sure whether a cutoff exists, set `verification_status: 'needs_check'` and say what you could not confirm in `notes`. A missing number is a gap the student can check. A made-up number is a lie the student will trust.
-3. **Never guess a date.** `deadline` is the date on the official page, or `'rolling'`, or `'tbd'`. When the last known window has passed, leave the old date in place and fill `typical_window` so the app can say "expected next cycle".
+2. **Never invent a number.** If the official page does not state a cutoff, the rule is `null`. If you are not sure whether a cutoff exists, set `verification_status: 'needs_check'` and say what you could not confirm in `notes`. A missing number is a gap the student can check. A made-up number is a lie the student will trust. The opposite mistake is just as bad: `null` renders as "no such cutoff", so before you write it, search the page for `%`, `CGPA`, `GPA`, `aggregate`, `marks`, `backlog`, `arrear` and `gap` and quote what you find in the verification log. A degree bar given as a percentage or on a 4-point scale ("60% or equivalent", "GPA 3.0") goes in `notes`, not in `min_cgpa`; only a figure the page itself prints on a 10-point scale belongs there.
+3. **Never guess a date.** `deadline` is the date on the official page, or `'rolling'`, or `'tbd'`. When the last known window has passed, leave the old date in place and fill `typical_window` so the app can say "expected next cycle". When a page gives year of study instead of a batch ("pre-final year", "first to third year"), convert it using the academic year the application window belonged to, not today's date: a January 2026 deadline sits in 2025-26, so final year is the 2026 batch and pre-final is 2027.
 4. **Never guess the money.** `benefit.amount_text` is copied from the official page with its currency, or it is null, and `amount_source` is the page you copied it from. `amount_status: 'not_stated'` means you read the page and it gives no figure; if you did not look, leave `'unchecked'`. The same goes for the fee: `fee_status: 'free'` only after you checked, otherwise `'unchecked'`. `beginner_friendly: true` only when the page says so.
 
 ## Adding or fixing a record
 
 1. Open the official page. Copy the eligibility text into `docs/verification/<category>.md` under the record id, with the URL and today's date. This is the paper trail the next person will need.
 2. Edit the record in the matching `data/*.ts` file. Set `last_verified` to today in `YYYY-MM-DD`.
-3. Regenerate the dataset file and run the checks from the repo root:
+3. Check the record, regenerate the dataset file and run the tests from the repo root:
 
    ```bash
+   pnpm --filter @workspace/still-eligible check-data
    pnpm --filter @workspace/still-eligible export-data
    pnpm --filter @workspace/still-eligible run typecheck
    pnpm --filter @workspace/still-eligible test
    ```
 
-   The data test names the record id and field when something is wrong, and fails if `data/dataset.json` is out of date.
+   `check-data` validates every record without writing anything and names the record id and field when something is wrong, so you can iterate on it. The data test runs the same checks and also fails if `data/dataset.json` is out of date.
 4. Open a pull request. In the description, paste the sentence from the official page that supports each number you changed.
 
 Once the pull request is merged, every installed app picks up the new `data/dataset.json` on its next launch. No app store release is needed for a data fix.
@@ -62,4 +63,7 @@ Every record's detail screen has a "Report a wrong rule" link. It opens a prefil
 
 - Records for programs you found on aggregator sites but could not trace to an official page.
 - Records whose only source is a past year's PDF with no sign the program still runs.
+- One-off events. A hackathon that ran once has no next cycle, and once its deadline passes the app would show "expected next cycle" for something that will never come back. Add a program only when official pages show at least two editions or say it runs every year.
+- Offers whose money is an equity investment or credits only. A stated equity-free grant, prize, stipend or paid role is in; "seed investment for a 10% stake" is out.
+- Government schemes (central or state). They are out of scope for this app; foreign government scholarships are fine.
 - Edits that change ids. Tracked lists on students' phones are stored by id.

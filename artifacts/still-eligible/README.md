@@ -40,6 +40,7 @@ lib/conversions.ts  CGPA and percentage helpers for the onboarding form
 lib/validate.ts     Runtime schema used by the data tests
 lib/store.tsx       AsyncStorage-backed profile, tracked list and dataset cache
 data/               One file per category, index.ts that merges them, and the generated dataset.json
+scripts/check-data.ts      Validates every record without writing anything (pnpm check-data)
 scripts/export-dataset.ts  Writes data/dataset.json; run it after any data change
 tests/              Jest tests for the engine, deadlines, conversions, wording, dataset parsing and data drift
 docs/               Schema reference and per-category verification logs

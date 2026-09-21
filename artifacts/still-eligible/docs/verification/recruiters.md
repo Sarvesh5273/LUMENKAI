@@ -39,3 +39,22 @@ These companies were checked on 2026-09-21. None of them publishes a fresher cut
 
 - Tech Mahindra fresher hiring: the official careers results found were experienced-hire jobs, not a stable India fresher or Graduate Engineer Trainee drive. No official common fresher criteria page was found.
 - Deloitte USI Analyst: the official USI search page showed many unrelated analyst and specialist vacancies but no single campus Analyst program with common BTech eligibility. Criteria are posting-specific.
+
+## Retry on 2026-09-22
+
+Official company career searches were checked again. Search results from blogs, college notices and fresher aggregators were ignored.
+
+| Company and role | What the official site showed on 2026-09-22 |
+| --- | --- |
+| Wipro Elite NTH and Turbo | Wipro Careers and its Early Careers page were live, but no current Elite NTH or Turbo posting with public academic cutoffs was present. |
+| Infosys Systems Engineer, Specialist Programmer and Digital Specialist Engineer | Search returned third-party drive pages, but no readable Infosys Careers, InfyTQ or Springboard posting with the claimed cutoffs. |
+| Capgemini Exceller | No current official Exceller drive page with eligibility cutoffs and an application deadline was found. |
+| Cognizant GenC | No live official India engineering drive page exposing GenC academic cutoffs was found. |
+| HCLTech fresher hiring | The official careers material did not expose a current drive with marks, backlog and gap rules. |
+| Accenture Associate Software Engineer India | No readable live official listing with common fresher academic cutoffs was found. |
+| LTIMindtree GET | No readable current official GET listing with public academic cutoffs was found. |
+| Tech Mahindra fresher hiring | Official results did not show a current India fresher drive with published cutoffs. |
+| IBM Associate Systems Engineer | No live official India fresher posting with public academic cutoffs was found. |
+| DXC Associate Professional | No live official India fresher posting with public academic cutoffs was found. |
+| Deloitte India campus | Official results did not expose a single current BTech campus drive with common eligibility cutoffs. |
+| Persistent, Mphasis, Hexaware, Virtusa, Zensar, Cyient and NTT Data | Official career pages or job search pages were available, but no common current fresher drive page with public academic cutoffs was found. |
