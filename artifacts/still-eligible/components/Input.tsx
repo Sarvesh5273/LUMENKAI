@@ -21,6 +21,7 @@ export function Input({ label, error, helper, style, ...props }: InputProps) {
       )}
       <TextInput
         testID={props.testID || `input-${label?.toLowerCase().replace(/\s+/g, '-')}`}
+        accessibilityLabel={props.accessibilityLabel || label}
         style={[
           styles.input,
           typography.body,

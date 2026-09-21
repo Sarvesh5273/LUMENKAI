@@ -1,40 +1,60 @@
 # StillEligible
 
-A candid, offline-first eligibility checker for Indian BTech students navigating campus placements, off-campus drives, and alternative routes.
+Most placement drives in India filter on five numbers: 10th percentage, 12th percentage, CGPA, active backlogs and gap years. Students who miss one cutoff often assume every door is shut. Most doors never had that cutoff.
 
-## Day 1 Capabilities
-- **Local Onboarding:** 60-second profile setup storing 10th %, 12th %, CGPA, backlogs, branch, etc.
-- **Offline Deterministic Engine:** Instantly evaluates eligibility based on strict rules.
-- **Categorized Opportunities:** Shows curated open doors across Mass Recruiters, Product, Startups, Govt, and Higher Ed.
-- **Per-Rule Transparency:** Explicitly tells you why you passed, failed, or need to verify a specific rule.
-- **Tracked list:** Save opportunities you qualify for or need to verify.
-- **Local Persistence:** Uses AsyncStorage. No backend, no account, absolute privacy.
+StillEligible is an offline-first Android and iOS app that takes a student's profile once, checks it against a hand-verified dataset of programs, and shows exactly which doors are still open and why. For every program it prints one line per rule, including the lines that matter most: "No minimum CGPA required."
 
-## Architecture
-- React Native / Expo SDK 57
-- Expo Router
-- Pure TypeScript Rules Engine
-- Local `AsyncStorage` via React Context
-- `react-native-reanimated` for reveals
+Built solo by a BTech student for the RevenueCat Shipaton 2026 Next Gen award.
 
-## Data Provenance
-The 30 starter opportunities are curated manually from publicly available notifications, FAQs, and official career portals (TCS, Infosys, Amazon, ISRO, GATE, etc.). Data is deterministic but should always be double-checked via the `official_url`.
+## What it does
 
-## Running the App
+- **Profile once, on the device.** 10th, 12th, CGPA, backlogs, gap years, branch, graduation year, citizenship, optional gender, student status, work experience. Stored with AsyncStorage. No account, no server, nothing leaves the phone.
+- **Doors still open.** Programs you qualify for, grouped into five categories: criteria-free drives, open source programs, funded internships and research, abroad scholarships, hackathons and fellowships.
+- **Why you qualify.** Every record shows each rule with pass, fail, unknown or "no such cutoff", plus the official link, the page the criteria were read from, and the date a human last read it.
+- **Honest about uncertainty.** A missing profile field never fails a rule; it shows as "check this" and names the field. A record whose criteria could not be fully confirmed says so in the UI.
+- **Closed doors (planned).** Mass recruiter cutoffs live in a separate list so the app can tell you which number shut a door and by how much, and point at the nearest open one. Only recruiters that publish their cutoffs on an official public page are included, which today means TCS NQT alone; the rest reach students through placement cells, not URLs.
+- **Tracked deadlines.** Save what you plan to apply to. Countdowns are computed on the device from the stored date; programs whose last window has passed show "expected next cycle" with the usual annual window. Local reminders are planned.
 
-### Expo Go (Physical Device)
-Scan the QR code in Replit to open in Expo Go. The dev server uses `$REPLIT_EXPO_DEV_DOMAIN`.
+## Where the data comes from
 
-### Web
-Can also be previewed locally using the React Native Web build.
+Every record has an `official_url`, a `source_url` (the exact page the criteria were read on) and a `last_verified` date. The reading notes for each category are in `docs/verification/`. If an official page did not state a cutoff, the rule is `null` and the record is marked `needs_check` with an explanation. No number in the dataset was made up to fill a gap. See [`CONTRIBUTING.md`](CONTRIBUTING.md) if you want to fix or add a record.
 
-## Testing the Engine
-```bash
-npx tsx tests/engine.test.ts
+## Project layout
+
+```
+app/                Expo Router screens (onboarding, tabs, opportunity detail)
+components/         Reusable UI pieces
+constants/, hooks/  Theme and colour helpers
+lib/types.ts        The data model. Read this first.
+lib/engine.ts       Pure eligibility engine: one record + one profile -> verdict with reasons
+lib/deadlines.ts    Countdown and "expected next cycle" logic, computed from the device clock
+lib/conversions.ts  CGPA and percentage helpers for the onboarding form
+lib/validate.ts     Runtime schema used by the data tests
+lib/store.tsx       AsyncStorage-backed profile and tracked list
+data/               One file per category plus index.ts that merges them
+tests/              Jest tests for the engine, deadlines, conversions and the dataset
+docs/               Schema reference and per-category verification logs
 ```
 
-## Current Limitations (Not in Day 1 Build)
-- No RevenueCat / paywall
-- No push notifications or system calendar sync
-- UI for "Closed Doors" (permanently ineligible opportunities) is currently filtered out of the main view to focus on hope.
-- The database is currently static (30 curated records) and not a live feed of 40-60 verified active links yet.
+## Running it
+
+This package lives in a pnpm workspace. From the repo root:
+
+```bash
+pnpm install
+pnpm --filter @workspace/still-eligible run typecheck
+pnpm --filter @workspace/still-eligible test
+```
+
+The Expo dev server is started by the workspace's `expo` workflow. Scan the QR code with Expo Go on a phone, or open the web preview.
+
+## Stack
+
+- Expo SDK 57 (React Native 0.86, Expo Router), TypeScript
+- Zod for runtime validation of the dataset
+- Jest with babel-preset-expo for the pure logic tests
+- RevenueCat for the Pro tier (planned, not wired yet)
+
+## Licence
+
+MIT. See [`LICENSE`](../../LICENSE).

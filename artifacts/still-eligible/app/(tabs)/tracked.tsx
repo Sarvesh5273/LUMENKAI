@@ -1,11 +1,12 @@
 import React, { useMemo } from 'react';
-import { StyleSheet, Text, View, FlatList } from 'react-native';
+import { StyleSheet, Text, View, FlatList, Platform } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useColors } from '@/hooks/useColors';
 import { typography } from '@/constants/styles';
 import { useStore } from '@/lib/store';
-import { OPPORTUNITIES } from '@/data/opportunities';
+import { findOpportunity } from '@/data';
 import { evaluateEligibility } from '@/lib/engine';
+import { deadlineSortValue } from '@/lib/deadlines';
 import { OpportunityCard } from '@/components/OpportunityCard';
 import Animated, { FadeInUp } from 'react-native-reanimated';
 
@@ -16,12 +17,17 @@ export default function TrackedScreen() {
 
   const trackedItems = useMemo(() => {
     if (!profile) return [];
-    return OPPORTUNITIES
-      .filter(opp => trackedOppIds.includes(opp.id))
-      .map(opp => ({
-        opportunity: opp,
-        eligibility: evaluateEligibility(opp, profile)
-      }));
+    const items = [];
+    for (const id of trackedOppIds) {
+      const opp = findOpportunity(id);
+      if (opp) {
+        items.push({
+          opportunity: opp,
+          eligibility: evaluateEligibility(opp, profile)
+        });
+      }
+    }
+    return items.sort((a, b) => deadlineSortValue(a.opportunity.deadline) - deadlineSortValue(b.opportunity.deadline));
   }, [profile, trackedOppIds]);
 
   return (
@@ -30,11 +36,11 @@ export default function TrackedScreen() {
         data={trackedItems}
         keyExtractor={(item) => item.opportunity.id}
         contentContainerStyle={{ 
-          paddingTop: insets.top + 60,
+          paddingTop: (Platform.OS === 'web' ? 67 : insets.top) + 24,
           paddingBottom: insets.bottom + 120,
           paddingHorizontal: 20 
         }}
-        ListHeaderComponent={() => (
+        ListHeaderComponent={(
           <View style={styles.header}>
             <Text style={[typography.h1, { color: colors.foreground }]}>Tracked</Text>
             <Text style={[typography.body, { color: colors.mutedForeground, marginTop: 4 }]}>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, ScrollView, Platform } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useColors } from '@/hooks/useColors';
 import { typography } from '@/constants/styles';
@@ -7,6 +7,7 @@ import { useStore } from '@/lib/store';
 import { Button } from '@/components/Button';
 import { useRouter } from 'expo-router';
 import { Feather } from '@expo/vector-icons';
+import { BRANCH_LABELS, CITIZENSHIP_LABELS, GENDER_LABELS } from '@/lib/types';
 
 export default function ProfileScreen() {
   const insets = useSafeAreaInsets();
@@ -17,22 +18,24 @@ export default function ProfileScreen() {
   if (!profile) return null;
 
   const dataPoints = [
-    { label: '10th %', value: profile.percent_10th ? `${profile.percent_10th}%` : 'Not set' },
-    { label: '12th %', value: profile.percent_12th ? `${profile.percent_12th}%` : 'Not set' },
-    { label: 'CGPA', value: profile.cgpa ? profile.cgpa : 'Not set' },
-    { label: 'Active Backlogs', value: profile.active_backlogs ?? 0 },
-    { label: 'Gap Years', value: profile.gap_years ?? 0 },
-    { label: 'Branch', value: profile.branch || 'Not set' },
-    { label: 'Graduation Year', value: profile.grad_year || 'Not set' },
-    { label: 'Citizenship', value: profile.citizenship || 'Not set' },
-    { label: 'Gender', value: profile.gender || 'Not set' },
+    { label: '10th %', value: profile.tenth_pct !== null ? `${profile.tenth_pct}%` : 'Not set' },
+    { label: '12th %', value: profile.twelfth_pct !== null ? `${profile.twelfth_pct}%` : 'Not set' },
+    { label: 'CGPA', value: profile.cgpa !== null ? profile.cgpa : 'Not set' },
+    { label: 'Active Backlogs', value: profile.active_backlogs !== null ? profile.active_backlogs : 'Not set' },
+    { label: 'Gap Years', value: profile.gap_years !== null ? profile.gap_years : 'Not set' },
+    { label: 'Branch', value: profile.branch ? BRANCH_LABELS[profile.branch] : 'Not set' },
+    { label: 'Graduation Year', value: profile.grad_year !== null ? profile.grad_year : 'Not set' },
+    { label: 'Citizenship', value: profile.citizenship ? CITIZENSHIP_LABELS[profile.citizenship] : 'Not set' },
+    { label: 'Gender', value: profile.gender ? GENDER_LABELS[profile.gender] : 'Not set' },
+    { label: 'Student', value: profile.is_student !== null ? (profile.is_student ? 'Yes' : 'No') : 'Not set' },
+    { label: 'Work Experience', value: profile.work_years !== null ? `${profile.work_years} years` : 'Not set' },
   ];
 
   return (
     <View style={[styles.container, { backgroundColor: colors.background }]}>
       <ScrollView
         contentContainerStyle={{ 
-          paddingTop: insets.top + 60,
+          paddingTop: (Platform.OS === 'web' ? 67 : insets.top) + 24,
           paddingBottom: insets.bottom + 120,
           paddingHorizontal: 20 
         }}

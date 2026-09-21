@@ -4,9 +4,14 @@ import { useColors } from '@/hooks/useColors';
 import { typography } from '@/constants/styles';
 import * as Haptics from 'expo-haptics';
 
+interface SelectOption {
+  label: string;
+  value: string;
+}
+
 interface SelectProps {
   label?: string;
-  options: string[];
+  options: SelectOption[];
   value: string | null;
   onChange: (val: string) => void;
   error?: string;
@@ -31,11 +36,14 @@ export function Select({ label, options, value, onChange, error }: SelectProps) 
       )}
       <View style={styles.optionsGrid}>
         {options.map((opt) => {
-          const isSelected = value === opt;
+          const isSelected = value === opt.value;
           return (
             <TouchableOpacity
-              key={opt}
-              onPress={() => handlePress(opt)}
+              key={opt.value}
+              onPress={() => handlePress(opt.value)}
+              accessibilityRole="radio"
+              accessibilityState={{ selected: isSelected, checked: isSelected }}
+              accessibilityLabel={label ? `${label}: ${opt.label}` : opt.label}
               style={[
                 styles.option,
                 {
@@ -49,7 +57,7 @@ export function Select({ label, options, value, onChange, error }: SelectProps) 
                 typography.bodySmall,
                 { color: isSelected ? colors.primaryForeground : colors.foreground }
               ]}>
-                {opt}
+                {opt.label}
               </Text>
             </TouchableOpacity>
           );

@@ -2,10 +2,12 @@ import React from "react";
 import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import { useColors } from "@/hooks/useColors";
 import { typography } from "@/constants/styles";
-import { Opportunity, EligibilityResult } from "@/lib/types";
+import { Opportunity, EligibilityResult, UserProfile } from "@/lib/types";
 import { Feather } from "@expo/vector-icons";
 import { useRouter } from "expo-router";
 import * as Haptics from "expo-haptics";
+import { formatDeadlineShort } from "@/lib/deadlines";
+import { hasNoMarksCutoff, summarizeStatus } from "@/lib/engine";
 
 interface OpportunityCardProps {
   opportunity: Opportunity;
@@ -21,9 +23,6 @@ export function OpportunityCard({
   const colors = useColors();
   const router = useRouter();
 
-  // We navigate imperatively instead of wrapping the card in <Link asChild>.
-  // expo-router's Slot throws at runtime when the wrapped child receives an
-  // array style, which is exactly what this card uses for theming.
   const handlePress = () => {
     Haptics.selectionAsync().catch(() => {});
     if (onPress) {
@@ -33,38 +32,34 @@ export function OpportunityCard({
     router.push(`/opportunity/${opportunity.id}`);
   };
 
+  const summary = summarizeStatus(opportunity, eligibility);
+
   const getStatusColor = () => {
-    switch (eligibility.status) {
-      case "eligible":
+    switch (summary.tone) {
+      case "open":
         return colors.success;
-      case "not_eligible":
+      case "closed":
         return colors.destructive;
-      case "unknown":
+      case "check":
         return colors.accent;
     }
   };
 
-  const getStatusText = () => {
-    switch (eligibility.status) {
-      case "eligible":
-        return "You qualify";
-      case "not_eligible":
-        return "Not eligible";
-      case "unknown":
-        return "Verify rules";
-    }
-  };
-
   const getStatusIcon = () => {
-    switch (eligibility.status) {
-      case "eligible":
+    switch (summary.tone) {
+      case "open":
         return "check-circle";
-      case "not_eligible":
+      case "closed":
         return "x-circle";
-      case "unknown":
+      case "check":
         return "help-circle";
     }
   };
+
+  const deadlineText = formatDeadlineShort(opportunity.deadline);
+  // Only a verified record may wear the badge; an unconfirmed record with
+  // empty rules is a gap in our data, not a promise from the program.
+  const noCutoffs = opportunity.verification_status === 'verified' && hasNoMarksCutoff(opportunity.rules);
 
   return (
     <TouchableOpacity
@@ -79,18 +74,18 @@ export function OpportunityCard({
         },
       ]}
       accessibilityRole="button"
-      accessibilityLabel={`Opportunity: ${opportunity.title} at ${opportunity.company}. Status: ${getStatusText()}`}
+      accessibilityLabel={`Opportunity: ${opportunity.title} at ${opportunity.org}. Status: ${summary.headline}`}
       testID={`opp-card-${opportunity.id}`}
     >
       <View style={styles.header}>
-        <View style={styles.companyRow}>
+        <View style={styles.orgRow}>
           <Text
-            style={[typography.caption, { color: colors.mutedForeground }]}
+            style={[typography.caption, { color: colors.mutedForeground, flex: 1, paddingRight: 8 }]}
             numberOfLines={1}
           >
-            {opportunity.company}
+            {opportunity.org}
           </Text>
-          {opportunity.expected_next_cycle && (
+          {noCutoffs && (
             <View style={[styles.badge, { backgroundColor: colors.secondary }]}>
               <Text
                 style={[
@@ -98,7 +93,7 @@ export function OpportunityCard({
                   { color: colors.secondaryForeground, fontSize: 10 },
                 ]}
               >
-                Expected Soon
+                No marks cutoff
               </Text>
             </View>
           )}
@@ -138,25 +133,20 @@ export function OpportunityCard({
               { color: getStatusColor(), marginLeft: 6 },
             ]}
           >
-            {getStatusText()}
+            {summary.headline}
           </Text>
         </View>
-        {opportunity.deadline && (
-          <View style={styles.deadlineRow}>
-            <Feather name="clock" size={14} color={colors.mutedForeground} />
-            <Text
-              style={[
-                typography.caption,
-                { color: colors.mutedForeground, marginLeft: 4 },
-              ]}
-            >
-              {new Date(opportunity.deadline).toLocaleDateString(undefined, {
-                month: "short",
-                day: "numeric",
-              })}
-            </Text>
-          </View>
-        )}
+        <View style={styles.deadlineRow}>
+          <Feather name="clock" size={14} color={colors.mutedForeground} />
+          <Text
+            style={[
+              typography.caption,
+              { color: colors.mutedForeground, marginLeft: 4 },
+            ]}
+          >
+            {deadlineText}
+          </Text>
+        </View>
       </View>
     </TouchableOpacity>
   );
@@ -171,7 +161,7 @@ const styles = StyleSheet.create({
   header: {
     padding: 16,
   },
-  companyRow: {
+  orgRow: {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",

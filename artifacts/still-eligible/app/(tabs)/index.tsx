@@ -1,43 +1,29 @@
 import React, { useMemo } from 'react';
-import { StyleSheet, Text, View, SectionList, ActivityIndicator } from 'react-native';
+import { StyleSheet, Text, View, SectionList, ActivityIndicator, Platform } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { Link } from 'expo-router';
 import { useColors } from '@/hooks/useColors';
 import { typography } from '@/constants/styles';
 import { useStore } from '@/lib/store';
-import { OPPORTUNITIES } from '@/data/opportunities';
-import { evaluateEligibility } from '@/lib/engine';
+import { OPPORTUNITIES } from '@/data';
+import { evaluateAll, PROFILE_FIELD_LABELS, summarizeStatus } from '@/lib/engine';
 import { OpportunityCard } from '@/components/OpportunityCard';
-import { OpportunityCategory } from '@/lib/types';
+import { CATEGORIES, CATEGORY_LABELS } from '@/lib/types';
+import { deadlineSortValue } from '@/lib/deadlines';
 import Animated, { FadeInUp } from 'react-native-reanimated';
+import { Feather } from '@expo/vector-icons';
 
 const AnimatedSectionList = Animated.createAnimatedComponent(SectionList);
-
-const CATEGORY_TITLES: Record<OpportunityCategory, string> = {
-  mass_recruiter: 'Mass Recruiters',
-  product: 'Product Based',
-  startup: 'Startups',
-  government: 'Government / PSUs',
-  higher_ed: 'Higher Education'
-};
 
 export default function HomeScreen() {
   const insets = useSafeAreaInsets();
   const colors = useColors();
   const { profile } = useStore();
 
-  const sections = useMemo(() => {
-    if (!profile) return [];
+  const { sections, totalDoors, totalEligible, missingFields } = useMemo(() => {
+    if (!profile) return { sections: [], totalDoors: 0, totalEligible: 0, missingFields: [] };
 
-    // Evaluate all opportunities
-    const evaluated = OPPORTUNITIES.map(opp => ({
-      opportunity: opp,
-      eligibility: evaluateEligibility(opp, profile)
-    }));
-
-    // Group by category, but only include those that are eligible or unknown (not explicitly failed)
-    // Wait, let's include all so they see what's closed too, or just open doors?
-    // "showing exactly which doors remain open." Let's filter out 'not_eligible'.
-    // Or actually, maybe show everything but the card shows the status. Let's show only 'eligible' and 'unknown'.
+    const evaluated = evaluateAll(OPPORTUNITIES, profile);
     const visibleOpps = evaluated.filter(item => item.eligibility.status !== 'not_eligible');
 
     const grouped = visibleOpps.reduce((acc, curr) => {
@@ -47,10 +33,34 @@ export default function HomeScreen() {
       return acc;
     }, {} as Record<string, typeof evaluated>);
 
-    return Object.keys(CATEGORY_TITLES).map(cat => ({
-      title: CATEGORY_TITLES[cat as OpportunityCategory],
-      data: grouped[cat] || []
-    })).filter(section => section.data.length > 0);
+    let doorsCount = 0;
+    let eligibleCount = 0;
+    const allMissing = new Set<string>();
+
+    const builtSections = CATEGORIES.map(cat => {
+      const data = grouped[cat] || [];
+      const sectionEligibleCount = data.filter(d => summarizeStatus(d.opportunity, d.eligibility).tone === 'open').length;
+      doorsCount += data.length;
+      eligibleCount += sectionEligibleCount;
+      
+      data.forEach(d => {
+        d.eligibility.missingFields.forEach(mf => { if (mf !== 'gender') allMissing.add(mf); });
+      });
+
+      return {
+        title: CATEGORY_LABELS[cat],
+        data: data.sort((a, b) => deadlineSortValue(a.opportunity.deadline) - deadlineSortValue(b.opportunity.deadline)),
+        eligibleCount: sectionEligibleCount,
+        totalCount: data.length
+      };
+    }).filter(section => section.data.length > 0);
+
+    return { 
+      sections: builtSections, 
+      totalDoors: doorsCount,
+      totalEligible: eligibleCount,
+      missingFields: Array.from(allMissing)
+    };
   }, [profile]);
 
   if (!profile) {
@@ -67,10 +77,32 @@ export default function HomeScreen() {
         sections={sections as any}
         keyExtractor={(item: any) => item.opportunity.id}
         contentContainerStyle={{ 
-          paddingTop: insets.top + 60, // Space for header
-          paddingBottom: insets.bottom + 120, // Space for tabs
+          paddingTop: (Platform.OS === 'web' ? 67 : insets.top) + 24,
+          paddingBottom: insets.bottom + 120,
           paddingHorizontal: 20 
         }}
+        ListHeaderComponent={(
+          <View style={styles.listHeader}>
+            <Text style={[typography.h1, { color: colors.foreground }]}>Doors open</Text>
+            <Text style={[typography.body, { color: colors.mutedForeground, marginTop: 4 }]}>
+              {totalEligible} you qualify for, {totalDoors - totalEligible} still to check.
+            </Text>
+            
+            {missingFields.length > 0 && (
+              <View style={[styles.banner, { backgroundColor: colors.accent + '20', borderColor: colors.accent, borderRadius: colors.radius }]}>
+                <Feather name="info" size={16} color={colors.accentForeground} style={{ marginTop: 2 }} />
+                <View style={{ marginLeft: 12, flex: 1 }}>
+                  <Text style={[typography.bodySmall, { color: colors.accentForeground }]}>
+                    Fill in your {missingFields.map(f => PROFILE_FIELD_LABELS[f as keyof typeof PROFILE_FIELD_LABELS]).join(', ')} to settle the doors marked check.
+                  </Text>
+                  <Link href="/(tabs)/profile" style={{ marginTop: 4 }}>
+                    <Text style={[typography.bodySmall, { color: colors.primary, fontWeight: '600' }]}>Complete your profile</Text>
+                  </Link>
+                </View>
+              </View>
+            )}
+          </View>
+        )}
         renderItem={({ item, index }: any) => (
           <Animated.View entering={FadeInUp.delay(index * 50).springify()}>
             <OpportunityCard 
@@ -79,15 +111,18 @@ export default function HomeScreen() {
             />
           </Animated.View>
         )}
-        renderSectionHeader={({ section: { title } }: any) => (
+        renderSectionHeader={({ section: { title, eligibleCount, totalCount } }: any) => (
           <View style={[styles.sectionHeader, { backgroundColor: colors.background }]}>
             <Text style={[typography.h2, { color: colors.foreground }]}>{title}</Text>
+            <Text style={[typography.caption, { color: colors.mutedForeground, marginTop: 2 }]}>
+              {eligibleCount} of {totalCount} confirmed
+            </Text>
           </View>
         )}
         ListEmptyComponent={() => (
           <View style={styles.emptyContainer}>
             <Text style={[typography.body, { color: colors.mutedForeground, textAlign: 'center' }]}>
-              No open doors found for your current profile. Check if you missed filling out any details in your profile.
+              We did not find any opportunities matching your profile at the moment.
             </Text>
           </View>
         )}
@@ -99,6 +134,16 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+  },
+  listHeader: {
+    marginBottom: 24,
+  },
+  banner: {
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    padding: 12,
+    borderWidth: 1,
+    marginTop: 16,
   },
   sectionHeader: {
     paddingVertical: 16,

@@ -13,8 +13,8 @@ export default function IndexScreen() {
     );
   }
 
-  // If we have a profile with a graduation year, we consider them onboarded.
-  if (profile?.grad_year) {
+  // Any saved profile counts as onboarded; every field is optional.
+  if (profile) {
     return <Redirect href="/(tabs)" />;
   }
 
