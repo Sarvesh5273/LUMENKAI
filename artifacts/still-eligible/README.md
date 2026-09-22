@@ -13,8 +13,8 @@ Built solo by a BTech student for the RevenueCat Shipaton 2026 Next Gen award.
 - **Honest about money.** Each record carries the benefit as the official page states it, with the page it was read on. An amount nobody has checked is shown as "not recorded yet", never as "nothing".
 - **Apply-ready.** What you need before you start, how they select, whether beginners are welcome, and the application fee. A record whose fee has been checked and found to be zero says so outright: never pay anyone to get you in. A fee nobody has checked is shown as unchecked, not as free.
 - **Path from zero.** A fixed five-step route for a student with weak marks and no network: one hackathon, one merged pull request, a paid remote mentorship, a funded internship, then product companies directly. Each step links to the matching section of the feed.
-- **Always current.** The app ships with the dataset built in and downloads the newest `data/dataset.json` from this repo on launch. A merged data fix reaches every installed app without a store release. Records added since your last visit are marked New.
-- **Share and report.** A five-line WhatsApp-ready share message (name, pay, who can apply, deadline, official link) and a "Report a wrong rule" link that opens a prefilled issue here.
+- **Always current.** The app ships with the dataset built in and downloads the newest `data/dataset.json` from this repo ([Sarvesh5273/LUMENKAI](https://github.com/Sarvesh5273/LUMENKAI)) on launch. A merged data fix reaches every installed app without a store release. Records added since your last visit are marked New.
+- **Share and report.** A five-line WhatsApp-ready share message (name, pay, who can apply, deadline, official link) and a "Report a wrong rule" link that opens a prefilled issue in [this repo's issue tracker](https://github.com/Sarvesh5273/LUMENKAI/issues).
 - **Why you qualify.** Every record shows each rule with pass, fail, unknown or "no such cutoff", plus the official link, the page the criteria were read from, and the date a human last read it.
 - **Honest about uncertainty.** A missing profile field never fails a rule; it shows as "check this" and names the field. A record whose criteria could not be fully confirmed says so in the UI.
 - **Tracked deadlines.** Save what you plan to apply to. Countdowns are computed on the device from the stored date; programs whose last window has passed show "expected next cycle" with the usual annual window. Local reminders are planned.
@@ -35,7 +35,7 @@ lib/deadlines.ts    Countdown, "expected next cycle" and sort order, computed fr
 lib/format.ts       Wording for money, location and apply-ready fields
 lib/share.ts        Share text and the prefilled "wrong rule" issue link
 lib/dataset.ts      Versioned dataset file: parsing, which copy wins, what counts as new
-lib/config.ts       The repo URL everything else derives from
+lib/config.ts       The repo URL everything else derives from (dataset URL, issue link)
 lib/conversions.ts  CGPA and percentage helpers for the onboarding form
 lib/validate.ts     Runtime schema used by the data tests
 lib/store.tsx       AsyncStorage-backed profile, tracked list and dataset cache

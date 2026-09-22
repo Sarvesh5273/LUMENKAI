@@ -57,7 +57,7 @@ Programs close. When one does, delete the record and remove its id from every ot
 
 ## Reporting a wrong rule from the app
 
-Every record's detail screen has a "Report a wrong rule" link. It opens a prefilled issue on this repo with the record id and each rule as a checkbox. If you are fixing one of those issues, the checked box is the field to look at and the reporter's paste is the new source sentence.
+Every record's detail screen has a "Report a wrong rule" link. It opens a prefilled issue on this repo (https://github.com/Sarvesh5273/LUMENKAI/issues) with the record id and each rule as a checkbox. If you are fixing one of those issues, the checked box is the field to look at and the reporter's paste is the new source sentence.
 
 ## What not to send
 

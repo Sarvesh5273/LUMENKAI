@@ -6,8 +6,8 @@
  * is derived from `REPO_URL`, so moving the repo is a one-line change.
  */
 
-/** Public GitHub repo. Set once the repo exists; the app works offline without it. */
-export const REPO_URL = 'https://github.com/SarveshBijawe/still-eligible';
+/** Public GitHub repo (the whole workspace is pushed there). The app works offline without it. */
+export const REPO_URL = 'https://github.com/Sarvesh5273/LUMENKAI';
 
 /** Branch the app reads the dataset from. */
 export const REPO_BRANCH = 'main';
