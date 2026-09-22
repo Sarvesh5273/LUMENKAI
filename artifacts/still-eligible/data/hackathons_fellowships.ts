@@ -189,56 +189,7 @@ export const HACKATHONS_FELLOWSHIPS: Opportunity[] = [
     tags: ['women', 'hackathon', 'fashion tech'],
     notes:
       'The latest official registration page found is the 2025 cycle. It lists undergraduate engineering students, female gender and teams of two to three, but does not name graduation years.',
-    alternative_ids: ['smart-india-hackathon', 'walmart-sparkplug'],
-  },
-  {
-    id: 'walmart-sparkplug',
-    title: 'Walmart Sparkplug',
-    org: 'Walmart Global Tech India',
-    category: 'hackathons_fellowships',
-    summary:
-      'An individual coding challenge used to select students for summer internships at Walmart Global Tech India. Top performers can receive paid internship opportunities with development teams.',
-    benefit: {
-      kind: 'paid_role',
-      what_you_get:
-        'Top 100 performers are selected for paid summer internships at Walmart Global Tech India.',
-      amount_text: 'Internship stipend of INR 1 to 1.1 lakh per month',
-      amount_status: 'stated',
-      amount_source: 'https://unstop.com/hackathons/crp-sparkplug-summer-internship-2026-walmart-global-tech-in-india-1575885',
-    },
-    location: { mode: 'on_site', place: 'India, Walmart Global Tech offices' },
-    apply: {
-      what_you_need: null,
-      how_they_select: 'An individual online coding challenge',
-      beginner_friendly: null,
-      application_fee: null,
-      fee_status: 'unchecked',
-    },
-    official_url:
-      'https://unstop.com/hackathons/crp-sparkplug-summer-internship-2026-walmart-global-tech-in-india-1575885',
-    source_url:
-      'https://unstop.com/hackathons/crp-sparkplug-summer-internship-2026-walmart-global-tech-in-india-1575885',
-    last_verified: '2026-09-22',
-    deadline: '2025-11-16',
-    typical_window: 'Registration for the summer internship challenge usually closes in October or November',
-    rules: {
-      min_tenth_pct: null,
-      min_twelfth_pct: null,
-      min_cgpa: null,
-      max_active_backlogs: null,
-      max_gap_years: null,
-      grad_years: null,
-      citizenship: 'any',
-      gender: 'any',
-      requires_student: true,
-      branches: 'any',
-      min_work_years: null,
-    },
-    verification_status: 'needs_check',
-    tags: ['coding', 'internship', 'students'],
-    notes:
-      'The official registration page labels eligibility as engineering students from eligible institutes but does not expose the institute list or detailed cohort rules in the fetched text. Check the next cycle for institute, degree, graduation-year and any academic-cutoff requirements.',
-    alternative_ids: ['myntra-hackerramp-weforshe', 'smart-india-hackathon'],
+    alternative_ids: ['smart-india-hackathon'],
   },
   {
     id: 'tata-imagination-challenge',

@@ -50,6 +50,11 @@ Checked on 2026-09-21. Quotes below are from official programme or organisation 
 - Selection (read 2026-09-22 at the criteria URL): USIEF reviews eligible applications and interviews shortlisted candidates before nomination.
 - Beginner friendly: the three-year professional experience requirement means it is not beginner friendly.
 
+- Re-check 2026-09-22: the page still shows the 2026-27 call; USIEF lists 2027-28 calls for other Fulbright-Nehru categories but not for the master’s fellowships. Keyword scan (%, CGPA, GPA, aggregate, marks, backlog, arrear, gap): the only hit is the 55% degree rule. Record set to `verified`, old deadline kept with `typical_window`.
+- Degree marks: “at least 55% marks” in the qualifying degree stays in notes, not in `min_cgpa`. Citizenship: “citizens of India” resident in India.
+
+Re-checked 2026-09-22 after review: the degree bar quoted above is a percentage or a 4-point GPA that the rules cannot encode, and a verified record would render its null marks rules as "no such cutoff". Status set back to needs_check; the bar stays quoted in notes.
+
 ## `rhodes-scholarship-india`
 
 - Deadline and application: https://www.rhodeshouse.ox.ac.uk/scholarships/applications/india
@@ -79,6 +84,14 @@ Checked on 2026-09-21. Quotes below are from official programme or organisation 
 - Selection (read 2026-09-22 at the same URL): independent review is followed by preliminary and final interviews.
 - Beginner friendly: the page does not say beginners or first-time applicants are welcome.
 
+Re-checked 2026-09-22 at https://inlaksfoundation.org/opportunities/scholarship/ (source_url).
+- Cycle: “Applications closed for 2026”; the 2027 call is not announced. Selection stages for 2026 ran April to May.
+- Academic rule: “For Mathematics, Sciences, Environment and related subjects, candidates must have a minimum academic grade of 70%, CGPA 7.2/10, or GPA 3/4”; for social sciences, humanities, law, fine arts and architecture “a minimum academic grade of 65%, CGPA 6.8/10, or GPA 2.6/4”. The 10-point figures are printed by the page itself, so the lower one is entered in `min_cgpa` with the science figure in notes.
+- Offer rule: “Applicants who have received a deferred offer of admission must have a valid offer for the academic year 2026-27 to be eligible for the 2026 scholarships.”
+- Keyword scan (%, CGPA, GPA, aggregate, marks, backlog, arrear, gap): only the two rules above. Record set to `verified`.
+
+Re-checked 2026-09-22 after review: the cutoff depends on the subject (65% or 6.8/10 for some listed fields, 70% or 7.2/10 for others). min_cgpa 6.8 stays as the lowest floor so a lower CGPA still closes the door, but the record is needs_check because a pass is not a pass for every field.
+
 ## `erasmus-mundus-joint-masters`
 
 - Criteria and timing: https://erasmus-plus.ec.europa.eu/opportunities/individuals/students/erasmus-mundus-joint-masters
@@ -92,6 +105,12 @@ Checked on 2026-09-21. Quotes below are from official programme or organisation 
 - Apply (read 2026-09-22 at the criteria URL): applicants need a bachelor’s degree or must graduate before the master’s starts.
 - Selection (read 2026-09-22 at the criteria URL): “full scholarships are available for the best-ranked students worldwide.”
 - Beginner friendly: the page does not say beginners or first-time applicants are welcome.
+
+Re-checked 2026-09-22 at https://erasmus-plus.ec.europa.eu/opportunities/individuals/students/erasmus-mundus-joint-masters (source_url).
+- Programme-level rules: “You must have a bachelor’s degree (first degree), or be in your last year of bachelor studies” and “graduate before the master’s programme starts”. “Students apply directly to the institution running their chosen programme.”
+- Keyword scan (%, CGPA, GPA, aggregate, marks, backlog, arrear, gap): no hits. Each consortium sets its own academic requirements and deadline (kept in notes). Record set to `verified` at programme level.
+
+Re-checked 2026-09-22 after review: the Erasmus Mundus page prints no cutoff, but each consortium sets its own academic entry requirements, so a null rule cannot honestly render as "no such cutoff". Status set back to needs_check.
 
 ## `kaust-fellowship`
 
@@ -109,6 +128,13 @@ Checked on 2026-09-21. Quotes below are from official programme or organisation 
 - Selection (read 2026-09-22 at the admissions pages): complete applications undergo faculty review for admission.
 - Beginner friendly: the page does not say beginners or first-time applicants are welcome.
 
+Re-checked 2026-09-22 at https://admissions.kaust.edu.sa/how-to-apply/entry-requirements (source_url).
+- Academic bar: “The minimum permitted GPA is 3.0 on a 4-point scale (or equivalent). Typically, 90% of admitted applicants have a GPA above 3.3”. A 4-point bar stays in notes, not in `min_cgpa`.
+- Degree: “Bachelors degree in a subject relevant the program being applied to, from a recognized higher education institution”; “At least 18 years of age on entry”.
+- Keyword scan (%, CGPA, GPA, aggregate, marks, backlog, arrear, gap): only the GPA sentence. Record set to `verified`.
+
+Re-checked 2026-09-22 after review: the degree bar quoted above is a percentage or a 4-point GPA that the rules cannot encode, and a verified record would render its null marks rules as "no such cutoff". Status set back to needs_check; the bar stays quoted in notes.
+
 ## `stipendium-hungaricum`
 
 - Application page: https://stipendiumhungaricum.hu/apply/
@@ -124,6 +150,13 @@ Checked on 2026-09-21. Quotes below are from official programme or organisation 
 - Apply (read 2026-09-22 at the call): required documents include the online form, motivation letter, language proof, school certificates and transcripts.
 - Selection (read 2026-09-22 at the call): selection includes technical checking, sending-partner nomination and host-institution evaluation.
 - Beginner friendly: the page does not say beginners or first-time applicants are welcome.
+
+Re-checked 2026-09-22 at https://stipendiumhungaricum.hu/apply/ and the 2026/27 call https://stipendiumhungaricum.hu/wp-content/uploads/2025/10/BA_MA_OTM_Call_for_Applications_2026_27.pdf.
+- Deadline: documents “must be submitted to the online application system by all applicants by 15 January 2026, 2 p.m.” The 2027/28 call is not yet published.
+- Exclusions: Hungarian citizens and refugees in Hungary are ineligible (“if you obtain Hungarian citizenship or refugee status during your studies in Hungary, you automatically lose your scholarship status”); self-financed students of Hungarian institutions applying below their current level are excluded.
+- Keyword scan (%, CGPA, GPA, aggregate, marks, backlog, arrear, gap): no hits in the call. Academic requirements are set per host programme (notes). Record set to `verified`.
+
+Re-checked 2026-09-22 after review: the host university and the Indian sending authority apply their own academic requirements, so the null rules stay unconfirmed. Status set back to needs_check.
 
 ## Official programmes reviewed but excluded
 
@@ -187,6 +220,12 @@ Checked on 2026-09-21. Quotes below are from official programme or organisation 
 - Keyword re-check (2026-09-22): searched for %, CGPA, GPA, aggregate, backlog, arrear, gap and marks; none are present. The degree-class wording above is retained in notes without numeric conversion.
 - Doubt: India’s national nominator may set additional rules and an earlier deadline, so the record needs checking.
 
+Re-checked 2026-09-22 at https://cscuk.fcdo.gov.uk/scholarships/commonwealth-masters-scholarships (source_url).
+- Cycle: “Applications for Commonwealth Master’s Scholarships for the 2027/28 academic year are now open. The closing date for applications is 16:00 BST on Tuesday 20 October.”
+- Route: “As well as applying to the CSC, applicants must apply to a nominator.” India’s nominator is the Ministry of Education; its notices (https://www.education.gov.in/en/scholarships) show a separate SAKSHAT portal window that was extended on 19 December 2025 for the 2026 round and a nominee list published on 13 January 2026.
+- Still unconfirmed: the Ministry’s own academic and age criteria for its nominees were not readable, so the record stays `needs_check` with the current deadline.
+- Fetch attempts (2026-09-22): https://www.education.gov.in/en/2025-commonwealth-masters-scholarship-united-kingdom and https://www.education.gov.in/en/revised-procedure-selection-candidates-under-commonwealth-scholarship-uk both returned a 6 KB bot-challenge shell with no notice text or PDF link, with two different fetchers. Open the 2027 notice in a real browser and copy its marks and age rules here before changing the status.
+
 ## turkiye-scholarships-graduate
 
 - Sources read: https://www.turkiyeburslari.gov.tr/scholarshipsprograms, https://turkiyeburslari.gov.tr/fulltimeprograms and https://www.turkiyeburslari.gov.tr/announcements/turkiye-scholarships-2026-applications-121
@@ -199,6 +238,8 @@ Checked on 2026-09-21. Quotes below are from official programme or organisation 
 - Academic cutoffs: the programmes page lists a “Minimum Academic Achievement” of “For graduate candidates: 75%” (undergraduate 70%, health sciences 90%). This is a degree percentage with no 10-point CGPA figure, so it is kept in `notes` rather than converted into `min_cgpa`. No Class 10, Class 12, backlog or gap cutoff is stated.
 - Doubt: none for the encoded rules. Re-read on 2026-09-22 after a first pass had missed the 75% line.
 
+Re-checked 2026-09-22 after review: the degree bar quoted above is a percentage or a 4-point GPA that the rules cannot encode, and a verified record would render its null marks rules as "no such cutoff". Status set back to needs_check; the bar stays quoted in notes.
+
 ## eiffel-excellence-scholarship
 
 - Sources read: https://www.campusfrance.org/en/the-france-excellence-eiffel-scholarship-program, https://www.campusfrance.org/en/france-excellence-eiffel-scholarship-implementation and https://www.campusfrance.org/system/files/medias/documents/2025-12/reglementation_bourse_eiffel_2026_EN_V2.pdf
@@ -210,6 +251,13 @@ Checked on 2026-09-21. Quotes below are from official programme or organisation 
 - Academic cutoffs: the official rules list no Class 10, Class 12, 10-point CGPA, backlog or gap cutoff.
 - Keyword re-check (2026-09-22): searched the regulations for %, CGPA, GPA, aggregate, backlog, arrear, gap and marks. No applicant marks or GPA cutoff is present. The document says “No more than one gap year is permitted during the scholarship period,” which governs a recipient’s funded study after selection, not an applicant’s prior education gap.
 - Doubt: the current candidate eligibility call and institution-specific nomination deadline still need checking.
+
+Re-checked 2026-09-22 at https://www.campusfrance.org/system/files/medias/documents/2025-12/reglementation_bourse_eiffel_2026_EN_V2.pdf (source_url); the English landing page fetched earlier now returns “The requested page could not be found.”
+- Route: only “French institutions of higher education … that nominate candidates for the Eiffel program” can apply; students cannot apply directly.
+- Money: “Master level Eiffel scholarship recipients receive a monthly allowance of €1,200 (effective January 1 2026)”; “Tuition and fees are not paid by the Eiffel” programme.
+- Keyword scan (%, CGPA, GPA, aggregate, marks, backlog, arrear, gap): no hits. Rules stay null with the nomination route in notes; record set to `verified`. The 2027 regulation and its January deadline were not published at the time of checking.
+
+Re-checked 2026-09-22 after review: the nominating French institution applies its own academic selection, so the null rules stay unconfirmed. Status set back to needs_check.
 
 ## iet-india-scholarship-award
 
@@ -274,6 +322,11 @@ Checked on 2026-09-21. Quotes below are from official programme or organisation 
 - Academic cutoffs: the page requires “a demonstrated record of superior academic achievement at the undergraduate level” but gives no number. Searched for %, CGPA, GPA, aggregate, backlog, arrear, gap and marks; no numeric entry cutoff is present.
 - Doubt: the 2027 application is not open and the eligibility text still refers to older cohorts, so the next cycle must be checked.
 
+Re-checked 2026-09-22 at https://www.quadfellowship.org/ (source_url).
+- Cycle: “The application to select the 2025-2026 Fellows is now closed” and the timeline reads “To Be Announced”, so the deadline stays `tbd`.
+- Eligibility: citizens or legal permanent residents of the Quad countries or the ten ASEAN countries; must have applied to or be enrolled in an eligible STEM graduate programme in the United States; “superior academic achievement” with no numeric cutoff.
+- Keyword scan (%, CGPA, GPA, aggregate, marks, backlog, arrear, gap): no hits. Record set to `verified`.
+
 ## amazon-future-engineer-scholarship-india
 
 - Sources read: https://www.amazonfutureengineer.in/india/faq, https://www.amazonfutureengineer.in/Scholarship%20and%20Internship-2024 and https://ffe.org/amazon-future-engineer
@@ -287,6 +340,12 @@ Checked on 2026-09-21. Quotes below are from official programme or organisation 
 - Income retained in notes: “Annual Income should be less than Rs 4.00L.”
 - Academic cutoffs: searched for %, CGPA, GPA, aggregate, backlog, arrear, gap and marks. No numeric academic cutoff is printed. The page instead requires admission based on a state or national entrance merit rank or state counselling.
 - Doubt: the official page gives money and eligibility but still prints a 2025 deadline, so the current cycle and cohort year must be confirmed.
+
+Re-checked 2026-09-22 at the official scholarship page (source_url).
+- Deadline: “Last date of applying – 30th November 2025”; the same page also says selected students will be notified “latest by March 31st, 2027”, an inconsistency noted in `typical_window`.
+- Eligibility: “must be Indian Citizen”; “Only Girl Students pursuing BE/BTech/Integrated MTech”; “Only First-Year Applicants”; Class 12 passed “After 2024”; annual family income below Rs 4.00 lakh; lateral entry students are not eligible.
+- Money: “INR 50,000/year” for the degree duration.
+- Keyword scan (%, CGPA, GPA, aggregate, marks, backlog, arrear, gap): no marks cutoff is printed; only the income figure. Record set to `verified` with `grad_years: [2029]` for the closed 2025-26 round.
 
 ## Reviewed and dropped
 

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-21T22:11:32.729Z",
+  "generated_at": "2026-09-22T12:39:55.296Z",
   "records": [
     {
       "id": "smart-india-hackathon",
@@ -214,61 +214,6 @@
       ],
       "notes": "The latest official registration page found is the 2025 cycle. It lists undergraduate engineering students, female gender and teams of two to three, but does not name graduation years.",
       "alternative_ids": [
-        "smart-india-hackathon",
-        "walmart-sparkplug"
-      ]
-    },
-    {
-      "id": "walmart-sparkplug",
-      "title": "Walmart Sparkplug",
-      "org": "Walmart Global Tech India",
-      "category": "hackathons_fellowships",
-      "summary": "An individual coding challenge used to select students for summer internships at Walmart Global Tech India. Top performers can receive paid internship opportunities with development teams.",
-      "benefit": {
-        "kind": "paid_role",
-        "what_you_get": "Top 100 performers are selected for paid summer internships at Walmart Global Tech India.",
-        "amount_text": "Internship stipend of INR 1 to 1.1 lakh per month",
-        "amount_status": "stated",
-        "amount_source": "https://unstop.com/hackathons/crp-sparkplug-summer-internship-2026-walmart-global-tech-in-india-1575885"
-      },
-      "location": {
-        "mode": "on_site",
-        "place": "India, Walmart Global Tech offices"
-      },
-      "apply": {
-        "what_you_need": null,
-        "how_they_select": "An individual online coding challenge",
-        "beginner_friendly": null,
-        "application_fee": null,
-        "fee_status": "unchecked"
-      },
-      "official_url": "https://unstop.com/hackathons/crp-sparkplug-summer-internship-2026-walmart-global-tech-in-india-1575885",
-      "source_url": "https://unstop.com/hackathons/crp-sparkplug-summer-internship-2026-walmart-global-tech-in-india-1575885",
-      "last_verified": "2026-09-22",
-      "deadline": "2025-11-16",
-      "typical_window": "Registration for the summer internship challenge usually closes in October or November",
-      "rules": {
-        "min_tenth_pct": null,
-        "min_twelfth_pct": null,
-        "min_cgpa": null,
-        "max_active_backlogs": null,
-        "max_gap_years": null,
-        "grad_years": null,
-        "citizenship": "any",
-        "gender": "any",
-        "requires_student": true,
-        "branches": "any",
-        "min_work_years": null
-      },
-      "verification_status": "needs_check",
-      "tags": [
-        "coding",
-        "internship",
-        "students"
-      ],
-      "notes": "The official registration page labels eligibility as engineering students from eligible institutes but does not expose the institute list or detailed cohort rules in the fetched text. Check the next cycle for institute, degree, graduation-year and any academic-cutoff requirements.",
-      "alternative_ids": [
-        "myntra-hackerramp-weforshe",
         "smart-india-hackathon"
       ]
     },
@@ -958,7 +903,7 @@
         "branches": "any",
         "min_work_years": null
       },
-      "verification_status": "needs_check",
+      "verification_status": "verified",
       "tags": [
         "mentorship",
         "linux",
@@ -1178,13 +1123,13 @@
         "branches": "any",
         "min_work_years": null
       },
-      "verification_status": "needs_check",
+      "verification_status": "verified",
       "tags": [
         "fellowship",
         "IIT Bombay",
         "FOSS"
       ],
-      "notes": "The official page says students from any college, degree, and stage may apply. The next cycle and its exact deadline are not announced, so check the fellowship page when March registration opens.",
+      "notes": "The official fellowship page says it is open to students from any college, pursuing any degree, at any stage of undergraduate or postgraduate study, and that the only selection criterion is the successful completion of a useful project after the screening tasks. It prints no marks, backlog or gap cutoff. The 2026 fellowship is over and its results were published on 18 September 2026; the 2027 registration date is not announced yet, so watch the fellowship page around March.",
       "alternative_ids": [
         "summer-of-bitcoin",
         "gsoc",
@@ -1219,7 +1164,7 @@
       "source_url": "https://hacktoberfest.com/questions",
       "last_verified": "2026-09-22",
       "deadline": "tbd",
-      "typical_window": "Events take place throughout October, with individual event registration dates",
+      "typical_window": "Hacktoberfest 2026 runs through October 2026 with 300+ in-person and online events; each event publishes its own date and registration link.",
       "rules": {
         "min_tenth_pct": null,
         "min_twelfth_pct": null,
@@ -1233,7 +1178,7 @@
         "branches": "any",
         "min_work_years": null
       },
-      "verification_status": "needs_check",
+      "verification_status": "verified",
       "tags": [
         "open source",
         "events",
@@ -1618,7 +1563,7 @@
         "branches": "any",
         "min_work_years": null
       },
-      "verification_status": "needs_check",
+      "verification_status": "verified",
       "tags": [
         "cloud native",
         "mentorship",
@@ -1655,18 +1600,23 @@
         "application_fee": null,
         "fee_status": "unchecked"
       },
-      "official_url": "https://webjapps.ias.ac.in/fellowship2026/index.html",
-      "source_url": "https://webjapps.ias.ac.in/fellowship2026/index.html",
+      "official_url": "https://webjapps.ias.ac.in/fellowship2027/index.html",
+      "source_url": "https://webjapps.ias.ac.in/fellowship2027/application_instructions.jsp",
       "last_verified": "2026-09-22",
-      "deadline": "2026-01-31",
-      "typical_window": "Applications are usually invited around October and close in January.",
+      "deadline": "2026-11-30",
+      "typical_window": "The 2027 call opened on 10 September 2026 and closes on 30 November 2026; the call is usually announced in September for the following summer.",
       "rules": {
         "min_tenth_pct": null,
         "min_twelfth_pct": null,
         "min_cgpa": null,
         "max_active_backlogs": null,
         "max_gap_years": null,
-        "grad_years": null,
+        "grad_years": [
+          2027,
+          2028,
+          2029,
+          2030
+        ],
         "citizenship": "any",
         "gender": "any",
         "requires_student": true,
@@ -1679,10 +1629,9 @@
         "India",
         "fellowship"
       ],
-      "notes": "The public announcement says applicants must study in India. The detailed eligibility instructions in the closed application could not be read, so any academic percentage or CGPA requirement must be checked when the next form opens.",
+      "notes": "The 2027 instructions admit BE, BTech and BCA students in the second and third year only, and BTech plus MTech dual degree students in years two to four. For the 2027 summer (academic year 2026-27) that means the 2029 and 2028 BTech batches, the 2028 and 2027 BCA batches, and the 2030, 2029 and 2028 dual degree batches, so all four years are listed and your degree type decides which apply. The academic rule is a single figure: the average of marks in core subjects only, excluding languages, from Class 10 through every completed year of study must be 65 percent or above. The app cannot compute that combined average from your profile, so the marks rules are left unconfirmed here; work it out yourself before applying. Students who have held the Academies fellowship twice before and PhD students are not eligible, and you must be studying in India. The fellowship amount is not printed on the pages read.",
       "alternative_ids": [
-        "iit-madras-summer-fellowship",
-        "sn-bose-scholars"
+        "iit-madras-summer-fellowship"
       ]
     },
     {
@@ -1713,7 +1662,7 @@
       "source_url": "https://www.inde.campusfrance.org/france-excellence-charpak-summer-training-scholarship",
       "last_verified": "2026-09-22",
       "deadline": "tbd",
-      "typical_window": "The call is announced before internships held between May and August.",
+      "typical_window": "The call is announced before internships held between May and August; the 2026 session is closed and the page says to watch the website for updates.",
       "rules": {
         "min_tenth_pct": null,
         "min_twelfth_pct": null,
@@ -1729,72 +1678,15 @@
         "branches": "any",
         "min_work_years": null
       },
-      "verification_status": "needs_check",
+      "verification_status": "verified",
       "tags": [
         "France",
         "research",
         "stipend"
       ],
-      "notes": "The official page says the 2026 call is closed but does not display its exact deadline or the next deadline. It explicitly says there is no CGPA or percentage cutoff. Applicants also need an invitation from a French laboratory or institution.",
+      "notes": "The official page says the 2026 call is closed and does not print its deadline or the next one. It states that there is no CGPA or percentage cutoff. You must be an Indian national residing in India, be enrolled in an Indian institution at bachelor or master level, be no more than 30 years old at the time of application, and hold an invitation letter from the French laboratory or institution where the one to two month internship will take place.",
       "alternative_ids": [
-        "technion-summer-research",
-        "sn-bose-scholars"
-      ]
-    },
-    {
-      "id": "sn-bose-scholars",
-      "title": "S.N. Bose Scholars Program",
-      "org": "Indo-U.S. Science and Technology Forum",
-      "category": "funded_internships",
-      "summary": "A research exchange that places Indian bachelor’s and master’s students at leading institutions in the United States. The award includes a stipend, health insurance and airfare.",
-      "benefit": {
-        "kind": "stipend",
-        "what_you_get": "A stipend, health insurance and airfare for a research stay in the United States.",
-        "amount_text": null,
-        "amount_status": "not_stated",
-        "amount_source": null
-      },
-      "location": {
-        "mode": "on_site",
-        "place": "United States"
-      },
-      "apply": {
-        "what_you_need": null,
-        "how_they_select": null,
-        "beginner_friendly": null,
-        "application_fee": null,
-        "fee_status": "unchecked"
-      },
-      "official_url": "https://iusstf.org/s-n-bose-scholars-program",
-      "source_url": "https://iusstf.org/s-n-bose-scholars-program",
-      "last_verified": "2026-09-22",
-      "deadline": "tbd",
-      "typical_window": "IUSSTF publishes a separate call for each summer cohort.",
-      "rules": {
-        "min_tenth_pct": null,
-        "min_twelfth_pct": null,
-        "min_cgpa": null,
-        "max_active_backlogs": null,
-        "max_gap_years": null,
-        "grad_years": null,
-        "citizenship": [
-          "IN"
-        ],
-        "gender": "any",
-        "requires_student": true,
-        "branches": "any",
-        "min_work_years": null
-      },
-      "verification_status": "needs_check",
-      "tags": [
-        "USA",
-        "research",
-        "exchange"
-      ],
-      "notes": "The official program page has no current application deadline and does not state a numeric academic cutoff. Its eligible fields are Atmospheric and Earth Sciences, Chemical Sciences, Engineering Sciences, Mathematical and Computational Sciences, and Physical Sciences. Check the next call for a deadline and any cohort-specific academic criteria.",
-      "alternative_ids": [
-        "iusstf-viterbi",
-        "science-academies-srfp"
+        "technion-summer-research"
       ]
     },
     {
@@ -1847,10 +1739,9 @@
         "research",
         "summer"
       ],
-      "notes": "The 2026 registration portal is closed and does not show the exact deadline. The Engineering Design page says applications are accepted on a rolling basis, while the central portal is cycle-based. Confirm the next central deadline and whether the completed-sixth-semester rule applies across all departments.",
+      "notes": "The Engineering Design and Applied Mechanics department pages describe the programme for BTech students who have completed their sixth semester; for the closed 2026 cycle that meant the 2027 batch. Neither page prints a marks, backlog or gap cutoff. The central registration portal shows Registration Closed for 2026 without an eligibility page or the next deadline, so check the portal when it reopens for department-specific conditions. The central portal's own eligibility page could not be read, so the absence of a marks cutoff is unconfirmed until it reopens.",
       "alternative_ids": [
-        "science-academies-srfp",
-        "sn-bose-scholars"
+        "science-academies-srfp"
       ]
     },
     {
@@ -1913,7 +1804,6 @@
       ],
       "notes": "The official page also gives equivalents of 3.5 on a 4.0 scale or 80 percent. The structured cutoff uses only the explicitly stated 8.5 GPA value. Eligible students are in the third year of a four-year bachelor’s, the third or fourth year of a five-year bachelor’s, or the first year of a master’s, with degree completion on or after May 2027.",
       "alternative_ids": [
-        "sn-bose-scholars",
         "technion-summer-research"
       ]
     },
@@ -1944,15 +1834,19 @@
       "official_url": "https://int.technion.ac.il/programs/summer-research-program-in-science-and-engineering/",
       "source_url": "https://int.technion.ac.il/programs/summer-research-program-in-science-and-engineering/application-requirements-and-deadlines/",
       "last_verified": "2026-09-22",
-      "deadline": "tbd",
-      "typical_window": "Applications usually close in February for the July program.",
+      "deadline": "2026-02-21",
+      "typical_window": "Applications close in late February for the July programme; the page announces the 2027 programme for July 2027 and says registration will open soon.",
       "rules": {
         "min_tenth_pct": null,
         "min_twelfth_pct": null,
         "min_cgpa": null,
         "max_active_backlogs": null,
         "max_gap_years": null,
-        "grad_years": null,
+        "grad_years": [
+          2026,
+          2027,
+          2028
+        ],
         "citizenship": "any",
         "gender": "any",
         "requires_student": true,
@@ -1965,7 +1859,7 @@
         "research",
         "scholarship"
       ],
-      "notes": "The program page announces dates for July 2027 and says registration will open soon, but the requirements page still shows the old February 21, 2026 deadline. It requires an 80 percent GPA, stated as 3.0 on a 4.0 scale, so no min_cgpa was entered. Confirm the 2027 deadline when registration opens.",
+      "notes": "The requirements page asks for undergraduates who have completed at least two years of study and a grade point average of 80 percent, given as 3.0 on a 4.0 scale; that degree bar is recorded here and not as a CGPA. For the February 2026 deadline (academic year 2025-26) completing two years by July meant the 2028 batch or earlier, so the closed cycle covered the 2026, 2027 and 2028 batches. Some Technion faculties add their own requirements. The scholarship covers accommodation and programme activities; you pay airfare, most meals and local transport. This degree bar is stated as a percentage or on a 4-point scale, which the app cannot compare with your 10-point CGPA, so the marks rule stays unconfirmed here and you must check it yourself.",
       "alternative_ids": [
         "charpak-summer-training",
         "iusstf-viterbi"
@@ -2139,13 +2033,13 @@
         ],
         "min_work_years": null
       },
-      "verification_status": "verified",
+      "verification_status": "needs_check",
       "tags": [
         "EPFL",
         "Switzerland",
         "engineering"
       ],
-      "notes": "Applicants must remain enrolled for the internship and must have completed at least the second bachelor year when applying. The page asks applicants to be in the top 10 percent of their class but gives no numeric CGPA conversion. It lists no school marks, backlog or gap cutoff.",
+      "notes": "Applicants must remain enrolled for the internship and must have completed at least the second bachelor year when applying. The page asks applicants to be in the top 10 percent of their class but gives no numeric CGPA conversion. It lists no school marks, backlog or gap cutoff. This degree bar is stated as a percentage or on a 4-point scale, which the app cannot compare with your 10-point CGPA, so the marks rule stays unconfirmed here and you must check it yourself.",
       "alternative_ids": [
         "eth-summer-research-fellowship",
         "cern-summer-student"
@@ -2562,13 +2456,13 @@
         ],
         "min_work_years": null
       },
-      "verification_status": "verified",
+      "verification_status": "needs_check",
       "tags": [
         "Canada",
         "Mitacs",
         "research"
       ],
-      "notes": "Indian applicants must be at least 18, study full time at an eligible non-IIT institution, be in BE or BTech, have 70 percent cumulative grades, and have one to three semesters remaining in fall 2027. The 70 percent degree requirement is not converted to min_cgpa. Applicants must be fluent in the project language. The page lists no Class 10, Class 12, backlog or gap cutoff.",
+      "notes": "Indian applicants must be at least 18, study full time at an eligible non-IIT institution, be in BE or BTech, have 70 percent cumulative grades, and have one to three semesters remaining in fall 2027. The 70 percent degree requirement is not converted to min_cgpa. Applicants must be fluent in the project language. The page lists no Class 10, Class 12, backlog or gap cutoff. This degree bar is stated as a percentage or on a 4-point scale, which the app cannot compare with your 10-point CGPA, so the marks rule stays unconfirmed here and you must check it yourself.",
       "alternative_ids": [
         "utokyo-utrip",
         "charpak-summer-training"
@@ -2734,7 +2628,7 @@
         "United States",
         "work experience"
       ],
-      "notes": "A current undergraduate cannot apply because three years of relevant full-time paid professional experience are required by the deadline. The official page still shows the 2026-27 cycle and a 14 May 2025 deadline, so check for a newer call. The degree requirement is at least 55% in a qualifying degree and is not stored as min_cgpa.",
+      "notes": "The official page still shows the 2026-27 cycle with its 14 May 2025 deadline, and USIEF has not published a 2027-28 master’s call yet. You need Indian citizenship, a completed bachelor’s degree with at least 55 percent marks (a degree percentage, so it is not entered as a CGPA) and at least three years of full-time paid professional work experience relevant to the proposed field. The page prints no backlog or gap rule. This degree bar is stated as a percentage or on a 4-point scale, which the app cannot compare with your 10-point CGPA, so the marks rule stays unconfirmed here and you must check it yourself.",
       "alternative_ids": [
         "chevening",
         "inlaks-scholarship"
@@ -2846,7 +2740,7 @@
         "India",
         "overseas study"
       ],
-      "notes": "Final-year undergraduates awaiting results may apply. Applicants must hold an Indian passport, reside in India at application, be born on or after 1 January 1996 for the 2026 call, and already hold an admission offer. Degree cutoffs vary by subject: 65% or 6.8/10 for listed humanities-related fields, and 70% or 7.2/10 for listed science-related fields, which is where engineering and natural sciences fall. The stored 6.8 is the floor below which nobody qualifies; for a science or engineering programme the bar is 7.2. Engineering and natural sciences are considered only at Imperial College London, so check course eligibility before applying.",
+      "notes": "Final-year undergraduates awaiting results may apply. Applicants must hold an Indian passport, reside in India at application, be born on or after 1 January 1996 for the 2026 call, and already hold an admission offer. Degree cutoffs vary by subject: 65% or 6.8/10 for listed humanities-related fields, and 70% or 7.2/10 for listed science-related fields, which is where engineering and natural sciences fall. The stored 6.8 is the floor below which nobody qualifies; for a science or engineering programme the bar is 7.2. Engineering and natural sciences are considered only at Imperial College London, so check course eligibility before applying. Because the bar depends on your subject, the stored 6.8 is only the lowest floor; treat the marks rule as unconfirmed until you match your field against the official list.",
       "alternative_ids": [
         "rhodes-scholarship-india",
         "erasmus-mundus-joint-masters"
@@ -2900,7 +2794,7 @@
         "Europe",
         "joint degree"
       ],
-      "notes": "Final-year bachelor’s students may apply but must graduate before the master’s programme begins. Each consortium sets its own exact deadline, entry requirements and available subjects, so check the chosen programme’s official website.",
+      "notes": "Final-year bachelor’s students may apply but must graduate before the master’s programme begins. Each consortium sets its own exact deadline, entry requirements and available subjects, so check the chosen programme’s official website. Because each consortium sets its own academic entry requirements, no cutoff can be confirmed absent here; treat the rules as unconfirmed until you read the chosen programme's page.",
       "alternative_ids": [
         "stipendium-hungaricum",
         "inlaks-scholarship"
@@ -2954,7 +2848,7 @@
         "Saudi Arabia",
         "STEM"
       ],
-      "notes": "Master’s applicants need a bachelor’s degree in a subject relevant to the programme. The minimum GPA is stated as 3.0 on a 4-point scale or equivalent, so it is not converted to min_cgpa. The stored deadline is Fall 2027 Round 2 (MS, MS/PhD and PhD), which the timeline page calls tentative. The 27 September 2026 round is Spring 2027 entry for PhD applicants only. Confirm the intake and programme before applying.",
+      "notes": "Master’s applicants need a bachelor’s degree in a subject relevant to the programme. The minimum GPA is stated as 3.0 on a 4-point scale or equivalent, so it is not converted to min_cgpa. The stored deadline is Fall 2027 Round 2 (MS, MS/PhD and PhD), which the timeline page calls tentative. The 27 September 2026 round is Spring 2027 entry for PhD applicants only. Confirm the intake and programme before applying. This degree bar is stated as a percentage or on a 4-point scale, which the app cannot compare with your 10-point CGPA, so the marks rule stays unconfirmed here and you must check it yourself.",
       "alternative_ids": [
         "erasmus-mundus-joint-masters",
         "stipendium-hungaricum"
@@ -3008,7 +2902,7 @@
         "government",
         "degree study"
       ],
-      "notes": "India appears in the official list of eligible sending partners. Available study levels and fields depend on the sending partner, and applications may also need submission to the responsible Indian authority under its own requirements and deadline. Check the India partner page and the next call before applying.",
+      "notes": "India appears in the official list of eligible sending partners. Available study levels and fields depend on the sending partner, and applications may also need submission to the responsible Indian authority under its own requirements and deadline. Check the India partner page and the next call before applying. Because the host university and the Indian sending authority set their own academic requirements, the rules stay unconfirmed until you read both.",
       "alternative_ids": [
         "erasmus-mundus-joint-masters",
         "mext-undergraduate"
@@ -3228,7 +3122,7 @@
         "UK",
         "development"
       ],
-      "notes": "India is an eligible Commonwealth country, but applicants must also use an approved national nominator, which may set additional criteria and an earlier deadline. The degree standard is upper second-class honours, or lower second-class with a relevant postgraduate qualification, and is not converted to CGPA. Confirm the India nominator rules before applying.",
+      "notes": "The CSC page confirms the 2027/28 round is open until 16:00 BST on 20 October 2026 and requires an upper second class bachelor’s degree, which is a class of degree rather than a CGPA. Indian candidates must also be nominated by the Ministry of Education through its SAKSHAT portal, which ran a separate nomination window into December for the 2026 round. The Ministry’s own criteria for its nominees could not be read, so this stays unconfirmed until its 2027 notice is checked.",
       "alternative_ids": [
         "chevening",
         "gates-cambridge"
@@ -3276,13 +3170,13 @@
         "branches": "any",
         "min_work_years": null
       },
-      "verification_status": "verified",
+      "verification_status": "needs_check",
       "tags": [
         "master’s",
         "Türkiye",
         "government"
       ],
-      "notes": "Citizens of all countries may apply except Turkish citizens and people who lost Turkish citizenship. Master’s applicants must be under 30. The minimum academic achievement for graduate candidates is 75% in the degree; the page gives no 10-point CGPA figure, so treat 75% aggregate in your degree as the bar. No Class 10, Class 12, backlog, gap or work-experience cutoff is stated.",
+      "notes": "Citizens of all countries may apply except Turkish citizens and people who lost Turkish citizenship. Master’s applicants must be under 30. The minimum academic achievement for graduate candidates is 75% in the degree; the page gives no 10-point CGPA figure, so treat 75% aggregate in your degree as the bar. No Class 10, Class 12, backlog, gap or work-experience cutoff is stated. This degree bar is stated as a percentage or on a 4-point scale, which the app cannot compare with your 10-point CGPA, so the marks rule stays unconfirmed here and you must check it yourself.",
       "alternative_ids": [
         "stipendium-hungaricum",
         "erasmus-mundus-joint-masters"
@@ -3336,7 +3230,7 @@
         "France",
         "institution nomination"
       ],
-      "notes": "Students cannot apply directly; a French institution must nominate them and sets its own internal deadline. The Eiffel programme does not pay tuition or fees, despite paying the allowance and listed services. The current candidate eligibility call and institution-specific deadline still need to be checked before applying.",
+      "notes": "Students cannot apply directly; a French institution must nominate them and sets its own internal deadline. The Eiffel programme does not pay tuition or fees, despite paying the allowance and listed services. The current candidate eligibility call and institution-specific deadline still need to be checked before applying. Because the nominating institution applies its own academic selection, the rules stay unconfirmed until you read its call.",
       "alternative_ids": [
         "erasmus-mundus-joint-masters",
         "inlaks-scholarship"
@@ -3612,7 +3506,7 @@
       "source_url": "https://www.quadfellowship.org/apply",
       "last_verified": "2026-09-22",
       "deadline": "tbd",
-      "typical_window": "The official page says the 2025-26 selection is closed and lists the next timeline as to be announced.",
+      "typical_window": "One cohort is selected each year; the application for the 2025-26 fellows is closed and the page lists the next timeline as To Be Announced.",
       "rules": {
         "min_tenth_pct": null,
         "min_twelfth_pct": null,
@@ -3626,7 +3520,7 @@
         "branches": "any",
         "min_work_years": null
       },
-      "verification_status": "needs_check",
+      "verification_status": "verified",
       "tags": [
         "STEM",
         "United States",
@@ -3666,7 +3560,7 @@
       "source_url": "https://ffe.org/amazon-future-engineer",
       "last_verified": "2026-09-22",
       "deadline": "2025-11-30",
-      "typical_window": "The official page gives 30 November 2025 as its last published deadline; the next cycle date is not announced.",
+      "typical_window": "The 2025-26 round closed on 30 November 2025; the page now refers to notifying selected students by 31 March 2027, so a new round for first-year students is expected in the autumn.",
       "rules": {
         "min_tenth_pct": null,
         "min_twelfth_pct": null,
@@ -3684,7 +3578,7 @@
         "branches": "any",
         "min_work_years": null
       },
-      "verification_status": "needs_check",
+      "verification_status": "verified",
       "tags": [
         "women",
         "first year",
@@ -3805,60 +3699,6 @@
       ]
     },
     {
-      "id": "peak-xv-spark",
-      "title": "Spark Fellowship",
-      "org": "Peak XV Partners",
-      "category": "startup_programs",
-      "summary": "A fellowship for women building early-stage technology companies, with an equity-free grant and founder support.",
-      "benefit": {
-        "kind": "grant",
-        "what_you_get": "An equity-free grant plus mentorship and access to a community of founders.",
-        "amount_text": "$100k Equity-free Grant",
-        "amount_status": "stated",
-        "amount_source": "https://www.peakxv.com/our-causes"
-      },
-      "location": {
-        "mode": "hybrid",
-        "place": "India and Southeast Asia"
-      },
-      "apply": {
-        "what_you_need": "An early-stage technology startup led by a woman founder.",
-        "how_they_select": null,
-        "beginner_friendly": null,
-        "application_fee": null,
-        "fee_status": "unchecked"
-      },
-      "official_url": "https://www.peakxv.com/our-causes",
-      "source_url": "https://www.peakxv.com/our-causes",
-      "last_verified": "2026-09-22",
-      "deadline": "tbd",
-      "typical_window": "The current program page publishes no application dates; earlier Spark cohorts used fixed annual windows.",
-      "rules": {
-        "min_tenth_pct": null,
-        "min_twelfth_pct": null,
-        "min_cgpa": null,
-        "max_active_backlogs": null,
-        "max_gap_years": null,
-        "grad_years": null,
-        "citizenship": "any",
-        "gender": "women",
-        "requires_student": false,
-        "branches": "any",
-        "min_work_years": null
-      },
-      "verification_status": "needs_check",
-      "tags": [
-        "grant",
-        "women founders",
-        "technology"
-      ],
-      "notes": "The current official page confirms the women-founder, technology, early-stage and grant criteria, but does not publish the next application date, application route or selection process. It also lists no marks, backlog or gap cutoff.",
-      "alternative_ids": [
-        "thiel-fellowship",
-        "antler-india-ai-residency"
-      ]
-    },
-    {
       "id": "mit-solve-global-challenges",
       "title": "MIT Solve Global Challenges",
       "org": "MIT Solve",
@@ -3962,7 +3802,6 @@
       ],
       "notes": "The page requires founders to join full-time in Bangalore but does not require Indian citizenship or student status. Investment is separate and is not counted as the listed benefit. The official page lists no marks, backlog or gap cutoff.",
       "alternative_ids": [
-        "peak-xv-spark",
         "mit-solve-global-challenges"
       ]
     },
@@ -4150,7 +3989,7 @@
         "how_they_select": "Online coding rounds, then a grand finale for the shortlisted",
         "beginner_friendly": null,
         "application_fee": null,
-        "fee_status": "unchecked"
+        "fee_status": "free"
       },
       "official_url": "https://www.infosys.com/careers/hackwithinfy.html",
       "source_url": "https://www.infosys.com/careers/hackwithinfy/2026/hwi-terms-conditions.pdf",
@@ -4172,344 +4011,16 @@
         "branches": "any",
         "min_work_years": null
       },
-      "verification_status": "needs_check",
+      "verification_status": "verified",
       "tags": [
         "coding",
         "hiring",
         "internship"
       ],
-      "notes": "The 2026 terms list the degree, graduation year, age and Indian residency requirements without a marks or backlog rule. No registration closing date is published, so the deadline and the absence of any college-level screening need confirmation. Registration happens through the college placement officer.",
+      "notes": "The 2026 terms and conditions require participants to be 18 or older, resident in India, and BE, BTech, ME, MTech, dual degree, MS (Research), MCA or five-year integrated MSc students graduating in 2027; for the 2027 edition expect the batch to move forward. They print no marks, backlog or gap rule, say participation is free, and say registration opened on 6 February 2026 through the college placement officer, without a closing date.",
       "alternative_ids": [
-        "microsoft-university-internship-india",
-        "atlassian-india-internship"
-      ]
-    },
-    {
-      "id": "google-swe-internship-india",
-      "title": "Google Software Engineering Internship India",
-      "org": "Google",
-      "category": "company_drives",
-      "summary": "Google software engineering internships place students on engineering projects with Google teams in India. Interns gain paid practical experience and work with engineering mentors.",
-      "benefit": {
-        "kind": "paid_role",
-        "what_you_get": "A paid software engineering internship on a Google team in India.",
-        "amount_text": null,
-        "amount_status": "not_stated",
-        "amount_source": null
-      },
-      "location": {
-        "mode": "on_site",
-        "place": "India"
-      },
-      "apply": {
-        "what_you_need": null,
-        "how_they_select": null,
-        "beginner_friendly": null,
-        "application_fee": null,
-        "fee_status": "unchecked"
-      },
-      "official_url": "https://www.google.com/about/careers/applications/students/engineering-and-technical-internships",
-      "source_url": "https://www.google.com/about/careers/applications/students/engineering-and-technical-internships",
-      "last_verified": "2026-09-22",
-      "deadline": "tbd",
-      "typical_window": "India summer internship roles are posted separately when teams begin hiring",
-      "rules": {
-        "min_tenth_pct": null,
-        "min_twelfth_pct": null,
-        "min_cgpa": null,
-        "max_active_backlogs": null,
-        "max_gap_years": null,
-        "grad_years": null,
-        "citizenship": "any",
-        "gender": "any",
-        "requires_student": false,
-        "branches": "any",
-        "min_work_years": null
-      },
-      "verification_status": "needs_check",
-      "tags": [
-        "internship",
-        "software",
-        "engineering"
-      ],
-      "notes": "No live India BTech internship listing with a current deadline could be read on the official site. Role-specific enrollment, degree and graduation-year requirements must be checked when a listing opens. No cutoff is published, but absence could not be confirmed.",
-      "alternative_ids": [
-        "microsoft-university-internship-india",
-        "atlassian-india-internship"
-      ]
-    },
-    {
-      "id": "amazon-university-hiring-india",
-      "title": "Amazon University Hiring India",
-      "org": "Amazon",
-      "category": "company_drives",
-      "summary": "Amazon posts software development internships and entry-level roles for university candidates in India. Successful applicants receive an internship or full-time role on an Amazon engineering team.",
-      "benefit": {
-        "kind": "paid_role",
-        "what_you_get": "A paid internship or an entry-level engineering role at Amazon India.",
-        "amount_text": null,
-        "amount_status": "not_stated",
-        "amount_source": null
-      },
-      "location": {
-        "mode": "on_site",
-        "place": "India"
-      },
-      "apply": {
-        "what_you_need": null,
-        "how_they_select": null,
-        "beginner_friendly": null,
-        "application_fee": null,
-        "fee_status": "unchecked"
-      },
-      "official_url": "https://www.amazon.jobs/en/teams/internships-for-students",
-      "source_url": "https://www.amazon.jobs/en/jobs/3046606/sde-i-intern-amazon-university-talent-acquisition",
-      "last_verified": "2026-09-22",
-      "deadline": "tbd",
-      "typical_window": "University roles are posted throughout the year and close by individual job",
-      "rules": {
-        "min_tenth_pct": null,
-        "min_twelfth_pct": null,
-        "min_cgpa": null,
-        "max_active_backlogs": null,
-        "max_gap_years": null,
-        "grad_years": null,
-        "citizenship": "any",
-        "gender": "any",
-        "requires_student": false,
-        "branches": "any",
-        "min_work_years": null
-      },
-      "verification_status": "needs_check",
-      "tags": [
-        "university",
-        "software",
-        "hiring"
-      ],
-      "notes": "The India university role found in official search was no longer readable as a live job page, so its qualifications and closing date could not be verified. Check the current job listing for degree, graduation year and work authorization. No cutoff is published, but absence could not be confirmed.",
-      "alternative_ids": [
-        "google-swe-internship-india",
-        "microsoft-university-internship-india"
-      ]
-    },
-    {
-      "id": "microsoft-university-internship-india",
-      "title": "Microsoft University Internship India",
-      "org": "Microsoft",
-      "category": "company_drives",
-      "summary": "Microsoft offers university internships in India across engineering and related teams. Interns work on a team project and receive structured learning and professional experience.",
-      "benefit": {
-        "kind": "paid_role",
-        "what_you_get": "A paid university internship on a Microsoft team in India.",
-        "amount_text": null,
-        "amount_status": "not_stated",
-        "amount_source": null
-      },
-      "location": {
-        "mode": "on_site",
-        "place": "India"
-      },
-      "apply": {
-        "what_you_need": null,
-        "how_they_select": null,
-        "beginner_friendly": null,
-        "application_fee": null,
-        "fee_status": "unchecked"
-      },
-      "official_url": "https://careers.microsoft.com/v2/global/en/universityinternship",
-      "source_url": "https://careers.microsoft.com/v2/global/en/internship_eligibility",
-      "last_verified": "2026-09-22",
-      "deadline": "tbd",
-      "typical_window": "Openings and deadlines are published on individual internship job listings",
-      "rules": {
-        "min_tenth_pct": null,
-        "min_twelfth_pct": null,
-        "min_cgpa": null,
-        "max_active_backlogs": null,
-        "max_gap_years": null,
-        "grad_years": [
-          2028
-        ],
-        "citizenship": "any",
-        "gender": "any",
-        "requires_student": true,
-        "branches": "any",
-        "min_work_years": null
-      },
-      "verification_status": "needs_check",
-      "tags": [
-        "internship",
-        "university",
-        "technology"
-      ],
-      "notes": "The India eligibility section requires enrollment in a relevant course and pre-final-year status, but each role has its own closing date and qualifications. No cutoff is published, but absence could not be confirmed on a current India job listing.",
-      "alternative_ids": [
-        "google-swe-internship-india",
-        "atlassian-india-internship"
-      ]
-    },
-    {
-      "id": "atlassian-india-internship",
-      "title": "Atlassian India Internship",
-      "org": "Atlassian",
-      "category": "company_drives",
-      "summary": "Atlassian offers paid early-career internships in India for students in their penultimate year. Interns work on company projects while receiving learning and professional development support.",
-      "benefit": {
-        "kind": "paid_role",
-        "what_you_get": "A paid early-career internship at Atlassian India for penultimate-year students.",
-        "amount_text": null,
-        "amount_status": "not_stated",
-        "amount_source": null
-      },
-      "location": {
-        "mode": "on_site",
-        "place": "India"
-      },
-      "apply": {
-        "what_you_need": null,
-        "how_they_select": null,
-        "beginner_friendly": null,
-        "application_fee": null,
-        "fee_status": "unchecked"
-      },
-      "official_url": "https://www.atlassian.com/company/careers/all-jobs?team=Interns%2CGraduates",
-      "source_url": "https://www.atlassian.com/company/careers/earlycareers",
-      "last_verified": "2026-09-22",
-      "deadline": "tbd",
-      "typical_window": "India internship applications usually open around July for an April to June start",
-      "rules": {
-        "min_tenth_pct": null,
-        "min_twelfth_pct": null,
-        "min_cgpa": null,
-        "max_active_backlogs": null,
-        "max_gap_years": null,
-        "grad_years": [
-          2028
-        ],
-        "citizenship": "any",
-        "gender": "any",
-        "requires_student": true,
-        "branches": "any",
-        "min_work_years": null
-      },
-      "verification_status": "needs_check",
-      "tags": [
-        "internship",
-        "early career",
-        "software"
-      ],
-      "notes": "The early-careers page states the cohort and usual India opening window, but not an exact current deadline or a complete role-specific eligibility list. No cutoff is published, but absence could not be confirmed.",
-      "alternative_ids": [
-        "microsoft-university-internship-india",
-        "google-swe-internship-india"
-      ]
-    },
-    {
-      "id": "zoho-off-campus-hiring",
-      "title": "Zoho Off-Campus Hiring",
-      "org": "Zoho Corporation",
-      "category": "company_drives",
-      "summary": "Zoho accepts direct applications for software and other roles through its careers site. Applicants selected through the role-specific process can join Zoho in a full-time position.",
-      "benefit": {
-        "kind": "paid_role",
-        "what_you_get": "A full-time software role at Zoho, applied for directly through the careers site.",
-        "amount_text": null,
-        "amount_status": "not_stated",
-        "amount_source": null
-      },
-      "location": {
-        "mode": "on_site",
-        "place": "India"
-      },
-      "apply": {
-        "what_you_need": null,
-        "how_they_select": null,
-        "beginner_friendly": null,
-        "application_fee": null,
-        "fee_status": "unchecked"
-      },
-      "official_url": "https://careers.zohocorp.com/jobs/Careers",
-      "source_url": "https://careers.zohocorp.com/jobs/Careers",
-      "last_verified": "2026-09-22",
-      "deadline": "tbd",
-      "typical_window": "Openings appear throughout the year and close by individual role",
-      "rules": {
-        "min_tenth_pct": null,
-        "min_twelfth_pct": null,
-        "min_cgpa": null,
-        "max_active_backlogs": null,
-        "max_gap_years": null,
-        "grad_years": null,
-        "citizenship": "any",
-        "gender": "any",
-        "requires_student": false,
-        "branches": "any",
-        "min_work_years": null
-      },
-      "verification_status": "needs_check",
-      "tags": [
-        "off campus",
-        "software",
-        "jobs"
-      ],
-      "notes": "The official careers page lists current openings, but criteria and closing dates vary by role. The software-developer form found during research was unavailable when opened. No cutoff is published, but absence could not be confirmed.",
-      "alternative_ids": [
-        "juspay-developer-hiring",
-        "amazon-university-hiring-india"
-      ]
-    },
-    {
-      "id": "juspay-developer-hiring",
-      "title": "Juspay Developer Hiring",
-      "org": "Juspay",
-      "category": "company_drives",
-      "summary": "Juspay accepts direct applications for backend, frontend and other engineering roles. Selected applicants join teams that build and operate payment technology.",
-      "benefit": {
-        "kind": "paid_role",
-        "what_you_get": "A full-time engineering role at Juspay, applied for directly.",
-        "amount_text": null,
-        "amount_status": "not_stated",
-        "amount_source": null
-      },
-      "location": {
-        "mode": "on_site",
-        "place": "India"
-      },
-      "apply": {
-        "what_you_need": null,
-        "how_they_select": null,
-        "beginner_friendly": null,
-        "application_fee": null,
-        "fee_status": "unchecked"
-      },
-      "official_url": "https://juspay.io/careers",
-      "source_url": "https://juspay.io/careers/DEV-BE03",
-      "last_verified": "2026-09-22",
-      "deadline": "tbd",
-      "typical_window": "Roles are posted as hiring needs arise and close individually",
-      "rules": {
-        "min_tenth_pct": null,
-        "min_twelfth_pct": null,
-        "min_cgpa": null,
-        "max_active_backlogs": null,
-        "max_gap_years": null,
-        "grad_years": null,
-        "citizenship": "any",
-        "gender": "any",
-        "requires_student": false,
-        "branches": "any",
-        "min_work_years": null
-      },
-      "verification_status": "needs_check",
-      "tags": [
-        "developer",
-        "fintech",
-        "jobs"
-      ],
-      "notes": "No current student hiring challenge with official eligibility and a deadline was found. The linked official backend role is a direct job route and may add experience requirements, so check the live role before applying. No cutoff is published, but absence could not be confirmed.",
-      "alternative_ids": [
-        "zoho-off-campus-hiring",
-        "amazon-university-hiring-india"
+        "tcs-nqt",
+        "qualcomm-campus-hiring-india"
       ]
     },
     {
@@ -4558,17 +4069,16 @@
         "branches": "any",
         "min_work_years": null
       },
-      "verification_status": "verified",
+      "verification_status": "needs_check",
       "tags": [
         "fresher hiring",
         "NQT",
         "engineering"
       ],
-      "notes": "The official page requires 60% or equivalent CGPA in class 10, class 12, diploma and graduation. It gives no 10-point CGPA cutoff, so min_cgpa is left empty; treat 60% aggregate in your degree as the bar. The closed 2026 drive was open to the 2024, 2025 and 2026 batches only and capped work experience at two years. The salary figure shown is the Prime offer range for a UG candidate with zero to one year of experience.",
+      "notes": "The official page requires 60% or equivalent CGPA in class 10, class 12, diploma and graduation. It gives no 10-point CGPA cutoff, so min_cgpa is left empty; treat 60% aggregate in your degree as the bar. Because the app cannot compare that degree percentage with your 10-point CGPA, the record stays unconfirmed and a pass on the school marks alone is not a full pass. The closed 2026 drive was open to the 2024, 2025 and 2026 batches only and capped work experience at two years. The salary figure shown is the Prime offer range for a UG candidate with zero to one year of experience.",
       "alternative_ids": [
-        "zoho-off-campus-hiring",
         "hackwithinfy",
-        "juspay-developer-hiring"
+        "qualcomm-campus-hiring-india"
       ]
     },
     {
@@ -4625,8 +4135,7 @@
       "notes": "The official page lists no marks, backlog or gap cutoff. Its education line names Computer Science Engineering, Communication Engineering and ECE, and the minimum qualification also allows a related engineering, information systems or computer science field.",
       "alternative_ids": [
         "tcs-nqt",
-        "zoho-off-campus-hiring",
-        "amazon-university-hiring-india"
+        "qualcomm-hardware-internship-india"
       ]
     },
     {
@@ -4683,7 +4192,7 @@
       "notes": "The official page lists no marks, backlog or gap cutoff and does not state that current enrolment is required. It names bachelor or master backgrounds in Electrical Engineering, VLSI, Embedded and VLSI, or ECE.",
       "alternative_ids": [
         "qualcomm-campus-hiring-india",
-        "microsoft-university-internship-india"
+        "tcs-nqt"
       ]
     }
   ]

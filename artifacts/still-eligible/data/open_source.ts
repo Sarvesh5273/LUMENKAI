@@ -92,7 +92,7 @@ export const OPEN_SOURCE: Opportunity[] = [
       branches: 'any',
       min_work_years: null,
     },
-    verification_status: 'needs_check',
+    verification_status: 'verified',
     tags: ['mentorship', 'linux', 'stipend'],
     notes:
       'Applicants must be at least 18 and legally able to participate where they live. Each project can add prerequisites and its own exact deadline, so check the selected project before applying.',
@@ -282,10 +282,9 @@ export const OPEN_SOURCE: Opportunity[] = [
       branches: 'any',
       min_work_years: null,
     },
-    verification_status: 'needs_check',
+    verification_status: 'verified',
     tags: ['fellowship', 'IIT Bombay', 'FOSS'],
-    notes:
-      'The official page says students from any college, degree, and stage may apply. The next cycle and its exact deadline are not announced, so check the fellowship page when March registration opens.',
+    notes: 'The official fellowship page says it is open to students from any college, pursuing any degree, at any stage of undergraduate or postgraduate study, and that the only selection criterion is the successful completion of a useful project after the screening tasks. It prints no marks, backlog or gap cutoff. The 2026 fellowship is over and its results were published on 18 September 2026; the 2027 registration date is not announced yet, so watch the fellowship page around March.',
     alternative_ids: ['summer-of-bitcoin', 'gsoc', 'season-of-kde'],
   },
   {
@@ -315,7 +314,7 @@ export const OPEN_SOURCE: Opportunity[] = [
     source_url: 'https://hacktoberfest.com/questions',
     last_verified: '2026-09-22',
     deadline: 'tbd',
-    typical_window: 'Events take place throughout October, with individual event registration dates',
+    typical_window: 'Hacktoberfest 2026 runs through October 2026 with 300+ in-person and online events; each event publishes its own date and registration link.',
     rules: {
       min_tenth_pct: null,
       min_twelfth_pct: null,
@@ -329,7 +328,7 @@ export const OPEN_SOURCE: Opportunity[] = [
       branches: 'any',
       min_work_years: null,
     },
-    verification_status: 'needs_check',
+    verification_status: 'verified',
     tags: ['open source', 'events', 'AI'],
     notes:
       'Anyone aged 13 or older may participate, subject to US export controls and embargo restrictions. The official FAQ gives no single participant registration deadline because attendance is through individual events; check the selected event for its date.',
@@ -662,7 +661,7 @@ export const OPEN_SOURCE: Opportunity[] = [
       branches: 'any',
       min_work_years: null,
     },
-    verification_status: 'needs_check',
+    verification_status: 'verified',
     tags: ['cloud native', 'mentorship', 'stipend'],
     notes:
       'Each project sets its own prerequisites, and not every project is necessarily funded. Check that the selected listing is paid and review its requirements before applying.',

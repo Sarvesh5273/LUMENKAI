@@ -87,3 +87,33 @@ describe('validation clock', () => {
     expect(dayAfter.some((i) => i.path === 'typical_window')).toBe(true);
   });
 });
+
+test('a verified record may not hide a percent or 4-point degree bar in notes', () => {
+  const base = OPPORTUNITIES.find((o) => o.id === 'charpak-summer-training')!;
+  const hidden = {
+    ...base,
+    id: 'hidden-bar',
+    alternative_ids: [],
+    notes: 'Applicants need a grade point average of 80 percent, given as 3.0 on a 4.0 scale.',
+    rules: { ...base.rules, min_tenth_pct: null, min_twelfth_pct: null, min_cgpa: null },
+  };
+  const issues = validateOpportunities([...OPPORTUNITIES, hidden], new Date(2027, 5, 1));
+  expect(issues.map((i) => i.id + ':' + i.path)).toContain('hidden-bar:verification_status');
+  expect(validateOpportunities([...OPPORTUNITIES, { ...hidden, verification_status: 'needs_check' as const }], new Date(2027, 5, 1))).toEqual([]);
+});
+
+test('encoded school thresholds do not excuse an unencoded degree percentage', () => {
+  const base = OPPORTUNITIES.find((o) => o.id === 'charpak-summer-training')!;
+  const recruiter = {
+    ...base,
+    id: 'hidden-degree-bar',
+    alternative_ids: [],
+    verification_status: 'verified' as const,
+    notes: 'The official page requires 60% or equivalent CGPA in class 10, class 12, diploma and graduation.',
+    rules: { ...base.rules, min_tenth_pct: 60, min_twelfth_pct: 60, min_cgpa: null },
+  };
+  const issues = validateOpportunities([...OPPORTUNITIES, recruiter], new Date(2027, 5, 1));
+  expect(issues.map((i) => i.id + ':' + i.path)).toContain('hidden-degree-bar:verification_status');
+  const schoolOnly = { ...recruiter, id: 'school-bar-only', notes: 'Applicants must be admitted to first-year graduation at an eligible institution and have at least 75% marks or equivalent CGPA in Class 12.' };
+  expect(validateOpportunities([...OPPORTUNITIES, schoolOnly], new Date(2027, 5, 1))).toEqual([]);
+});

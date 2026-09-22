@@ -126,3 +126,4 @@ Rules for this category:
 - Ethereum Foundation Ecosystem Support Program: the current official applicant pages do not publish a traceable amount for an individual open application.
 - Entrepreneur First: no official page was found that states money paid to founders before investment for an India-accessible program.
 - Red Bull Basement: no official page was found stating a cash prize.
+- **Peak XV Spark (2026-09-22):** Dropped. https://www.peakxv.com/programs/spark and the Spark FAQ now return 404; the live site only carries an “Our Causes” blurb (“open to all female founders who are building in tech and are in the early stages”, “$100k Equity-free Grant”) with no application route or eligibility page. The archived FAQ (web.archive.org, May 2026) said “We only accept applications from full-time founders”, so students would have to commit full-time. No live official page means no verifiable record.

@@ -193,6 +193,28 @@ export type ValidationIssue = { id: string; path: string; message: string };
  * data is clean. Checks cross-record rules (unique ids, alternative_ids that
  * point at real records) on top of the per-record schema.
  */
+/** Matches "80 percent", "75%" or "3.0 on a 4-point scale". */
+const NUMERIC_BAR = /(\d{2}(\.\d+)?\s?(%|percent)|\b[0-4]\.\d\s?(on|\/)\s?(a\s)?4)/i;
+/** Words that tie a numeric bar to the degree rather than to school marks. */
+const DEGREE_WORDS = /(degree|graduat|bachelor|undergraduate|semester|grade point average|\bGPA\b)/i;
+
+/**
+ * True when a sentence in the notes states a numeric bar for the degree
+ * (a percentage or a 4-point GPA). Such a bar cannot live in min_cgpa, so a
+ * record that carries one must stay needs_check, no matter which school
+ * thresholds are encoded.
+ */
+export function notesStateDegreeBar(notes: string): boolean {
+  return notes.split(/(?<=[.!?])\s+/).some((sentence) => {
+    const match = NUMERIC_BAR.exec(sentence);
+    if (!match) return false;
+    // Look at the words just before the figure and everything after it, so
+    // "75% marks in Class 12" is not mistaken for a degree bar because the
+    // sentence happened to mention graduation earlier.
+    return DEGREE_WORDS.test(sentence.slice(Math.max(0, match.index - 40)));
+  });
+}
+
 export function validateOpportunities(records: Opportunity[], now: Date = new Date()): ValidationIssue[] {
   const schema = buildOpportunitySchema(now);
   const issues: ValidationIssue[] = [];
@@ -210,6 +232,22 @@ export function validateOpportunities(records: Opportunity[], now: Date = new Da
       issues.push({ id: record.id, path: 'id', message: 'duplicate id' });
     }
     seen.add(record.id);
+
+    // A degree bar printed as a percentage or on a 4-point scale cannot be
+    // encoded in min_cgpa, and a verified record renders a null min_cgpa as
+    // "No minimum CGPA required". Encoded school thresholds do not excuse it.
+    if (
+      record.verification_status === 'verified' &&
+      record.rules &&
+      record.rules.min_cgpa === null &&
+      notesStateDegreeBar(record.notes ?? '')
+    ) {
+      issues.push({
+        id: record.id,
+        path: 'verification_status',
+        message: 'notes state a degree bar (percent or 4-point GPA) that min_cgpa does not encode; keep the record needs_check',
+      });
+    }
 
     for (const alt of record.alternative_ids ?? []) {
       if (alt === record.id) {

@@ -1,5 +1,6 @@
 import { evaluateEligibility, evaluateAll, hasNoMarksCutoff, summarizeStatus } from '../lib/engine';
 import { EMPTY_PROFILE, Opportunity, UserProfile } from '../lib/types';
+import { OPPORTUNITIES } from '../data';
 
 // Every test pins the clock so a stored deadline never flips from upcoming
 // to passed depending on the day the suite runs.
@@ -298,5 +299,28 @@ describe('evaluateAll and helpers', () => {
     expect(hasNoMarksCutoff(openRecord({ requires_student: true, citizenship: ['IN'] }).rules)).toBe(true);
     expect(hasNoMarksCutoff(openRecord({ min_cgpa: 6 }).rules)).toBe(false);
     expect(hasNoMarksCutoff(openRecord({ max_gap_years: 1 }).rules)).toBe(false);
+  });
+});
+
+describe('rules the schema cannot encode stay hedged', () => {
+  test('a needs_check record with a combined marks average never says you qualify and never closes on school marks', () => {
+    const record = OPPORTUNITIES.find((o) => o.id === 'science-academies-srfp')!;
+    expect(record.verification_status).toBe('needs_check');
+    expect(record.rules.min_tenth_pct).toBeNull();
+    expect(record.rules.min_twelfth_pct).toBeNull();
+    const strong = evaluateEligibility(record, { ...fullProfile, grad_year: 2028 }, NOW);
+    expect(summarizeStatus(record, strong).tone).not.toBe('open');
+    const lowSchool = evaluateEligibility(record, { ...fullProfile, tenth_pct: 60, twelfth_pct: 70, grad_year: 2028 }, NOW);
+    expect(lowSchool.rules.find((r) => r.key === 'min_tenth_pct')?.status).toBe('no_rule');
+    expect(summarizeStatus(record, lowSchool).tone).not.toBe('closed');
+  });
+
+  test('a degree bar on a 4-point scale or in percent keeps the record needs_check', () => {
+    for (const id of ['technion-summer-research', 'kaust-fellowship', 'fulbright-nehru-masters']) {
+      const record = OPPORTUNITIES.find((o) => o.id === id)!;
+      expect(record.verification_status).toBe('needs_check');
+      const result = evaluateEligibility(record, { ...fullProfile, cgpa: 6.0 }, NOW);
+      expect(summarizeStatus(record, result).tone).not.toBe('open');
+    }
   });
 });

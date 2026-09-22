@@ -34,6 +34,10 @@ Checked on 2026-09-21. Quotes below are from official program or organisation pa
 - Selection (read 2026-09-22 at https://docs.linuxfoundation.org/lfx/mentorship/mentee-guide/how-to-apply): "Your application will be reviewed, and the program admin will contact you with the next steps."
 - Beginner friendly (read 2026-09-22 at https://docs.linuxfoundation.org/lfx/mentorship/mentee-guide/am-i-eligible): the common eligibility page does not say beginners or first-timers are welcome, so this remains null.
 
+Re-checked 2026-09-22 at https://lfx.linuxfoundation.org/tools/mentorship/ and the LFX mentee eligibility guide (https://docs.linuxfoundation.org/lfx/mentorship/mentee-guide/am-i-eligible).
+- Eligibility quoted: “be at least 18 years old”, “not have been previously accepted as an LF mentee”, must be “eligible to work in the jurisdiction where you reside”, apply as an individual, and “Meet all criteria set by the program” including any custom prerequisites.
+- Keyword scan (%, CGPA, GPA, aggregate, marks, backlog, arrear, gap): no hits. All academic rules stay null and the record is now `verified`; per-project prerequisites remain a caveat in notes.
+
 ## `mlh-fellowship`
 
 - Criteria and deadline: [MLH Fellowship application](https://fellowship.mlh.io/apply)
@@ -98,6 +102,11 @@ Checked on 2026-09-21. Quotes below are from official program or organisation pa
 - Selection (read 2026-09-22 at https://fossee.in/node/82): the page describes screening tasks and selection by the FOSSEE team.
 - Beginner friendly (read 2026-09-22 at https://fossee.in/node/82): the page does not explicitly welcome beginners or require prior work, so this remains null.
 
+Re-checked 2026-09-22 at https://fossee.in/node/82 (source_url) and https://fossee.in/fellowship/2026.
+- Eligibility: “open to students from any college, pursuing any degree, and at any stage of their undergraduate or postgraduate studies. The only criterion for selection is the successful completion of a useful project.”
+- Cycle: the 2026 page shows results (page updated 18 September 2026); no 2027 dates are published, so the deadline stays `tbd`.
+- Keyword scan (%, CGPA, GPA, aggregate, marks, backlog, arrear, gap): no hits. Rules stay null; record set to `verified`.
+
 ## `hacktoberfest`
 
 - Criteria and timing: [Hacktoberfest 2026 FAQ](https://hacktoberfest.com/questions)
@@ -110,6 +119,10 @@ Checked on 2026-09-21. Quotes below are from official program or organisation pa
 - Apply (read 2026-09-22 at https://hacktoberfest.com/questions): events use OrganizerHQ "for attendee registration and day-of check-in."
 - Selection (read 2026-09-22 at https://hacktoberfest.com/questions): the page does not describe selection of ordinary attendees, so this remains null.
 - Beginner friendly (read 2026-09-22 at https://hacktoberfest.com/questions): the page emphasizes learning but does not explicitly say beginners or first-timers are welcome, so this is null.
+
+Re-checked 2026-09-22 at https://hacktoberfest.com/ and the FAQ (source_url).
+- Cycle: “October 2026 · 300+ events In person and online” and “Hacktoberfest 2026: AI belongs to everyone.” Participation is through events run under Major League Hacking and DEV; there is no single registration closing date, so the deadline stays `tbd` with the 2026 window described in `typical_window`.
+- Eligibility: the FAQ keeps the age rule already logged (13 years or older with guardian consent under 18). Keyword scan (%, CGPA, GPA, aggregate, marks, backlog, arrear, gap): no hits. Record set to `verified`.
 
 ## `season-of-kde`
 
@@ -225,6 +238,9 @@ Checked on 2026-09-21. Quotes below are from official program or organisation pa
 - Beginner friendly: the common page does not explicitly welcome beginners for every CNCF project, so this is null.
 - Academic-cutoff keyword check: searched the common eligibility text and Term 3 project page for `%`, `CGPA`, `GPA`, `aggregate`, `backlog`, `arrear`, `gap`, and `marks`. No academic cutoff is present. The term page uses `>80% coverage` for software tests and uses "gap" and "backlog" in technical project descriptions, not student eligibility.
 - Doubt: `needs_check` because each project can add prerequisites and the term page does not state that every listed project pays a stipend.
+
+Re-checked 2026-09-22 at https://github.com/cncf/mentoring (source_url). Program terms defer to the LFX mentee eligibility rules quoted under lfx-mentorship.
+- Keyword scan (%, CGPA, GPA, aggregate, marks, backlog, arrear, gap): no hits. Rules stay null, record set to `verified`; project-level prerequisites stay in notes.
 
 ## Programs reviewed but excluded
 

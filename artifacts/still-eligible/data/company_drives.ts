@@ -1,13 +1,17 @@
 import { Opportunity } from '../lib/types';
 
 /**
- * Off-campus company drives: product companies that hire students directly
- * and mass recruiters that publish their cutoffs on an official page.
+ * Off-campus company drives: only companies whose official page prints the
+ * eligibility text a student can read (batch, degree, cutoffs or the absence
+ * of cutoffs) and that hire students directly.
  *
  * Most Indian mass recruiters do not publish criteria anywhere a student can
  * read them; their cutoffs reach colleges through placement cells. Those
  * companies were reviewed and left out on purpose. See
- * docs/verification/recruiters.md for the list and the reasons.
+ * docs/verification/recruiters.md for the list and the reasons. Product
+ * companies with no official eligibility page (Google, Amazon, Microsoft,
+ * Atlassian, Zoho, Juspay) were dropped on 2026-09-22; see the "Reviewed and
+ * dropped" section of docs/verification/company_drives.md.
  */
 export const COMPANY_DRIVES: Opportunity[] = [
   {
@@ -31,7 +35,7 @@ export const COMPANY_DRIVES: Opportunity[] = [
       how_they_select: 'Online coding rounds, then a grand finale for the shortlisted',
       beginner_friendly: null,
       application_fee: null,
-      fee_status: 'unchecked',
+      fee_status: 'free',
     },
     official_url: 'https://www.infosys.com/careers/hackwithinfy.html',
     source_url:
@@ -52,297 +56,10 @@ export const COMPANY_DRIVES: Opportunity[] = [
       branches: 'any',
       min_work_years: null,
     },
-    verification_status: 'needs_check',
+    verification_status: 'verified',
     tags: ['coding', 'hiring', 'internship'],
-    notes:
-      'The 2026 terms list the degree, graduation year, age and Indian residency requirements without a marks or backlog rule. No registration closing date is published, so the deadline and the absence of any college-level screening need confirmation. Registration happens through the college placement officer.',
-    alternative_ids: ['microsoft-university-internship-india', 'atlassian-india-internship'],
-  },
-  {
-    id: 'google-swe-internship-india',
-    title: 'Google Software Engineering Internship India',
-    org: 'Google',
-    category: 'company_drives',
-    summary:
-      'Google software engineering internships place students on engineering projects with Google teams in India. Interns gain paid practical experience and work with engineering mentors.',
-    benefit: {
-      kind: 'paid_role',
-      what_you_get:
-        'A paid software engineering internship on a Google team in India.',
-      amount_text: null,
-      amount_status: 'not_stated',
-      amount_source: null,
-    },
-    location: { mode: 'on_site', place: 'India' },
-    apply: {
-      what_you_need: null,
-      how_they_select: null,
-      beginner_friendly: null,
-      application_fee: null,
-      fee_status: 'unchecked',
-    },
-    official_url:
-      'https://www.google.com/about/careers/applications/students/engineering-and-technical-internships',
-    source_url:
-      'https://www.google.com/about/careers/applications/students/engineering-and-technical-internships',
-    last_verified: '2026-09-22',
-    deadline: 'tbd',
-    typical_window: 'India summer internship roles are posted separately when teams begin hiring',
-    rules: {
-      min_tenth_pct: null,
-      min_twelfth_pct: null,
-      min_cgpa: null,
-      max_active_backlogs: null,
-      max_gap_years: null,
-      grad_years: null,
-      citizenship: 'any',
-      gender: 'any',
-      requires_student: false,
-      branches: 'any',
-      min_work_years: null,
-    },
-    verification_status: 'needs_check',
-    tags: ['internship', 'software', 'engineering'],
-    notes:
-      'No live India BTech internship listing with a current deadline could be read on the official site. Role-specific enrollment, degree and graduation-year requirements must be checked when a listing opens. No cutoff is published, but absence could not be confirmed.',
-    alternative_ids: ['microsoft-university-internship-india', 'atlassian-india-internship'],
-  },
-  {
-    id: 'amazon-university-hiring-india',
-    title: 'Amazon University Hiring India',
-    org: 'Amazon',
-    category: 'company_drives',
-    summary:
-      'Amazon posts software development internships and entry-level roles for university candidates in India. Successful applicants receive an internship or full-time role on an Amazon engineering team.',
-    benefit: {
-      kind: 'paid_role',
-      what_you_get:
-        'A paid internship or an entry-level engineering role at Amazon India.',
-      amount_text: null,
-      amount_status: 'not_stated',
-      amount_source: null,
-    },
-    location: { mode: 'on_site', place: 'India' },
-    apply: {
-      what_you_need: null,
-      how_they_select: null,
-      beginner_friendly: null,
-      application_fee: null,
-      fee_status: 'unchecked',
-    },
-    official_url: 'https://www.amazon.jobs/en/teams/internships-for-students',
-    source_url:
-      'https://www.amazon.jobs/en/jobs/3046606/sde-i-intern-amazon-university-talent-acquisition',
-    last_verified: '2026-09-22',
-    deadline: 'tbd',
-    typical_window: 'University roles are posted throughout the year and close by individual job',
-    rules: {
-      min_tenth_pct: null,
-      min_twelfth_pct: null,
-      min_cgpa: null,
-      max_active_backlogs: null,
-      max_gap_years: null,
-      grad_years: null,
-      citizenship: 'any',
-      gender: 'any',
-      requires_student: false,
-      branches: 'any',
-      min_work_years: null,
-    },
-    verification_status: 'needs_check',
-    tags: ['university', 'software', 'hiring'],
-    notes:
-      'The India university role found in official search was no longer readable as a live job page, so its qualifications and closing date could not be verified. Check the current job listing for degree, graduation year and work authorization. No cutoff is published, but absence could not be confirmed.',
-    alternative_ids: ['google-swe-internship-india', 'microsoft-university-internship-india'],
-  },
-  {
-    id: 'microsoft-university-internship-india',
-    title: 'Microsoft University Internship India',
-    org: 'Microsoft',
-    category: 'company_drives',
-    summary:
-      'Microsoft offers university internships in India across engineering and related teams. Interns work on a team project and receive structured learning and professional experience.',
-    benefit: {
-      kind: 'paid_role',
-      what_you_get:
-        'A paid university internship on a Microsoft team in India.',
-      amount_text: null,
-      amount_status: 'not_stated',
-      amount_source: null,
-    },
-    location: { mode: 'on_site', place: 'India' },
-    apply: {
-      what_you_need: null,
-      how_they_select: null,
-      beginner_friendly: null,
-      application_fee: null,
-      fee_status: 'unchecked',
-    },
-    official_url: 'https://careers.microsoft.com/v2/global/en/universityinternship',
-    source_url: 'https://careers.microsoft.com/v2/global/en/internship_eligibility',
-    last_verified: '2026-09-22',
-    deadline: 'tbd',
-    typical_window: 'Openings and deadlines are published on individual internship job listings',
-    rules: {
-      min_tenth_pct: null,
-      min_twelfth_pct: null,
-      min_cgpa: null,
-      max_active_backlogs: null,
-      max_gap_years: null,
-      grad_years: [2028],
-      citizenship: 'any',
-      gender: 'any',
-      requires_student: true,
-      branches: 'any',
-      min_work_years: null,
-    },
-    verification_status: 'needs_check',
-    tags: ['internship', 'university', 'technology'],
-    notes:
-      'The India eligibility section requires enrollment in a relevant course and pre-final-year status, but each role has its own closing date and qualifications. No cutoff is published, but absence could not be confirmed on a current India job listing.',
-    alternative_ids: ['google-swe-internship-india', 'atlassian-india-internship'],
-  },
-  {
-    id: 'atlassian-india-internship',
-    title: 'Atlassian India Internship',
-    org: 'Atlassian',
-    category: 'company_drives',
-    summary:
-      'Atlassian offers paid early-career internships in India for students in their penultimate year. Interns work on company projects while receiving learning and professional development support.',
-    benefit: {
-      kind: 'paid_role',
-      what_you_get:
-        'A paid early-career internship at Atlassian India for penultimate-year students.',
-      amount_text: null,
-      amount_status: 'not_stated',
-      amount_source: null,
-    },
-    location: { mode: 'on_site', place: 'India' },
-    apply: {
-      what_you_need: null,
-      how_they_select: null,
-      beginner_friendly: null,
-      application_fee: null,
-      fee_status: 'unchecked',
-    },
-    official_url:
-      'https://www.atlassian.com/company/careers/all-jobs?team=Interns%2CGraduates',
-    source_url: 'https://www.atlassian.com/company/careers/earlycareers',
-    last_verified: '2026-09-22',
-    deadline: 'tbd',
-    typical_window: 'India internship applications usually open around July for an April to June start',
-    rules: {
-      min_tenth_pct: null,
-      min_twelfth_pct: null,
-      min_cgpa: null,
-      max_active_backlogs: null,
-      max_gap_years: null,
-      grad_years: [2028],
-      citizenship: 'any',
-      gender: 'any',
-      requires_student: true,
-      branches: 'any',
-      min_work_years: null,
-    },
-    verification_status: 'needs_check',
-    tags: ['internship', 'early career', 'software'],
-    notes:
-      'The early-careers page states the cohort and usual India opening window, but not an exact current deadline or a complete role-specific eligibility list. No cutoff is published, but absence could not be confirmed.',
-    alternative_ids: ['microsoft-university-internship-india', 'google-swe-internship-india'],
-  },
-  {
-    id: 'zoho-off-campus-hiring',
-    title: 'Zoho Off-Campus Hiring',
-    org: 'Zoho Corporation',
-    category: 'company_drives',
-    summary:
-      'Zoho accepts direct applications for software and other roles through its careers site. Applicants selected through the role-specific process can join Zoho in a full-time position.',
-    benefit: {
-      kind: 'paid_role',
-      what_you_get:
-        'A full-time software role at Zoho, applied for directly through the careers site.',
-      amount_text: null,
-      amount_status: 'not_stated',
-      amount_source: null,
-    },
-    location: { mode: 'on_site', place: 'India' },
-    apply: {
-      what_you_need: null,
-      how_they_select: null,
-      beginner_friendly: null,
-      application_fee: null,
-      fee_status: 'unchecked',
-    },
-    official_url: 'https://careers.zohocorp.com/jobs/Careers',
-    source_url: 'https://careers.zohocorp.com/jobs/Careers',
-    last_verified: '2026-09-22',
-    deadline: 'tbd',
-    typical_window: 'Openings appear throughout the year and close by individual role',
-    rules: {
-      min_tenth_pct: null,
-      min_twelfth_pct: null,
-      min_cgpa: null,
-      max_active_backlogs: null,
-      max_gap_years: null,
-      grad_years: null,
-      citizenship: 'any',
-      gender: 'any',
-      requires_student: false,
-      branches: 'any',
-      min_work_years: null,
-    },
-    verification_status: 'needs_check',
-    tags: ['off campus', 'software', 'jobs'],
-    notes:
-      'The official careers page lists current openings, but criteria and closing dates vary by role. The software-developer form found during research was unavailable when opened. No cutoff is published, but absence could not be confirmed.',
-    alternative_ids: ['juspay-developer-hiring', 'amazon-university-hiring-india'],
-  },
-  {
-    id: 'juspay-developer-hiring',
-    title: 'Juspay Developer Hiring',
-    org: 'Juspay',
-    category: 'company_drives',
-    summary:
-      'Juspay accepts direct applications for backend, frontend and other engineering roles. Selected applicants join teams that build and operate payment technology.',
-    benefit: {
-      kind: 'paid_role',
-      what_you_get:
-        'A full-time engineering role at Juspay, applied for directly.',
-      amount_text: null,
-      amount_status: 'not_stated',
-      amount_source: null,
-    },
-    location: { mode: 'on_site', place: 'India' },
-    apply: {
-      what_you_need: null,
-      how_they_select: null,
-      beginner_friendly: null,
-      application_fee: null,
-      fee_status: 'unchecked',
-    },
-    official_url: 'https://juspay.io/careers',
-    source_url: 'https://juspay.io/careers/DEV-BE03',
-    last_verified: '2026-09-22',
-    deadline: 'tbd',
-    typical_window: 'Roles are posted as hiring needs arise and close individually',
-    rules: {
-      min_tenth_pct: null,
-      min_twelfth_pct: null,
-      min_cgpa: null,
-      max_active_backlogs: null,
-      max_gap_years: null,
-      grad_years: null,
-      citizenship: 'any',
-      gender: 'any',
-      requires_student: false,
-      branches: 'any',
-      min_work_years: null,
-    },
-    verification_status: 'needs_check',
-    tags: ['developer', 'fintech', 'jobs'],
-    notes:
-      'No current student hiring challenge with official eligibility and a deadline was found. The linked official backend role is a direct job route and may add experience requirements, so check the live role before applying. No cutoff is published, but absence could not be confirmed.',
-    alternative_ids: ['zoho-off-campus-hiring', 'amazon-university-hiring-india'],
+    notes: 'The 2026 terms and conditions require participants to be 18 or older, resident in India, and BE, BTech, ME, MTech, dual degree, MS (Research), MCA or five-year integrated MSc students graduating in 2027; for the 2027 edition expect the batch to move forward. They print no marks, backlog or gap rule, say participation is free, and say registration opened on 6 February 2026 through the college placement officer, without a closing date.',
+    alternative_ids: ['tcs-nqt', 'qualcomm-campus-hiring-india'],
   },
   {
     id: 'tcs-nqt',
@@ -377,10 +94,10 @@ export const COMPANY_DRIVES: Opportunity[] = [
       citizenship: 'any', gender: 'any', requires_student: false, branches: 'any',
       min_work_years: null,
     },
-    verification_status: 'verified',
+    verification_status: 'needs_check',
     tags: ['fresher hiring', 'NQT', 'engineering'],
-    notes: 'The official page requires 60% or equivalent CGPA in class 10, class 12, diploma and graduation. It gives no 10-point CGPA cutoff, so min_cgpa is left empty; treat 60% aggregate in your degree as the bar. The closed 2026 drive was open to the 2024, 2025 and 2026 batches only and capped work experience at two years. The salary figure shown is the Prime offer range for a UG candidate with zero to one year of experience.',
-    alternative_ids: ['zoho-off-campus-hiring', 'hackwithinfy', 'juspay-developer-hiring'],
+    notes: 'The official page requires 60% or equivalent CGPA in class 10, class 12, diploma and graduation. It gives no 10-point CGPA cutoff, so min_cgpa is left empty; treat 60% aggregate in your degree as the bar. Because the app cannot compare that degree percentage with your 10-point CGPA, the record stays unconfirmed and a pass on the school marks alone is not a full pass. The closed 2026 drive was open to the 2024, 2025 and 2026 batches only and capped work experience at two years. The salary figure shown is the Prime offer range for a UG candidate with zero to one year of experience.',
+    alternative_ids: ['hackwithinfy', 'qualcomm-campus-hiring-india'],
   },
   {
     id: 'qualcomm-campus-hiring-india',
@@ -429,7 +146,7 @@ export const COMPANY_DRIVES: Opportunity[] = [
     tags: ['campus hiring', 'software', 'engineering'],
     notes:
       'The official page lists no marks, backlog or gap cutoff. Its education line names Computer Science Engineering, Communication Engineering and ECE, and the minimum qualification also allows a related engineering, information systems or computer science field.',
-    alternative_ids: ['tcs-nqt', 'zoho-off-campus-hiring', 'amazon-university-hiring-india'],
+    alternative_ids: ['tcs-nqt', 'qualcomm-hardware-internship-india'],
   },
   {
     id: 'qualcomm-hardware-internship-india',
@@ -478,6 +195,6 @@ export const COMPANY_DRIVES: Opportunity[] = [
     tags: ['internship', 'hardware', 'VLSI'],
     notes:
       'The official page lists no marks, backlog or gap cutoff and does not state that current enrolment is required. It names bachelor or master backgrounds in Electrical Engineering, VLSI, Embedded and VLSI, or ECE.',
-    alternative_ids: ['qualcomm-campus-hiring-india', 'microsoft-university-internship-india'],
+    alternative_ids: ['qualcomm-campus-hiring-india', 'tcs-nqt'],
   },
 ];

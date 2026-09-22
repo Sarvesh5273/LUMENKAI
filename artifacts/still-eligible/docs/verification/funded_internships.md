@@ -13,6 +13,16 @@ URL read: https://webjapps.ias.ac.in/fellowship2026/index.html
 
 Doubt: The announcement says detailed eligibility criteria are displayed in the online application, but the closed application no longer exposes them. Any percentage or CGPA cutoff needs checking in the next application form. This is why the record is `needs_check`.
 
+Re-checked 2026-09-22. The 2027 call is live: https://webjapps.ias.ac.in/fellowship2027/index.html (announcement dated 10 September 2026) and https://webjapps.ias.ac.in/fellowship2027/application_instructions.jsp (source_url).
+- Deadline: “The last date for receipt of applications online is 30 November 2026.”
+- Year of study: “BE / BTech / BCA (II and III years only)” and “(dual degree) BTech + MTech (II, III, IV years only)”. For the 2027 summer (academic year 2026-27) that is the 2029 and 2028 BTech batches, so `grad_years: [2028, 2029]`.
+- Marks rule: “The minimum percentage of average marks in core subjects only (i.e. excluding languages) from X std. up to post-graduation (whichever years completed) should be 65% or above for students”. This is one average across Class 10, Class 12 and completed degree years. It is entered as `min_tenth_pct: 65` and `min_twelfth_pct: 65` (the same treatment as TCS NQT); the degree part of the average is explained in notes, not entered as a CGPA.
+- Exclusions: “PhD students are not eligible”; students who “availed the Academies fellowship twice before are not eligible”; applicants must be “studying/teaching in India” at a recognised college.
+- Money: the instructions promise a monthly fellowship and train fare but print no amount, so `amount_status` stays `not_stated`.
+- Keyword scan (%, CGPA, GPA, aggregate, marks, backlog, arrear, gap): the only hits are the 65% rule above. Record set to `verified`.
+
+Corrected 2026-09-22 after review: the 65% figure is one average across Class 10, Class 12 and every completed degree year, not two separate school thresholds, so min_tenth_pct and min_twelfth_pct are null again and the record is needs_check with the rule explained in notes. grad_years now lists every eligible cohort for academic year 2026-27: BE/BTech years 2-3 (2029, 2028), BCA years 2-3 (2028, 2027) and five-year dual degree years 2-4 (2030, 2029, 2028), so [2027, 2028, 2029, 2030].
+
 ## charpak-summer-training
 
 URL read: https://www.inde.campusfrance.org/france-excellence-charpak-summer-training-scholarship
@@ -25,6 +35,15 @@ URL read: https://www.inde.campusfrance.org/france-excellence-charpak-summer-tra
 - Deadline status: “Call for Applications 2026 session is closed now. Kindly keep a check on the website for all updates.”
 
 Doubt: The page does not give the closed 2026 deadline or a deadline for the next call. Applicants also need an invitation from a French laboratory or institution. The missing deadline makes the record `needs_check`.
+
+Re-checked 2026-09-22 at https://www.inde.campusfrance.org/france-excellence-charpak-summer-training-scholarship (source_url).
+- Citizenship: “be an Indian national residing in India at the time of application”.
+- Age: “not be more than 30 years old at the time of application”.
+- Student status: “be enrolled in an Indian institution of higher learning at Bachelor's or Master's level at the time of application”.
+- Prerequisite: “be in possession of an invitation letter from a French laboratory or institution”.
+- Academic cutoff: “There is no CGPA/ Percentage cut off for the scholarship.”
+- Cycle: “Call for Applications 2026 session is closed now. Kindly keep a check on the website for all updates.” No date is printed, so the deadline stays `tbd`.
+- Keyword scan (%, CGPA, GPA, aggregate, marks, backlog, arrear, gap): the only hit is the no-cutoff sentence above. Record set to `verified`.
 
 ## sn-bose-scholars
 
@@ -49,6 +68,13 @@ URLs read:
 - Central portal status: “Registration Closed for 2026.”
 
 Doubt: The central portal is cycle-based and closed, but it no longer displays the exact 2026 deadline. The department page’s rolling statement may apply only to Engineering Design projects. The next central deadline and whether the sixth-semester rule is institute-wide must be checked, so the record is `needs_check`.
+
+Re-checked 2026-09-22 at https://ed.iitm.ac.in/summerfellowship.html (source_url), https://apm.iitm.ac.in/pages/summer_fellowship and https://ssp.iitm.ac.in/summer-fellowship-registration.
+- Year of study: “The SFP provides B.Tech. students who have completed their 6th semester an opportunity to undertake a guided research internship at IIT Madras” (Engineering Design); Applied Mechanics repeats “B.Tech students who have completed their 6th semester”. For the closed 2026 cycle that is the 2027 batch.
+- Cycle: the central portal shows “Registration Closed for 2026” and prints no eligibility text or next date; the institute announcement page only links to the portal. Deadline stays `tbd`.
+- Keyword scan (%, CGPA, GPA, aggregate, marks, backlog, arrear, gap): no hits on either department page. Rules stay null apart from the batch; record set to `verified`, with the portal caveat in notes.
+
+Re-checked 2026-09-22 after review: the department pages print no cutoff, but the central portal (ssp.iitm.ac.in) that owns the eligibility text could not be read, so absence is unconfirmed. Status set back to needs_check.
 
 ## iusstf-viterbi
 
@@ -79,6 +105,16 @@ URLs read:
 - Funding: “Students who are accepted to participate in the program will receive a scholarship which will cover the cost of on-campus housing (dormitories) or accommodation off campus arranged by the Technion for the duration of the program.”
 
 Doubt: The 2027 deadline has not been announced and the requirements page still carries the 2026 deadline. The academic requirement is stated as 80 percent and 3.0/4.0, so rule 11 requires `min_cgpa: null`. Confirm the new deadline and whether requirements change when registration opens. The record is `needs_check`.
+
+Re-checked 2026-09-22 at https://int.technion.ac.il/programs/summer-research-program-in-science-and-engineering/application-requirements-and-deadlines/ (source_url), the programme page and the costs page.
+- Eligibility: “open to undergraduate students at a recognized institute of higher education who have completed at least two years of studies.”
+- Academic bar: “A grade point average of 80% (3.0/4.0 scale) and above is required.” A percentage or 4-point bar goes in notes, not in `min_cgpa`. “some Technion faculties require” additional conditions.
+- Deadline: “The application deadline is February 21st, 2026.” Programme page: “Registration will open soon!” for the July 2027 programme. Deadline entered as 2026-02-21 with the 2027 window in `typical_window`.
+- Batches: a February 2026 deadline sits in 2025-26; completing two years by July 2026 means second year or later, so `grad_years: [2026, 2027, 2028]` for the closed cycle.
+- Money: “will receive a scholarship which will cover the cost of on-campus housing (dormitories) or accommodation off campus”; “Students will need to cover the costs of their airfare to Israel, most food and meals throughout the program and transport”.
+- Keyword scan (%, CGPA, GPA, aggregate, marks, backlog, arrear, gap): the only hit is the 80% GPA sentence. Record set to `verified`.
+
+Re-checked 2026-09-22 after review: the degree bar quoted above is a percentage or a 4-point GPA that the rules cannot encode, and a verified record would render its null marks rules as "no such cutoff". Status set back to needs_check; the bar stays quoted in notes.
 
 ## flipkart-grid
 
@@ -171,6 +207,8 @@ Doubt: None affecting the BTech-focused structured rules. The page separately al
 - Selection: “host labs screen the applications and can invite you for an online interview.”
 - Academic cutoffs: the page says “You are among the top 10% of your class with a high GPA” but gives no 10-point CGPA figure and lists no school marks, backlog or gap cutoff.
 - Doubt: none affecting structured rules.
+
+Re-checked 2026-09-22 after review: the degree bar quoted above is a percentage or a 4-point GPA that the rules cannot encode, and a verified record would render its null marks rules as "no such cutoff". Status set back to needs_check; the bar stays quoted in notes.
 
 ## eth-summer-research-fellowship
 
@@ -275,6 +313,8 @@ Doubt: None affecting the BTech-focused structured rules. The page separately al
 - Academic cutoff search: searched the official page for %, CGPA, GPA, aggregate, backlog, arrear, gap and marks. The India section states the 70% cumulative degree requirement; it states no Class 10, Class 12, backlog, arrear or gap cutoff.
 - Doubt: none affecting structured rules. The page gives a degree percentage rather than a 10-point CGPA, so min_cgpa remains null.
 
+Re-checked 2026-09-22 after review: the degree bar quoted above is a percentage or a 4-point GPA that the rules cannot encode, and a verified record would render its null marks rules as "no such cutoff". Status set back to needs_check; the bar stays quoted in notes.
+
 ## Programs researched and excluded
 
 - **DAAD WISE:** The supplied official DAAD India URL returned “This page was not found.” The official DAAD scholarship database entry says “This programme is not available right now” and exposes no current eligibility or funding figure.
@@ -291,3 +331,4 @@ Doubt: None affecting the BTech-focused structured rules. The page separately al
 - **IISER summer programs:** Dropped because the current IISER Mohali page says it provides no stipend or travel support and free accommodation is limited to one category; the IISER Pune page fetched was a 2021 international call.
 - **Google Research India internships:** Dropped because the official research pages link to changing job searches but did not provide a readable India student listing with eligibility and compensation.
 - **Microsoft Research India internships:** Dropped because the official lab page has no current readable student internship call with eligibility and funding.
+- **S.N. Bose Scholars Program (2026-09-22):** Dropped as dormant. https://iusstf.org/s-n-bose-scholars-program prints eligibility but no year, call or deadline; the linked Indian Application Guidelines still say “completing their degree program on or after May 2020” and “mid of May to July 2019”, and no 2025, 2026 or 2027 call could be found on iusstf.org. A record with no next cycle would render as “expected next cycle” forever.

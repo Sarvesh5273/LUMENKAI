@@ -138,8 +138,7 @@ export const SCHOLARSHIPS: Opportunity[] = [
     },
     verification_status: 'needs_check',
     tags: ['master’s', 'United States', 'work experience'],
-    notes:
-      'A current undergraduate cannot apply because three years of relevant full-time paid professional experience are required by the deadline. The official page still shows the 2026-27 cycle and a 14 May 2025 deadline, so check for a newer call. The degree requirement is at least 55% in a qualifying degree and is not stored as min_cgpa.',
+    notes: 'The official page still shows the 2026-27 cycle with its 14 May 2025 deadline, and USIEF has not published a 2027-28 master’s call yet. You need Indian citizenship, a completed bachelor’s degree with at least 55 percent marks (a degree percentage, so it is not entered as a CGPA) and at least three years of full-time paid professional work experience relevant to the proposed field. The page prints no backlog or gap rule. This degree bar is stated as a percentage or on a 4-point scale, which the app cannot compare with your 10-point CGPA, so the marks rule stays unconfirmed here and you must check it yourself.',
     alternative_ids: ['chevening', 'inlaks-scholarship'],
   },
   {
@@ -233,7 +232,7 @@ export const SCHOLARSHIPS: Opportunity[] = [
     verification_status: 'needs_check',
     tags: ['postgraduate', 'India', 'overseas study'],
     notes:
-      'Final-year undergraduates awaiting results may apply. Applicants must hold an Indian passport, reside in India at application, be born on or after 1 January 1996 for the 2026 call, and already hold an admission offer. Degree cutoffs vary by subject: 65% or 6.8/10 for listed humanities-related fields, and 70% or 7.2/10 for listed science-related fields, which is where engineering and natural sciences fall. The stored 6.8 is the floor below which nobody qualifies; for a science or engineering programme the bar is 7.2. Engineering and natural sciences are considered only at Imperial College London, so check course eligibility before applying.',
+      'Final-year undergraduates awaiting results may apply. Applicants must hold an Indian passport, reside in India at application, be born on or after 1 January 1996 for the 2026 call, and already hold an admission offer. Degree cutoffs vary by subject: 65% or 6.8/10 for listed humanities-related fields, and 70% or 7.2/10 for listed science-related fields, which is where engineering and natural sciences fall. The stored 6.8 is the floor below which nobody qualifies; for a science or engineering programme the bar is 7.2. Engineering and natural sciences are considered only at Imperial College London, so check course eligibility before applying. Because the bar depends on your subject, the stored 6.8 is only the lowest floor; treat the marks rule as unconfirmed until you match your field against the official list.',
     alternative_ids: ['rhodes-scholarship-india', 'erasmus-mundus-joint-masters'],
   },
   {
@@ -280,7 +279,7 @@ export const SCHOLARSHIPS: Opportunity[] = [
     verification_status: 'needs_check',
     tags: ['master’s', 'Europe', 'joint degree'],
     notes:
-      'Final-year bachelor’s students may apply but must graduate before the master’s programme begins. Each consortium sets its own exact deadline, entry requirements and available subjects, so check the chosen programme’s official website.',
+      'Final-year bachelor’s students may apply but must graduate before the master’s programme begins. Each consortium sets its own exact deadline, entry requirements and available subjects, so check the chosen programme’s official website. Because each consortium sets its own academic entry requirements, no cutoff can be confirmed absent here; treat the rules as unconfirmed until you read the chosen programme\'s page.',
     alternative_ids: ['stipendium-hungaricum', 'inlaks-scholarship'],
   },
   {
@@ -328,7 +327,7 @@ export const SCHOLARSHIPS: Opportunity[] = [
     verification_status: 'needs_check',
     tags: ['graduate study', 'Saudi Arabia', 'STEM'],
     notes:
-      'Master’s applicants need a bachelor’s degree in a subject relevant to the programme. The minimum GPA is stated as 3.0 on a 4-point scale or equivalent, so it is not converted to min_cgpa. The stored deadline is Fall 2027 Round 2 (MS, MS/PhD and PhD), which the timeline page calls tentative. The 27 September 2026 round is Spring 2027 entry for PhD applicants only. Confirm the intake and programme before applying.',
+      'Master’s applicants need a bachelor’s degree in a subject relevant to the programme. The minimum GPA is stated as 3.0 on a 4-point scale or equivalent, so it is not converted to min_cgpa. The stored deadline is Fall 2027 Round 2 (MS, MS/PhD and PhD), which the timeline page calls tentative. The 27 September 2026 round is Spring 2027 entry for PhD applicants only. Confirm the intake and programme before applying. This degree bar is stated as a percentage or on a 4-point scale, which the app cannot compare with your 10-point CGPA, so the marks rule stays unconfirmed here and you must check it yourself.',
     alternative_ids: ['erasmus-mundus-joint-masters', 'stipendium-hungaricum'],
   },
   {
@@ -375,7 +374,7 @@ export const SCHOLARSHIPS: Opportunity[] = [
     verification_status: 'needs_check',
     tags: ['Hungary', 'government', 'degree study'],
     notes:
-      'India appears in the official list of eligible sending partners. Available study levels and fields depend on the sending partner, and applications may also need submission to the responsible Indian authority under its own requirements and deadline. Check the India partner page and the next call before applying.',
+      'India appears in the official list of eligible sending partners. Available study levels and fields depend on the sending partner, and applications may also need submission to the responsible Indian authority under its own requirements and deadline. Check the India partner page and the next call before applying. Because the host university and the Indian sending authority set their own academic requirements, the rules stay unconfirmed until you read both.',
     alternative_ids: ['erasmus-mundus-joint-masters', 'mext-undergraduate'],
   },
   {
@@ -559,8 +558,7 @@ export const SCHOLARSHIPS: Opportunity[] = [
     },
     verification_status: 'needs_check',
     tags: ['master’s', 'UK', 'development'],
-    notes:
-      'India is an eligible Commonwealth country, but applicants must also use an approved national nominator, which may set additional criteria and an earlier deadline. The degree standard is upper second-class honours, or lower second-class with a relevant postgraduate qualification, and is not converted to CGPA. Confirm the India nominator rules before applying.',
+    notes: 'The CSC page confirms the 2027/28 round is open until 16:00 BST on 20 October 2026 and requires an upper second class bachelor’s degree, which is a class of degree rather than a CGPA. Indian candidates must also be nominated by the Ministry of Education through its SAKSHAT portal, which ran a separate nomination window into December for the 2026 round. The Ministry’s own criteria for its nominees could not be read, so this stays unconfirmed until its 2027 notice is checked.',
     alternative_ids: ['chevening', 'gates-cambridge'],
   },
   {
@@ -603,10 +601,10 @@ export const SCHOLARSHIPS: Opportunity[] = [
       branches: 'any',
       min_work_years: null,
     },
-    verification_status: 'verified',
+    verification_status: 'needs_check',
     tags: ['master’s', 'Türkiye', 'government'],
     notes:
-      'Citizens of all countries may apply except Turkish citizens and people who lost Turkish citizenship. Master’s applicants must be under 30. The minimum academic achievement for graduate candidates is 75% in the degree; the page gives no 10-point CGPA figure, so treat 75% aggregate in your degree as the bar. No Class 10, Class 12, backlog, gap or work-experience cutoff is stated.',
+      'Citizens of all countries may apply except Turkish citizens and people who lost Turkish citizenship. Master’s applicants must be under 30. The minimum academic achievement for graduate candidates is 75% in the degree; the page gives no 10-point CGPA figure, so treat 75% aggregate in your degree as the bar. No Class 10, Class 12, backlog, gap or work-experience cutoff is stated. This degree bar is stated as a percentage or on a 4-point scale, which the app cannot compare with your 10-point CGPA, so the marks rule stays unconfirmed here and you must check it yourself.',
     alternative_ids: ['stipendium-hungaricum', 'erasmus-mundus-joint-masters'],
   },
   {
@@ -652,7 +650,7 @@ export const SCHOLARSHIPS: Opportunity[] = [
     verification_status: 'needs_check',
     tags: ['master’s', 'France', 'institution nomination'],
     notes:
-      'Students cannot apply directly; a French institution must nominate them and sets its own internal deadline. The Eiffel programme does not pay tuition or fees, despite paying the allowance and listed services. The current candidate eligibility call and institution-specific deadline still need to be checked before applying.',
+      'Students cannot apply directly; a French institution must nominate them and sets its own internal deadline. The Eiffel programme does not pay tuition or fees, despite paying the allowance and listed services. The current candidate eligibility call and institution-specific deadline still need to be checked before applying. Because the nominating institution applies its own academic selection, the rules stay unconfirmed until you read its call.',
     alternative_ids: ['erasmus-mundus-joint-masters', 'inlaks-scholarship'],
   },
   {
@@ -865,7 +863,7 @@ export const SCHOLARSHIPS: Opportunity[] = [
     source_url: 'https://www.quadfellowship.org/apply',
     last_verified: '2026-09-22',
     deadline: 'tbd',
-    typical_window: 'The official page says the 2025-26 selection is closed and lists the next timeline as to be announced.',
+    typical_window: 'One cohort is selected each year; the application for the 2025-26 fellows is closed and the page lists the next timeline as To Be Announced.',
     rules: {
       min_tenth_pct: null,
       min_twelfth_pct: null,
@@ -879,7 +877,7 @@ export const SCHOLARSHIPS: Opportunity[] = [
       branches: 'any',
       min_work_years: null,
     },
-    verification_status: 'needs_check',
+    verification_status: 'verified',
     tags: ['STEM', 'United States', 'fellowship'],
     notes:
       'Indian citizens are eligible, along with citizens or legal permanent residents of other named Quad and ASEAN countries. Applicants must have applied to or be enrolled full-time in an eligible US STEM graduate programme. The 2027 application is not open and the page still refers to the closed 2025-26 selection, so the next cycle must be checked.',
@@ -911,7 +909,7 @@ export const SCHOLARSHIPS: Opportunity[] = [
     source_url: 'https://ffe.org/amazon-future-engineer',
     last_verified: '2026-09-22',
     deadline: '2025-11-30',
-    typical_window: 'The official page gives 30 November 2025 as its last published deadline; the next cycle date is not announced.',
+    typical_window: 'The 2025-26 round closed on 30 November 2025; the page now refers to notifying selected students by 31 March 2027, so a new round for first-year students is expected in the autumn.',
     rules: {
       min_tenth_pct: null,
       min_twelfth_pct: null,
@@ -925,7 +923,7 @@ export const SCHOLARSHIPS: Opportunity[] = [
       branches: 'any',
       min_work_years: null,
     },
-    verification_status: 'needs_check',
+    verification_status: 'verified',
     tags: ['women', 'first year', 'engineering'],
     notes:
       'Annual family income must be below INR 4 lakh. The official eligibility section says only first-year women in BE, BTech or integrated MTech are eligible, with CS and IT preferred rather than required. The page still prints a 2025 deadline, so the stored batch is the 2025-26 first-year cohort (2029 graduates); the current cycle and cohort year must be confirmed before applying. No numeric marks, GPA, CGPA, aggregate, backlog, arrear or gap cutoff is printed.',
