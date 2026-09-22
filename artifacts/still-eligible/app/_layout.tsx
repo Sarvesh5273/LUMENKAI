@@ -5,6 +5,7 @@ import { KeyboardProvider } from 'react-native-keyboard-controller';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { ErrorBoundary } from '@/components/ErrorBoundary';
 import { StoreProvider } from '@/lib/store';
+import { initializeRevenueCat, SubscriptionProvider } from '@/lib/revenuecat';
 import {
   Inter_400Regular,
   Inter_500Medium,
@@ -17,6 +18,14 @@ import * as SplashScreen from 'expo-splash-screen';
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
+
+// Purchases are optional for booting: without keys the Season Pass screen
+// says it is unavailable and the rest of the app works as before.
+try {
+  initializeRevenueCat();
+} catch (err) {
+  console.warn('RevenueCat unavailable:', err instanceof Error ? err.message : err);
+}
 
 const queryClient = new QueryClient();
 
@@ -52,11 +61,13 @@ export default function RootLayout() {
       <ErrorBoundary>
         <StoreProvider>
           <QueryClientProvider client={queryClient}>
-            <GestureHandlerRootView>
-              <KeyboardProvider>
-                <RootLayoutNav />
-              </KeyboardProvider>
-            </GestureHandlerRootView>
+            <SubscriptionProvider>
+              <GestureHandlerRootView>
+                <KeyboardProvider>
+                  <RootLayoutNav />
+                </KeyboardProvider>
+              </GestureHandlerRootView>
+            </SubscriptionProvider>
           </QueryClientProvider>
         </StoreProvider>
       </ErrorBoundary>

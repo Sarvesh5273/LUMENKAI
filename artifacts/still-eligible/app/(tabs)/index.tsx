@@ -39,10 +39,11 @@ export default function HomeScreen() {
     router.setParams({ category: '' });
   };
 
-  const { sections, totalDoors, totalEligible, missingFields } = useMemo(() => {
-    if (!profile) return { sections: [], totalDoors: 0, totalEligible: 0, missingFields: [] };
+  const { sections, totalDoors, totalEligible, totalClosed, missingFields } = useMemo(() => {
+    if (!profile) return { sections: [], totalDoors: 0, totalEligible: 0, totalClosed: 0, missingFields: [] };
 
     const evaluated = evaluateAll(records, profile);
+    const closedCount = evaluated.filter((item) => item.eligibility.status === 'not_eligible').length;
     const visibleOpps = evaluated.filter((item) => {
       if (item.eligibility.status === 'not_eligible') return false;
       if (remoteOnly && item.opportunity.location.mode !== 'remote') return false;
@@ -85,6 +86,7 @@ export default function HomeScreen() {
       sections: builtSections,
       totalDoors: doorsCount,
       totalEligible: eligibleCount,
+      totalClosed: closedCount,
       missingFields: Array.from(allMissing),
     };
   }, [profile, records, remoteOnly, categoryFilter]);
@@ -123,6 +125,22 @@ export default function HomeScreen() {
             <Text style={[typography.caption, { color: colors.mutedForeground, marginTop: 8 }]} testID="data-updated">
               Data updated {updatedText}
             </Text>
+
+            {totalClosed > 0 && (
+              <TouchableOpacity
+                onPress={() => router.push('/(tabs)/closed')}
+                style={styles.closedLink}
+                accessibilityRole="link"
+                accessibilityLabel={`${totalClosed} doors are closed to your profile. See which rule shuts each one`}
+                testID="closed-doors-link"
+              >
+                <Feather name="lock" size={14} color={colors.mutedForeground} />
+                <Text style={[typography.bodySmall, { color: colors.mutedForeground, marginLeft: 6 }]}>
+                  {totalClosed === 1 ? '1 door is' : `${totalClosed} doors are`} closed to your profile.{' '}
+                  <Text style={{ color: colors.primary, fontFamily: 'Inter_600SemiBold' }}>See which rule shuts each</Text>
+                </Text>
+              </TouchableOpacity>
+            )}
 
             {missingFields.length > 0 && (
               <View style={[styles.banner, { backgroundColor: colors.accent + '20', borderColor: colors.accent, borderRadius: colors.radius }]}>
@@ -239,6 +257,11 @@ const styles = StyleSheet.create({
   },
   listHeader: {
     marginBottom: 8,
+  },
+  closedLink: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginTop: 12,
   },
   banner: {
     flexDirection: 'row',

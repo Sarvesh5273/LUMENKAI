@@ -8,9 +8,12 @@
     "scheme": "still-eligible",
     "userInterfaceStyle": "automatic",
     "ios": {
-      "supportsTablet": false
+      "supportsTablet": false,
+      "bundleIdentifier": "com.stilleligible.app"
     },
-    "android": {},
+    "android": {
+      "package": "com.stilleligible.app"
+    },
     "web": {
       "favicon": "./assets/images/icon.png"
     },

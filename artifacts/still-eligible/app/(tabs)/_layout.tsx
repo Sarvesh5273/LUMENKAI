@@ -21,6 +21,12 @@ function NativeTabLayout() {
         />
         <NativeTabs.Trigger.Label>Doors</NativeTabs.Trigger.Label>
       </NativeTabs.Trigger>
+      <NativeTabs.Trigger name="closed">
+        <NativeTabs.Trigger.Icon
+          sf={{ default: 'lock', selected: 'lock.open' }}
+        />
+        <NativeTabs.Trigger.Label>Closed</NativeTabs.Trigger.Label>
+      </NativeTabs.Trigger>
       <NativeTabs.Trigger name="tracked">
         <NativeTabs.Trigger.Icon
           sf={{ default: 'star', selected: 'star.fill' }}
@@ -84,6 +90,18 @@ function ClassicTabLayout() {
               <SymbolView name="door.left.hand.open" tintColor={color} size={24} fallback={<Feather name="home" size={24} color={color} />} />
             ) : (
               <Feather name="home" size={22} color={color} />
+            ),
+        }}
+      />
+      <Tabs.Screen
+        name="closed"
+        options={{
+          title: 'Closed',
+          tabBarIcon: ({ color }) =>
+            isIOS ? (
+              <SymbolView name="lock" tintColor={color} size={24} fallback={<Feather name="lock" size={24} color={color} />} />
+            ) : (
+              <Feather name="lock" size={22} color={color} />
             ),
         }}
       />
