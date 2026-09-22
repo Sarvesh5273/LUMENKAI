@@ -30,10 +30,12 @@ Tell-tale signs: `x-oauth-scopes` empty, `GET /user/installations` returns 0, `x
 contents=write` on the failed write. Reauthorizing the connection does not help. The Git pane uses a different app
 ("Replit", slug `replit`), so a Git-pane connection does not unlock the connectors either.
 
-## Environment quirks seen in the isolated task environment
+## Environment quirks (task environments and the main workspace shell alike)
 
-- `replit-git-askpass` returns username `token` but times out on the password, so `git push` fails with
-  "Invalid username or token"; `gh` is not logged in.
+- `replit-git-askpass` returns username `token` but times out on the password after ~30s, so `git push` fails with
+  "Invalid username or token"; `gh` is not logged in. Installing the "Replit" GitHub App on the repo (the Git pane's
+  app, done 22 Sep 2026 for LUMENKAI) does NOT change this for the agent shell: the credential is tied to the
+  owner's UI session, so the push must come from the Git pane or the owner's own Shell tab.
 - `listConnections('github-app')` returns `[]` in the CodeExecution sandbox even when the connection is attached.
   A node script in the workspace using `@replit/connectors-sdk` (`new ReplitConnectors().proxy('github-app', path)`)
   does reach the API with the connection's credentials injected server-side.
