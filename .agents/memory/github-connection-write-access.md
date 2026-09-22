@@ -20,6 +20,23 @@ Git-pane history (he must Pull before his next Push), and that the first full-re
 Git pane so both histories start identical. Recreating local commits byte-for-byte through the git data API to avoid
 that divergence is fragile (dates, offsets, committer fields) and not worth attempting.
 
+## Rule: the owner wants to appear as the GitHub contributor; rewrite authorship before the final push
+
+Checkpoint commits are authored "Replit Agent <agent@replit.com>" and task merges use a Replit noreply address, so
+GitHub's contributor graph showed only replit-agent. On 22 Sep 2026 (owner's explicit choice) all commits on
+`main` were rewritten with `git filter-branch --env-filter/--msg-filter`: author and committer = Sarvesh Bijawe with
+his verified primary GitHub email (the one in his git config), plus a `Co-authored-by: Replit Agent` trailer on
+agent-authored commits (messages already carry `Replit-Commit-Author: Agent`). Old history is tagged
+`pre-author-rewrite`. New checkpoints revert to the agent identity, so repeat the same rewrite and
+`push --force-with-lease` right before the Shipaton submission push. Nobody else has cloned the repo.
+
+## Lesson: the working Git push path is a classic PAT (`public_repo` scope) typed at the terminal prompt
+
+The Git pane gave "Unknown Git Error" and the owner's Shell got `403 Permission denied to Sarvesh5273` even after
+installing the "Replit" GitHub App on the repo and reconnecting under Git Providers. What worked: in the owner's
+Shell tab, `GIT_ASKPASS= git push -u origin main` (empty GIT_ASKPASS falls back to the terminal prompt) with the
+PAT as the password. The remote `origin` and `branch.main` tracking are already configured.
+
 ## Lesson: Replit GitHub connectors are read-only until the GitHub App is installed on the repo
 
 Both the `github` and `github-app` connectors are user-to-server tokens of the GitHub App "Replit Nexus"
