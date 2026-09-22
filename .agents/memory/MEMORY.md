@@ -2,4 +2,4 @@
 - [Expo testing setup and UI quirks](expo-testing-and-ui-quirks.md) — jest+babel-preset-expo (not jest-expo) under pnpm, pin `now` in tests, typed routes need a dev-server restart.
 - [Remote dataset design](remote-dataset-design.md) — no-backend updates via repo JSON, newest validated copy wins, three-valued amount and fee status must stay.
 - [Season Pass decisions](season-pass-decisions.md) — "opens" only for verified doors with nothing unknown; no batch-list predictions; production web gets no RevenueCat key.
-- [GitHub connection write access](github-connection-write-access.md) — owner pushes from the Git pane, agents do not; connectors stay read-only until the Replit Nexus app is installed on the repo.
+- [GitHub connection write access](github-connection-write-access.md) — only the owner can push (Git pane); connectors read-only until the Replit app is installed; API commits diverge.

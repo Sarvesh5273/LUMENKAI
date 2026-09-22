@@ -67,7 +67,11 @@ async function fetchRemoteDataset(): Promise<{ raw: string; dataset: Dataset } |
   const timer = setTimeout(() => controller.abort(), DATASET_FETCH_TIMEOUT_MS);
   try {
     const response = await fetch(DATASET_URL, { signal: controller.signal, headers: { accept: 'application/json' } });
-    if (!response.ok) return null;
+    if (!response.ok) {
+      // A 404 here means the repo has no commit with the file yet (or the branch moved).
+      if (__DEV__) console.log(`Remote dataset not fetched: HTTP ${response.status} from ${DATASET_URL}`);
+      return null;
+    }
     const raw = await response.text();
     const result = parseDataset(JSON.parse(raw));
     if (!result.ok) {
@@ -162,12 +166,24 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
       setIsRefreshingData(true);
       try {
         const remote = await fetchRemoteDataset();
-        if (remote && isNewerDataset(remote.dataset, datasetRef.current)) {
-          await AsyncStorage.setItem(DATASET_KEY, remote.raw);
-          await adoptDataset(remote.dataset, 'remote');
+        if (remote) {
+          const currentAt = datasetRef.current.generated_at;
+          const newer = isNewerDataset(remote.dataset, datasetRef.current);
+          if (newer) {
+            await AsyncStorage.setItem(DATASET_KEY, remote.raw);
+            await adoptDataset(remote.dataset, 'remote');
+          }
+          // Logged after the adopt step so "adopted" is only ever printed once
+          // it has actually happened; a failure inside it lands in the catch below.
+          if (__DEV__) {
+            console.log(
+              `Remote dataset fetched: generated_at ${remote.dataset.generated_at}, ${remote.dataset.records.length} records, ` +
+                (newer ? 'adopted' : `not newer than the current copy (${currentAt}), keeping that`),
+            );
+          }
         }
       } catch (e) {
-        console.error('Failed to refresh dataset', e);
+        console.error('Failed to refresh dataset: fetched copy was not adopted', e);
       } finally {
         setIsRefreshingData(false);
         refreshInFlight.current = null;

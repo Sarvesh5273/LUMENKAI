@@ -9,11 +9,16 @@ The public repo is Sarvesh5273/LUMENKAI and mirrors the whole workspace (branch 
 `artifacts/still-eligible/data/dataset.json` from raw.githubusercontent.com at launch, so a dataset change only
 reaches installed apps after the owner pushes.
 
-**Why:** On 2026-09-22 the owner chose to push from the Git pane himself rather than install the GitHub App that
-would let agents push. Respect that: do not mirror or push the repo from a task environment.
+**Why:** The owner first chose to push from the Git pane himself rather than install the GitHub App that would let
+agents push; he later said he would prefer agents to push but has not enabled it. Until he installs the app, no
+agent can push, so do not mirror or push the repo from a task environment.
 
 **How to apply:** After merging a change that matters for the app (dataset, config, README), tell the owner to push
-and give him the curl check for the raw dataset URL. Do not spend time trying to push.
+and give him the curl check for the raw dataset URL. Do not spend time trying to push. If he asks for agent pushes,
+the enabling step is installing the app on LUMENKAI; explain first that an API-created commit is not in his local
+Git-pane history (he must Pull before his next Push), and that the first full-repo push should still come from the
+Git pane so both histories start identical. Recreating local commits byte-for-byte through the git data API to avoid
+that divergence is fragile (dates, offsets, committer fields) and not worth attempting.
 
 ## Lesson: Replit GitHub connectors are read-only until the GitHub App is installed on the repo
 
@@ -32,3 +37,5 @@ contents=write` on the failed write. Reauthorizing the connection does not help.
 - `listConnections('github-app')` returns `[]` in the CodeExecution sandbox even when the connection is attached.
   A node script in the workspace using `@replit/connectors-sdk` (`new ReplitConnectors().proxy('github-app', path)`)
   does reach the API with the connection's credentials injected server-side.
+- `listConnections('github')` does work in the sandbox (`proxyFetch`). Write-access check: `GET /user/installations`;
+  `total_count: 0` means writes 403 even though the repo endpoint reports `permissions.push: true` for the user.
